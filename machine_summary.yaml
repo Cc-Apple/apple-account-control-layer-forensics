@@ -1,0 +1,110 @@
+repository:
+  name: "apple-account-control-layer-forensics"
+  purpose: "technical triage package, not attribution"
+  scope: "11-month, 9+ Apple device forensic anomaly dataset"
+
+core_request:
+  question: "Do these artifacts look like normal Apple/iOS behavior, or do they merit deeper forensic triage as a possible account/cloud/control-layer operation?"
+  attribution_claim: false
+  malware_family_claim: false
+
+dataset:
+  period: "approximately 11 months"
+  devices: "9+ Apple devices"
+  sources:
+    - "iPhone/iPad Analytics logs"
+    - "iMazing backup structures"
+    - "Manifest.db / Manifest.plist / Status.plist"
+    - "Wi-Fi / BSSID / sysdiagnose artifacts"
+    - "ScreenTime / Game Center / Content & Privacy signals"
+    - "usageClientId transitions"
+    - "daemon / resource-pressure logs"
+
+key_observations:
+  manifest_db:
+    summary: "Multiple backup generations showed Manifest.db behaving as non-SQLite / opaque / high-entropy structures."
+    interpretation: "backup path / backup service anomaly candidate"
+    strength: "high"
+    limitation: "not an attribution indicator"
+
+  usageclientid:
+    summary: "Repeated usageClientId switching and discontinuity were observed across logs and devices."
+    interpretation: "account / usage-state transition candidate"
+    strength: "medium-high"
+
+  restriction_layer:
+    summary: "ScreenTime / Game Center / Content & Privacy / ManagedSettings / FamilyControls signals appeared without visible MDM / supervised / userIsManaged indicators."
+    interpretation: "restriction-layer inconsistency candidate"
+    strength: "high"
+
+  march_2026_beta_phase:
+    summary: "Normalized analysis showed density increase in restriction-layer, ID/cloud, resource-pressure, and operational-trace categories."
+    interpretation: "possible beta-phase transition"
+    strength: "high"
+
+  mini1_2026_03_12:
+    file: "Analytics-2026-03-12-070038.ips"
+    sha256: "a6d312d5553b68e1923c9470de6729277bdd385b3393ffe8af6d9750380a5b09"
+    summary:
+      - "SIMTransfer"
+      - "BluetoothDiscovery"
+      - "CommCenter"
+      - "BasebandPowerCycle"
+      - "PrivacyProxy"
+      - "RSSI"
+      - "Nearby"
+      - "resource reactions"
+    interpretation: "mini1 proximity/communication peak"
+    strength: "very high"
+
+  fifteen_g_2026_03_07:
+    summary: "WiFiConnectionQuality/sysdiagnose artifacts showed a physical Wi-Fi location anchor."
+    ssid_status: "redacted in public repository"
+    bssid_status: "redacted or hashed in public repository"
+    rssi: "-49"
+    channel: 112
+    last_joined: "2026-03-07 17:35:02 +0700"
+    interpretation: "location anchor, not person/device attribution"
+    strength: "high"
+
+ttp_comparison:
+  apt42:
+    role: "closest surface similarity"
+    matching:
+      - "credential"
+      - "account"
+      - "cloud"
+      - "identity"
+      - "valid session / trusted state"
+    limitation: "too many operational inconsistencies for a clean APT42-native model"
+
+  apt32_oceanlotus:
+    role: "legacy doctrine hypothesis"
+    matching:
+      - "long-term operation"
+      - "legitimate service abuse"
+      - "trace suppression"
+      - "staged operation"
+    limitation: "not an attribution claim"
+
+  liminal_panda:
+    role: "telecom/proximity assistance hypothesis"
+    matching:
+      - "BSSID/RSSI"
+      - "Baseband"
+      - "CommCenter"
+      - "SIM/eSIM"
+      - "carrier context"
+    limitation: "does not explain Apple account/cloud/restriction-layer artifacts alone"
+
+working_hypothesis:
+  summary: "The observed structure is closest to an APT42-style account/cloud/control model, but the inconsistencies are better explained as an APT32-like legacy operational doctrine being adapted toward APT42-style Apple ID / cloud / account-control operations, with LIMINAL-style telecom/proximity assistance."
+  attribution: "not asserted"
+
+limitations:
+  - "No attribution is asserted."
+  - "No malware family name is asserted."
+  - "BSSID evidence is treated as a location anchor, not a person/device attribution."
+  - "Physical incident claims are not used as primary technical evidence."
+  - "Raw private logs are not publicly uploaded."
+  - "Sensitive identifiers are redacted or represented by SHA256 hashes."
