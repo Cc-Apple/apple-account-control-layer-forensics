@@ -414,3 +414,27 @@ If abnormal, investigate it.
 If this model is real, then the next generation of spyware may not look like spyware at all.
 
 It may look like the cloud.
+
+---
+
+## Latest integrated result: 2025-07 to 2026-05-26
+
+As of 2026-05-27, an additional structured analysis was completed using already organized device-specific log folders.
+
+The analysis covers:
+
+- My own Apple devices from 2025-07-01 to 2026-05-26
+- Selected friend / comparison device logs
+- A separate 2026-05 focused run for 12G, 15G, and iPhone11Pro
+- Raw Apple log families, RTCReporting, SiriSearchFeedback, and text-derived artifacts separated by source type
+- Derived summaries only; no raw logs or private identifiers are published here
+
+This repository does not claim attribution to APT32, APT42, any state actor, Apple, or any named organization.
+
+The current observation is that the collected Apple device artifacts show a long-running account / cloud / telecom / restriction-layer / daemon-layer structure that appears more consistent with a transitional or test-phase control-layer anomaly model than with isolated normal iOS behavior.
+
+Working term used in this repository:
+
+**Shadow Cloud**
+
+This is a working label for the observed structure, not a malware name, not an actor name, and not an attribution claim.
