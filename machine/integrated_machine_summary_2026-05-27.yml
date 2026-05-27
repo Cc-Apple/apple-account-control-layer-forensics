@@ -1,0 +1,153 @@
+summary_type: machine_readable_integrated_summary
+date: 2026-05-27
+case_label: Shadow Cloud
+attribution_claim: false
+
+scope:
+  wide_range:
+    period: 2025-07-01_to_2026-04-30
+    sources:
+      - My_Device
+      - Friend_Device
+    final_daily_count: 318
+  may_2026_focus:
+    period: 2026-05-01_to_2026-05-26
+    devices:
+      - 12G
+      - 15G
+      - iPhone11Pro
+    final_daily_count: 17
+  integrated:
+    period: 2025-07-01_to_2026-05-26
+    final_daily_count_total: 335
+
+device_counts:
+  My_Device_mini1: 142
+  My_Device_15G: 89
+  Friend_Device_Ha_Thao: 34
+  Friend_Device_Ngoc: 20
+  May3Dev_15G: 15
+  Friend_Device_Vy: 13
+  My_Device_12G: 11
+  My_Device_mini2: 4
+  Friend_Device_HaThao_Mother: 3
+  May3Dev_12G: 2
+  Friend_Device_kanaoya: 1
+  My_Device_iPhone11Pro: 1
+
+monthly_counts:
+  2025-07: 57
+  2025-08: 56
+  2025-09: 36
+  2025-10: 17
+  2025-11: 34
+  2025-12: 44
+  2026-01: 23
+  2026-02: 7
+  2026-03: 25
+  2026-04: 19
+  2026-05: 17
+
+core_observed_layers:
+  - MDM_false
+  - restriction_management
+  - account_cloud
+  - telecom_proximity
+  - usage_state
+  - daemon_repetition
+  - evidence_interference
+  - seam_failure
+
+apt42_style_alignment:
+  rating: high
+  previous_score_range: 83-88
+  integrated_score_range: 85-88
+  center_estimate: 86
+  basis:
+    - account_cloud_identity_surveillance_alignment
+    - native_feature_and_builtin_service_orientation
+    - no_requirement_for_visible_MDM_true
+    - repeated_account_cloud_plus_telecom_proximity
+    - repeated_MDM_false_plus_restriction_management
+  not_established:
+    - attribution
+    - infrastructure
+    - C2
+    - payload
+    - known_malware_family
+
+apt32_legacy_ttp_alignment:
+  rating: medium_high
+  previous_score_range: 70-78
+  integrated_score_range: 72-78
+  center_estimate: 75
+  basis:
+    - long_running_behavior
+    - low_exposure_pattern
+    - legitimate_daemon_orientation
+    - daemon_repetition
+    - save_search_log_delete_backup_side_effects
+    - integration_seam_failures
+  not_established:
+    - attribution
+    - infrastructure
+    - C2
+    - payload
+    - known_IOC
+    - malware_family
+
+shadow_cloud_phase_assessment:
+  2025-07_to_2026-02_or_early_03:
+    phase: alpha_or_field_prototype
+    maturity_estimate: 55-65
+  2026-03_to_2026-04:
+    phase: beta_or_migration_acceleration
+    maturity_estimate: 70-78
+  2026-05:
+    phase: late_beta_or_pre_release_candidate_like
+    maturity_estimate: 75-82
+    center_estimate: 78
+
+may_2026_core_anchors:
+  2026-05-10:
+    device: 15G
+    V4: 35431.18
+    raw: 14709.0
+    layers: 8
+    reasons:
+      - raw_apple_score_strong
+      - MDM_false_plus_restriction_management
+      - account_cloud_plus_telecom
+      - seam_failure
+  2026-05-20:
+    device: 15G
+    V4: 30784.76
+    raw: 10823.0
+    layers: 8
+    reasons:
+      - raw_apple_score_strong
+      - MDM_false_plus_restriction_management
+      - account_cloud_plus_telecom
+      - seam_failure
+  2026-05-21:
+    device: 15G
+    V4: 30251.22
+    raw: 10984.0
+    layers: 8
+    reasons:
+      - raw_apple_score_strong
+      - MDM_false_plus_restriction_management
+      - account_cloud_plus_telecom
+      - seam_failure
+
+interpretation:
+  strongest_statement: >
+    Shadow Cloud remains visible after organized-folder analysis,
+    person-level reaggregation, source-type separation, and 2026-05 focused analysis.
+    The observed structure is more consistent with a long-running
+    account/cloud/telecom/restriction-layer/daemon-layer anomaly model
+    than with isolated benign iOS events.
+  boundary: >
+    This is a structure-level and TTP-alignment observation.
+    It does not establish actor attribution, malware identity, C2,
+    payload, or exploit chain.
