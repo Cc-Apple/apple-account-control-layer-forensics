@@ -56,3 +56,61 @@ No attribution is asserted.
 ## Request
 
 Please assess whether these artifacts are likely normal Apple/iOS behavior, user-side backup artifacts, or whether they merit deeper forensic triage as a possible account/cloud/control-layer operation.
+
+---
+
+## 2026-05-27 Integrated Update
+
+A structured re-analysis was completed using organized device-specific log folders and a separate 2026-05 focused run.
+
+### Integrated scope
+
+- Period: 2025-07-01 to 2026-05-26
+- Wide-range result: My_Device + Friend_Device
+- 2026-05 focused result: 12G / 15G / iPhone11Pro
+- Integrated final daily shortlist: 335 days
+
+### Key result
+
+The observed structure remained visible after:
+
+- separating raw Apple logs, RTCReporting, SiriSearchFeedback, and text-derived artifacts
+- excluding derived summaries / OCR / notes from primary scoring
+- reaggregating Friend_Device by person / folder
+- adding the 2026-05 focused three-device result
+
+### Core repeated structure
+
+The following layers repeatedly appeared together:
+
+- MDM_false
+- restriction / management-adjacent artifacts
+- account / cloud artifacts
+- telecom / proximity artifacts
+- usage / RTCReporting artifacts
+- daemon repetition
+- evidence-interference-adjacent artifacts
+- seam-failure artifacts
+
+### Current assessment
+
+- APT42-style structural alignment: high, estimated 85-88 / 100
+- APT32-style legacy TTP / seam-failure alignment: medium to high, estimated 72-78 / 100
+- Shadow Cloud phase estimate: late beta / transitional control-layer model, approximately 75-82% maturity in 2026-05
+
+### Important boundary
+
+This is not an attribution claim.
+
+This repository does not establish:
+
+- APT42 attribution
+- APT32 attribution
+- state attribution
+- Apple attribution
+- confirmed malware
+- confirmed C2
+- confirmed payload
+- confirmed exploit chain
+
+The purpose is to request qualified technical review of whether the observed cross-artifact structure is meaningful and whether a formal mobile forensic review is justified.
