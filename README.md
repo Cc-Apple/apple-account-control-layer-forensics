@@ -260,6 +260,26 @@ That is why this case deserves expert review.
 
 ---
 
+## Supporting technical anchor repositories
+
+This main repository should be read together with two supporting technical anchor packages.
+
+These supporting repositories provide narrower, reviewable anchors for specific artifact structures.
+
+- `support-invisible-restriction-anchor-2026-03-03-public`  
+  2026-03-03 support-invisible Apple ID sign-out restriction anchor involving ManagedSettings, MCState, Apple Support visibility, and MDMStatus:false context.
+
+- `mdm-false-management-daemon-failure-chain-public`  
+  Cross-device MDMStatus:false and management-adjacent daemon failure chain across 15G and mini1.
+
+Relationship:
+
+- This repository provides the overall Shadow Cloud / Apple account-control-layer hypothesis.
+- The two supporting repositories provide focused technical anchor packages.
+- Raw logs and sensitive private evidence remain withheld unless provided later through a qualified secure review process.
+
+---
+
 ## Reports
 
 The `reports/` directory contains the structured analysis set:
