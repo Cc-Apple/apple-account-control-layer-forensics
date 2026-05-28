@@ -114,3 +114,21 @@ This repository does not establish:
 - confirmed exploit chain
 
 The purpose is to request qualified technical review of whether the observed cross-artifact structure is meaningful and whether a formal mobile forensic review is justified.
+
+---
+
+## Supporting technical anchors
+
+This one-page summary is supported by two focused public anchor repositories:
+
+- `support-invisible-restriction-anchor-2026-03-03-public`
+- `mdm-false-management-daemon-failure-chain-public`
+
+The main repository presents the overall Apple account / iCloud / control-layer anomaly model.
+
+The supporting repositories provide narrower technical anchors for:
+
+- a 2026-03-03 support-invisible restriction event
+- a repeated MDMStatus:false management-daemon failure chain across 15G and mini1
+
+Raw logs and sensitive evidence are not included in the public repositories.
