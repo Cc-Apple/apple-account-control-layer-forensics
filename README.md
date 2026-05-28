@@ -50,13 +50,13 @@ The correct response is a reproducible explanation.
 
 This repository does **not** assert:
 
-- that APT32/OceanLotus executed this activity
-- that APT42 executed this activity
-- that LIMINAL PANDA executed this activity
-- that any specific government executed this activity
-- that any specific company executed this activity
-- that a known spyware family was positively identified
-- that a single malware payload explains the dataset
+* that APT32/OceanLotus executed this activity
+* that APT42 executed this activity
+* that LIMINAL PANDA executed this activity
+* that any specific government executed this activity
+* that any specific company executed this activity
+* that a known spyware family was positively identified
+* that a single malware payload explains the dataset
 
 APT32, APT42, LIMINAL PANDA, mercenary spyware models, and living-off-the-land tradecraft are referenced only as **public TTP comparison points**.
 
@@ -76,17 +76,17 @@ This case does not look like that.
 
 The observed pattern appears across:
 
-- Apple account state
-- iCloud / trusted-device behavior
-- iMazing backup structures
-- Manifest.db behavior
-- ScreenTime / restriction-layer signals
-- ManagedSettings / FamilyControls traces
-- daemon-layer repetition
-- usageClientId transitions
-- CommCenter / Baseband / SIMTransfer signals
-- BSSID / RSSI proximity anchors
-- resource-pressure and evidence-preservation interference patterns
+* Apple account state
+* iCloud / trusted-device behavior
+* iMazing backup structures
+* Manifest.db behavior
+* ScreenTime / restriction-layer signals
+* ManagedSettings / FamilyControls traces
+* daemon-layer repetition
+* usageClientId transitions
+* CommCenter / Baseband / SIMTransfer signals
+* BSSID / RSSI proximity anchors
+* resource-pressure and evidence-preservation interference patterns
 
 If this model is real, then the risk is larger than one infected phone.
 
@@ -102,11 +102,11 @@ That is why this dataset is public.
 
 Multiple backup generations showed `Manifest.db` behaving as:
 
-- non-SQLite
-- opaque
-- high-entropy
-- structurally abnormal
-- inconsistent with ordinary readable Manifest.db expectations
+* non-SQLite
+* opaque
+* high-entropy
+* structurally abnormal
+* inconsistent with ordinary readable Manifest.db expectations
 
 The core issue is not merely encrypted backup handling.
 
@@ -124,10 +124,10 @@ Repeated `usageClientId` switching and discontinuity were observed across logs a
 
 This may indicate abnormal state transitions involving:
 
-- app usage identity
-- device/session state
-- account-linked usage state
-- possible continuity breaks between logical device identities
+* app usage identity
+* device/session state
+* account-linked usage state
+* possible continuity breaks between logical device identities
 
 This is not treated as proof of compromise.
 
@@ -141,9 +141,9 @@ ScreenTime / Game Center / Content & Privacy / ManagedSettings / FamilyControls 
 
 The concern is the mismatch:
 
-- restriction-layer behavior appears
-- management-adjacent traces appear
-- but ordinary visible device-management indicators are absent
+* restriction-layer behavior appears
+* management-adjacent traces appear
+* but ordinary visible device-management indicators are absent
 
 If this is normal Apple behavior, it should be explainable.
 
@@ -155,11 +155,11 @@ If it is not normal, it may represent a control-layer anomaly.
 
 Normalized analysis showed a density increase in several categories:
 
-- restriction-layer signals
-- ID / cloud signals
-- resource-pressure signals
-- operational-trace categories
-- telecom / proximity-related signals
+* restriction-layer signals
+* ID / cloud signals
+* resource-pressure signals
+* operational-trace categories
+* telecom / proximity-related signals
 
 This period is treated as a possible phase shift or beta-phase candidate.
 
@@ -173,14 +173,14 @@ The claim is that the density shift is worth forensic review.
 
 A mini1 Analytics log showed a strong proximity / communication pattern involving:
 
-- SIMTransfer
-- BluetoothDiscovery
-- CommCenter
-- BasebandPowerCycle
-- PrivacyProxy
-- RSSI
-- Nearby
-- resource reactions
+* SIMTransfer
+* BluetoothDiscovery
+* CommCenter
+* BasebandPowerCycle
+* PrivacyProxy
+* RSSI
+* Nearby
+* resource reactions
 
 This event is important because it connects telecom, proximity, privacy, and resource-pressure signals in a tight time window.
 
@@ -190,11 +190,11 @@ This event is important because it connects telecom, proximity, privacy, and res
 
 WiFiConnectionQuality and sysdiagnose artifacts showed a physical Wi-Fi anchor involving:
 
-- BSSID
-- RSSI
-- channel
-- lastJoined timestamps
-- location-specific wireless context
+* BSSID
+* RSSI
+* channel
+* lastJoined timestamps
+* location-specific wireless context
 
 This is treated as a physical-world anchor for timeline correlation.
 
@@ -208,16 +208,16 @@ A sophisticated operation may not reveal itself through a single payload.
 
 Instead, it may reveal itself where different systems must connect:
 
-- Apple ID ↔ iCloud
-- iCloud ↔ trusted devices
-- trusted devices ↔ backup state
-- backup state ↔ Manifest.db
-- ScreenTime ↔ ManagedSettings
-- restrictions ↔ visible MDM indicators
-- daemon activity ↔ evidence preservation
-- CommCenter ↔ Baseband
-- BSSID/RSSI ↔ physical proximity
-- resource pressure ↔ user attempt to preserve evidence
+* Apple ID ↔ iCloud
+* iCloud ↔ trusted devices
+* trusted devices ↔ backup state
+* backup state ↔ Manifest.db
+* ScreenTime ↔ ManagedSettings
+* restrictions ↔ visible MDM indicators
+* daemon activity ↔ evidence preservation
+* CommCenter ↔ Baseband
+* BSSID/RSSI ↔ physical proximity
+* resource pressure ↔ user attempt to preserve evidence
 
 The hypothesis is that Shadow Cloud-like activity would leave its clearest traces at these integration seams.
 
@@ -231,11 +231,11 @@ The comparison does not claim attribution.
 
 It asks whether the same type of operational logic appears:
 
-- legitimate-looking infrastructure
-- long-term low-noise operation
-- trace suppression
-- information-value targeting
-- residual artifacts appearing at integration seams
+* legitimate-looking infrastructure
+* long-term low-noise operation
+* trace suppression
+* information-value targeting
+* residual artifacts appearing at integration seams
 
 When implementation-layer differences are excluded, the operational-seam similarity score is estimated at:
 
@@ -247,12 +247,12 @@ It is a TTP-comparison score.
 
 The significance is that the similarity does not rely on:
 
-- malware hashes
-- C2 domains
-- IP reuse
-- certificate reuse
-- code reuse
-- known spyware-family detection
+* malware hashes
+* C2 domains
+* IP reuse
+* certificate reuse
+* code reuse
+* known spyware-family detection
 
 Instead, the similarity appears in operational doctrine and failure patterns.
 
@@ -266,17 +266,17 @@ This main repository should be read together with two supporting technical ancho
 
 These supporting repositories provide narrower, reviewable anchors for specific artifact structures.
 
-- `support-invisible-restriction-anchor-2026-03-03-public`  
+* `support-invisible-restriction-anchor-2026-03-03-public`
   2026-03-03 support-invisible Apple ID sign-out restriction anchor involving ManagedSettings, MCState, Apple Support visibility, and MDMStatus:false context.
 
-- `mdm-false-management-daemon-failure-chain-public`  
+* `mdm-false-management-daemon-failure-chain-public`
   Cross-device MDMStatus:false and management-adjacent daemon failure chain across 15G and mini1.
 
 Relationship:
 
-- This repository provides the overall Shadow Cloud / Apple account-control-layer hypothesis.
-- The two supporting repositories provide focused technical anchor packages.
-- Raw logs and sensitive private evidence remain withheld unless provided later through a qualified secure review process.
+* This repository provides the overall Shadow Cloud / Apple account-control-layer hypothesis.
+* The two supporting repositories provide focused technical anchor packages.
+* Raw logs and sensitive private evidence remain withheld unless provided later through a qualified secure review process.
 
 ---
 
@@ -284,31 +284,34 @@ Relationship:
 
 The `reports/` directory contains the structured analysis set:
 
-- `01_manifest_db_anomaly.md`  
+* `00_manifest_db_anomaly_core_point.md`
+  Core technical point explaining that the Manifest.db issue is not simple encrypted-backup unreadability, but repeated non-SQLite / opaque blob / high-entropy structural behavior across multiple backup generations.
+
+* `01_manifest_db_anomaly.md`
   Manifest.db non-SQLite / opaque / high-entropy anomaly report.
 
-- `02_usageclientid_shift.md`  
+* `02_usageclientid_shift.md`
   usageClientId transition and discontinuity report.
 
-- `03_screentime_gamecenter_restrictions.md`  
+* `03_screentime_gamecenter_restrictions.md`
   ScreenTime / Game Center / Content & Privacy / ManagedSettings / FamilyControls restriction-layer report.
 
-- `04_march2026_beta_phase.md`  
+* `04_march2026_beta_phase.md`
   March 2026 density-shift and beta-phase candidate report.
 
-- `05_bssid_proximity_anchor.md`  
+* `05_bssid_proximity_anchor.md`
   BSSID / RSSI / Wi-Fi location-anchor report.
 
-- `06_ttp_comparison_apt32_apt42_liminal.md`  
+* `06_ttp_comparison_apt32_apt42_liminal.md`
   Public TTP comparison involving APT32, APT42, and LIMINAL-style telecom/proximity concepts.
 
-- `07_limitations_and_non_attribution.md`  
+* `07_limitations_and_non_attribution.md`
   Limitations, non-attribution statement, and evidence-boundary clarification.
 
-- `08_automotive_sector_risk_scenario.md`  
+* `08_automotive_sector_risk_scenario.md`
   Automotive-sector risk scenario based on Apple account / iCloud / control-layer exposure.
 
-- `09_operational_seam_similarity_apt32_oceanlotus.md`  
+* `09_operational_seam_similarity_apt32_oceanlotus.md`
   Shadow Cloud operational-seam similarity assessment between public APT32/OceanLotus automotive reporting and the present Apple control-layer observations.
 
 ---
@@ -317,8 +320,8 @@ The `reports/` directory contains the structured analysis set:
 
 The `evidence/` directory contains:
 
-- `evidence_index.csv`
-- `sha256_index.csv`
+* `evidence_index.csv`
+* `sha256_index.csv`
 
 Raw private logs are not publicly uploaded.
 
@@ -328,11 +331,11 @@ The public repository is a minimal triage package, not the complete private evid
 
 Representative original artifacts can be shared only under appropriate conditions, such as:
 
-- NDA
-- paid forensic scoping
-- institutional review
-- legal counsel involvement
-- qualified DFIR / mobile forensic review
+* NDA
+* paid forensic scoping
+* institutional review
+* legal counsel involvement
+* qualified DFIR / mobile forensic review
 
 ---
 
@@ -390,14 +393,14 @@ This repository is being prepared as a minimal reproducible evidence package.
 
 Current status:
 
-- public triage package prepared
-- evidence index included
-- SHA256 index included
-- one-page summary included
-- machine-readable summary included
-- public TTP references included
-- raw private logs withheld
-- representative evidence available for qualified review
+* public triage package prepared
+* evidence index included
+* SHA256 index included
+* one-page summary included
+* machine-readable summary included
+* public TTP references included
+* raw private logs withheld
+* representative evidence available for qualified review
 
 ---
 
@@ -405,17 +408,17 @@ Current status:
 
 This repository is intended for:
 
-- DFIR professionals
-- mobile forensic analysts
-- iOS security researchers
-- OS security researchers
-- cloud-account security researchers
-- cyber-espionage researchers
-- incident response teams
-- legal / technical reviewers
-- research institutions
-- automotive-sector security teams
-- digital-rights and civil-society security teams
+* DFIR professionals
+* mobile forensic analysts
+* iOS security researchers
+* OS security researchers
+* cloud-account security researchers
+* cyber-espionage researchers
+* incident response teams
+* legal / technical reviewers
+* research institutions
+* automotive-sector security teams
+* digital-rights and civil-society security teams
 
 ---
 
@@ -443,11 +446,11 @@ As of 2026-05-27, an additional structured analysis was completed using already 
 
 The analysis covers:
 
-- My own Apple devices from 2025-07-01 to 2026-05-26
-- Selected friend / comparison device logs
-- A separate 2026-05 focused run for 12G, 15G, and iPhone11Pro
-- Raw Apple log families, RTCReporting, SiriSearchFeedback, and text-derived artifacts separated by source type
-- Derived summaries only; no raw logs or private identifiers are published here
+* Owner Apple devices from 2025-07-01 to 2026-05-26
+* Selected friend / comparison device logs
+* A separate 2026-05 focused run for 12G, 15G, and iPhone11Pro
+* Raw Apple log families, RTCReporting, SiriSearchFeedback, and text-derived artifacts separated by source type
+* Derived summaries only; no raw logs or private identifiers are published here
 
 This repository does not claim attribution to APT32, APT42, any state actor, Apple, or any named organization.
 
