@@ -128,6 +128,106 @@ The main repository presents the overall Apple account / iCloud / control-layer 
 
 The supporting repositories provide narrower technical anchors for:
 
+---
+
+## Working Hypothesis Refinement
+
+The Shadow Cloud model is not an attribution claim.
+
+It is a reviewer-facing working model intended to test whether the observed artifacts are better explained as isolated device failures, normal Apple/iOS/iCloud behavior, or a cross-layer account / cloud / policy / backup / telecom trust-state anomaly.
+
+The following four hypotheses are the highest-priority validation targets.
+
+### 1. Policy-as-Persistence
+
+The observed persistence may not rely on a classic malware implant.
+
+Instead, persistence may be expressed through:
+
+- ScreenTime state
+- ManagedSettings behavior
+- restriction-layer behavior
+- Apple ID sign-out restriction behavior
+- management-adjacent daemon activity
+- visible MDM state versus effective policy behavior mismatch
+
+The key question is:
+
+> Is policy state acting as persistence?
+
+### 2. Backup-layer Anti-Forensics
+
+Backup-layer artifacts may represent an anti-forensic surface affecting evidence preservation and third-party review.
+
+Relevant areas include:
+
+- Manifest.db
+- Manifest.plist
+- Status.plist
+- Info.plist
+- RTCR
+- backup encryption state
+- iMazing backup generations
+- encrypted versus unencrypted backup differences
+
+The key question is:
+
+> Is the backup layer preserving evidence normally, or becoming part of the anomaly?
+
+### 3. Trust-Graph Poisoning
+
+The center of gravity may not be a single compromised device.
+
+The anomaly may involve distortion of a broader trust graph, including:
+
+- Apple ID lineage
+- trusted devices
+- backup lineage
+- usageClientId continuity
+- SIM / CommCenter / OTP state
+- financial device trust
+
+The key question is:
+
+> Is the trusted relationship itself being distorted across devices, accounts, backups, or authentication events?
+
+### 4. Evidence-Suppression Objective
+
+The objective may include suppression of the user’s ability to preserve, explain, export, or validate evidence.
+
+Relevant signals include:
+
+- screenshot failure
+- screen recording failure
+- storage pressure during critical events
+- backup inconsistency
+- Manifest / RTCR abnormality
+- artifact preservation difficulty
+- log preservation degradation
+
+The key question is:
+
+> Did the system behave normally when the user attempted to preserve evidence?
+
+---
+
+## Validation boundary
+
+These hypotheses do not assert:
+
+- malware attribution
+- actor attribution
+- Apple-side causation
+- classic MDM enrollment
+- known spyware family deployment
+- Evil Twin / rogue AP use as a proven fact
+
+They are intended only to guide qualified DFIR / CTI / mobile forensic / platform-security review.
+
+The preferred outcome is not confirmation.
+
+The preferred outcome is a reproducible explanation that supports, weakens, or falsifies each hypothesis.
+
 - a 2026-03-03 support-invisible restriction event
 - a repeated MDMStatus:false management-daemon failure chain across 15G and mini1
 
