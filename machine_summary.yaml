@@ -108,3 +108,279 @@ limitations:
   - "Physical incident claims are not used as primary technical evidence."
   - "Raw private logs are not publicly uploaded."
   - "Sensitive identifiers are redacted or represented by SHA256 hashes."
+
+  working_hypotheses:
+  purpose: >
+    Reviewer-facing validation hypotheses for the Shadow Cloud working model.
+    These hypotheses are intended to make the model testable by qualified
+    DFIR, CTI, mobile forensic, platform-security, and OS-security reviewers.
+
+  boundary:
+    attribution_claim: false
+    malware_claim: false
+    apple_side_causation_claim: false
+    classic_mdm_enrollment_claim: false
+    known_spyware_family_claim: false
+    purpose: "validation and falsification framework"
+
+  core_model: >
+    Shadow Cloud is treated as a working hypothesis for a possible Apple
+    account, iCloud, backup, restriction-layer, telecom, and proximity
+    control-surface anomaly. The model does not require a visible classic
+    malware payload. The strongest traces may appear at the seams between
+    legitimate Apple services and abnormal control behavior.
+
+  hypotheses:
+    - id: H1
+      name: "Policy-as-Persistence"
+      role: "core"
+      confidence: "medium-high"
+      meaning: >
+        Persistence may be expressed through policy state, restriction state,
+        Apple ID trust state, ScreenTime state, ManagedSettings behavior, or
+        management-adjacent daemon activity rather than through a classic
+        malware implant.
+      main_layers:
+        - ScreenTimeAgent
+        - ManagedSettings
+        - FamilyControls
+        - restrictions
+        - Apple ID sign-out restriction
+        - managedappdistributiond
+        - dmd
+        - RemoteManagementAgent
+      observed_indicators:
+        - "ScreenTime restrictions without clear user configuration"
+        - "Apple ID sign-out restriction behavior"
+        - "ManagedSettings or FamilyControls traces"
+        - "MDMStatus:false or supervised:false with restriction-like behavior"
+        - "repeated policy-state or management-adjacent daemon anomalies"
+      supports_if:
+        - "restriction behavior repeats across multiple devices"
+        - "restriction behavior survives restore, migration, or Apple ID lineage changes"
+        - "visible management state and effective restriction behavior do not match"
+        - "restriction symptoms correlate with daemon activity"
+      weakens_if:
+        - "all restriction behavior is confirmed as local user configuration"
+        - "normal Apple behavior explains the full pattern"
+        - "there is no cross-device or cross-generation continuity"
+
+    - id: H2
+      name: "Backup-layer Anti-Forensics"
+      role: "core"
+      confidence: "medium-high"
+      meaning: >
+        Backup-layer artifacts may represent an anti-forensic surface affecting
+        evidence preservation, restoration integrity, reviewability, or
+        third-party verification.
+      main_layers:
+        - Manifest.db
+        - Manifest.plist
+        - Status.plist
+        - Info.plist
+        - RTCR
+        - backup encryption
+        - keybag
+        - iMazing backup generations
+      observed_indicators:
+        - "Manifest.db structural abnormality"
+        - "non-SQLite or opaque Manifest behavior"
+        - "backup generation inconsistency"
+        - "RTCR generation anomaly"
+        - "encrypted versus unencrypted backup difference"
+        - "backup success display with abnormal backend artifact state"
+      supports_if:
+        - "Manifest.db abnormality repeats across backup generations"
+        - "encrypted and unencrypted backups behave differently"
+        - "backup success status does not match artifact validity"
+        - "control devices show normal backup ledgers under similar conditions"
+      weakens_if:
+        - "iMazing or Apple backup behavior fully explains the Manifest pattern"
+        - "the same Manifest behavior appears on clean control devices"
+        - "proper decryption and tool handling restore normal SQLite access"
+      public_apt42_difference: >
+        Public APT42 reporting does not currently establish iOS backup
+        Manifest.db or Manifest.plist manipulation as a known TTP. This makes
+        backup-layer anomalies a Shadow Cloud differential hypothesis, not an
+        APT42 attribution point.
+
+    - id: H3
+      name: "Trust-Graph Poisoning"
+      role: "core"
+      confidence: "high"
+      meaning: >
+        The anomaly may involve distortion of a broader trust graph, including
+        Apple ID lineage, trusted devices, backup lineage, SIM or OTP state,
+        and financial device trust, rather than compromise of only one device.
+      main_layers:
+        - Apple ID lineage
+        - trusted devices
+        - usageClientId
+        - backup lineage
+        - SIM state
+        - CommCenter
+        - OTP trust
+        - financial device trust
+      observed_indicators:
+        - "Apple ID lineage transitions"
+        - "device identity discontinuity"
+        - "usageClientId switching"
+        - "trusted-device behavior anomalies"
+        - "SIM, CommCenter, or OTP-related anomalies"
+        - "financial applications requesting re-authentication"
+        - "bank-side device-change indicators"
+      supports_if:
+        - "similar trust-state anomalies appear across multiple Apple devices"
+        - "continuity persists after device replacement or Apple ID migration"
+        - "device trust anomalies correlate with financial re-authentication events"
+        - "comparison devices do not show the same trust-state pattern"
+      weakens_if:
+        - "all events are explained by normal account migration or device replacement"
+        - "there is no cross-device continuity"
+        - "financial re-authentication is unrelated to trust-state anomalies"
+
+    - id: H4
+      name: "Proximity-triggered State Switch"
+      role: "supporting"
+      confidence: "medium"
+      meaning: >
+        Wi-Fi, BSSID, RSSI, Evil Twin, rogue AP, or nearby-device signals may
+        function as proximity or condition triggers used to change state when
+        the target is physically present in a specific environment.
+      main_layers:
+        - WiFiLQMMetrics
+        - BSSID
+        - RSSI
+        - channel
+        - locationd
+        - CommCenter
+        - Baseband
+        - physical proximity
+      observed_indicators:
+        - "BSSID, RSSI, or channel anchors"
+        - "WiFiLQMMetrics anomalies"
+        - "locationd correlation"
+        - "CommCenter or Baseband correlation"
+        - "movement or arrival-time correlation"
+        - "device behavior changes around physical proximity events"
+      supports_if:
+        - "state changes repeat near specific BSSID or RSSI patterns"
+        - "human proximity events correlate with daemon, restriction, or telecom events"
+        - "behavior appears after travel, arrival, or network-environment change"
+      weakens_if:
+        - "BSSID or RSSI patterns are fully explained by ordinary Wi-Fi roaming"
+        - "there is no repeatable time correlation"
+        - "no control-layer symptoms align with proximity signals"
+
+    - id: H5
+      name: "Deniability-first Design"
+      role: "core-supporting"
+      confidence: "medium-high"
+      meaning: >
+        The observed pattern may be designed to appear as ordinary iOS bugs,
+        storage pressure, iCloud sync problems, Wi-Fi quality problems, user
+        error, or backup-tool failure. Plausible deniability may be part of
+        the design.
+      main_layers:
+        - daemon failures
+        - diskwrites
+        - CPU resource pressure
+        - storage pressure
+        - logd
+        - deleted
+        - sync delay
+        - backup failure
+      observed_indicators:
+        - "minor daemon failures across multiple layers"
+        - "storage pressure during evidence-relevant moments"
+        - "screenshot or screen-recording difficulty during critical moments"
+        - "backup failure or partial backup behavior"
+        - "normal-looking error categories masking cross-layer correlation"
+      supports_if:
+        - "minor errors cluster around evidence-relevant events"
+        - "similar benign-looking failure modes recur across devices"
+        - "user evidence actions correlate with preservation degradation"
+      weakens_if:
+        - "ordinary iOS behavior explains all clusters independently"
+        - "the same pattern appears on clean control devices"
+        - "storage and backup problems are fully explained locally"
+
+    - id: H6
+      name: "Alpha/Beta Cohort Testing"
+      role: "supporting"
+      confidence: "medium"
+      meaning: >
+        The long-term multi-device pattern may represent staged testing or
+        phased refinement rather than a finished mature operation. The strongest
+        anomalies may appear at seams because the model is incomplete or still
+        being tuned.
+      main_layers:
+        - timeline phases
+        - multi-device comparison
+        - owner devices
+        - friend devices
+        - control devices
+        - transition windows
+      observed_indicators:
+        - "phase-shift-like density increases"
+        - "March 2026 beta-phase candidate behavior"
+        - "different anomaly types across owner and comparison devices"
+        - "device-specific failure modes"
+        - "repeated but imperfect cross-layer coupling"
+        - "stronger contradictions during transition windows"
+      supports_if:
+        - "clear phase boundaries exist"
+        - "visible contradictions decrease over time"
+        - "different devices appear to occupy different test roles"
+        - "comparison devices act as negative or partial controls"
+      weakens_if:
+        - "there is no chronological progression"
+        - "there are no repeatable phase windows"
+        - "all anomalies are explained by unrelated local failures"
+
+    - id: H7
+      name: "Evidence-Suppression Objective"
+      role: "core"
+      confidence: "high"
+      meaning: >
+        The objective may include suppression of the user's ability to preserve,
+        explain, export, or validate evidence. Evidence preservation itself may
+        be part of the contested surface.
+      main_layers:
+        - screenshot capture
+        - screen recording
+        - local storage
+        - backup
+        - Manifest
+        - RTCR
+        - SFA artifacts
+        - log preservation
+      observed_indicators:
+        - "screenshot failure"
+        - "screen recording failure"
+        - "storage pressure during critical events"
+        - "backup inconsistency"
+        - "Manifest or RTCR abnormality"
+        - "artifact preservation difficulty"
+        - "deletion, logd, or resource-pressure patterns"
+      supports_if:
+        - "preservation failures repeat during high-value events"
+        - "user evidence actions correlate with resource, daemon, or backup anomalies"
+        - "control devices preserve evidence normally under similar conditions"
+        - "failure modes align with the most important event windows"
+      weakens_if:
+        - "preservation failures are fully explained by storage exhaustion, user error, or tool limitations"
+        - "there is no timing relationship to important events"
+        - "same failures reproduce on clean devices"
+
+  reviewer_questions:
+    - "Which hypotheses are supported by preserved artifacts?"
+    - "Which hypotheses are contradicted by preserved artifacts?"
+    - "Which hypotheses can be explained by normal Apple, iOS, iCloud, or iMazing behavior?"
+    - "Which hypotheses require Apple-side telemetry or platform-level review?"
+    - "Which artifacts are necessary for falsification?"
+
+  preferred_outcome: >
+    The preferred outcome is not confirmation. The preferred outcome is a
+    reproducible explanation that either supports, weakens, or falsifies each
+    hypothesis.
