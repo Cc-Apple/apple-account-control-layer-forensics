@@ -461,3 +461,64 @@ Working term used in this repository:
 **Shadow Cloud**
 
 This is a working label for the observed structure, not a malware name, not an actor name, and not an attribution claim.
+
+---
+
+## Working Hypothesis Matrix
+
+This repository includes a reviewer-facing working hypothesis matrix for the Shadow Cloud model.
+
+The matrix is not an attribution claim.
+
+It is intended to help qualified DFIR, CTI, mobile forensic, platform-security, and OS-security reviewers test whether the observed artifacts are better explained as:
+
+* normal Apple / iOS / iCloud behavior
+* user-side backup artifacts
+* tool-related artifacts
+* isolated device failures
+* or a cross-layer account / cloud / policy / backup / telecom trust-state anomaly
+
+The main validation hypotheses are:
+
+1. **Policy-as-Persistence**
+   Policy state, restriction state, ScreenTime state, ManagedSettings behavior, or Apple ID trust state may be acting as the persistence surface rather than a classic malware implant.
+
+2. **Backup-layer Anti-Forensics**
+   Manifest.db, Manifest.plist, RTCR, backup encryption state, or backup-generation behavior may be part of an evidence-preservation or reviewability problem.
+
+3. **Trust-Graph Poisoning**
+   The anomaly may involve Apple ID lineage, trusted devices, backup lineage, SIM / OTP state, usageClientId continuity, and financial device trust rather than only one compromised device.
+
+4. **Proximity-triggered State Switch**
+   BSSID / RSSI / Wi-Fi / telecom / location signals may act as environmental or proximity-based state triggers.
+
+5. **Deniability-first Design**
+   Individually benign-looking symptoms such as iOS bugs, storage pressure, backup failure, iCloud sync delay, or user-error-like behavior may mask cross-layer correlation.
+
+6. **Alpha / Beta Cohort Testing**
+   The observed multi-device timeline may represent staged refinement or transition-phase behavior rather than a mature stable operation.
+
+7. **Evidence-Suppression Objective**
+   The objective may include suppression of the user’s ability to preserve, export, explain, or validate evidence.
+
+These hypotheses are validation targets only.
+
+They do not assert:
+
+* malware attribution
+* actor attribution
+* state attribution
+* Apple-side causation
+* classic MDM enrollment
+* known spyware family deployment
+* confirmed C2
+* confirmed payload
+* confirmed exploit chain
+* Evil Twin / rogue AP use as a proven fact
+
+See also:
+
+* `SUMMARY_ONE_PAGE.md`
+* `reports/10_working_hypothesis_matrix.md`
+* `machine_summary.yaml`
+
