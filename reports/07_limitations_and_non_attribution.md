@@ -27,7 +27,9 @@ However, the current public package does not establish:
 * confirmed spyware-family deployment
 * confirmed MDM enrollment
 * confirmed attacker identity
+* confirmed actor attribution
 * confirmed state attribution
+* confirmed government attribution
 * confirmed vendor attribution
 * confirmed Apple attribution
 * confirmed iMazing attribution
@@ -77,11 +79,14 @@ Outlook / Microsoft account-cloud-calendar-document surface
 Manifest.db / backup-ledger seam
 = byproduct / observable evidence-preservation seam
 
-APT42-style ACMS
-= account / cloud / mobile-surveillance comparison reference
+Account / cloud / mobile-surveillance comparison
+= public comparison reference
 
-APT32-style historical transfer
+Historical TTP comparison
 = secondary operational-history comparison reference
+
+Telecom / proximity comparison
+= tertiary condition / context comparison
 
 Attribution
 = not asserted
@@ -156,13 +161,12 @@ The Shadow Cloud hypothesis applies a similar logic to Apple ecosystem state.
 
 The suspected surface is not primarily:
 
-* PowerShell
-* WMI
-* RDP
-* PsExec
-* SSH
-* VPN tools
-* enterprise admin consoles
+* PC-side native utilities
+* enterprise admin tools
+* classic remote-access tools
+* endpoint toolmarks
+* visible management profiles
+* known malware payloads
 
 The suspected surface is Apple platform state.
 
@@ -172,7 +176,7 @@ Therefore, the LOTL-like framing should be read as:
 
 It should not be read as:
 
-> A claim that a specific known LOTL actor performed the activity.
+> A claim that a specific known actor performed the activity.
 
 It should also not be read as:
 
@@ -253,76 +257,58 @@ If no, the backup ledger may require deeper forensic review as a possible eviden
 
 ---
 
-## Relationship to APT42
+## Relationship to public TTP mechanism comparison
 
-APT42 is referenced only as a public TTP comparison point.
+Public TTP comparison is used only as mechanism context.
 
-APT42-style public reporting is relevant because it emphasizes:
+It may help reviewers compare:
 
-* account targeting
-* credential / MFA / OTP targeting
-* cloud access
-* mobile surveillance
-* long-term monitoring
-* low-noise collection
-* cross-layer observation of human, authentication, cloud, and mobile behavior
+* account / cloud / mobile-surveillance concepts
+* long-term low-noise operations
+* legitimate-service-oriented behavior
+* staged refinement
+* trace-suppression behavior
+* telecom / proximity concepts
+* evidence-preservation problems
+* mobile-native LOTL-like platform-state behavior
 
-This is useful for comparing account / cloud / mobile-surveillance doctrine.
+However, public TTP comparison is not used as attribution.
 
-However, this repository does not claim:
+Named public threat reports, commercial spyware models, telecom / proximity concepts, Microsoft app surfaces, and LOTL references are comparison points or possible review surfaces only.
 
-* APT42 executed the observed activity
-* APT42 targeted the devices
-* APT42 infrastructure was found
-* APT42 malware was found
-* APT42 phishing infrastructure was found
-* APT42 attribution is established
-
-The similarity is doctrinal, not attributional.
-
-APT42-style ACMS is used only as:
-
-> An account / cloud / mobile-surveillance comparison reference.
-
----
-
-## Relationship to APT32 / OceanLotus
-
-APT32 / OceanLotus is referenced only as a historical and operational TTP comparison point.
-
-APT32-style comparison may be useful for examining:
-
-* older operational doctrine
-* long-term low-noise operation
-* legitimate-service abuse
-* trace suppression
-* staged operational refinement
-* residual seam failures
-* possible old-doctrine leakage
-* historical TTP transfer or adaptation
-
-However, this repository does not claim:
-
-* APT32 executed the observed activity
-* OceanLotus executed the observed activity
-* APT32 infrastructure was found
-* APT32 malware was found
-* APT32 C2 was found
-* APT32 attribution is established
-
-APT32-style comparison is secondary.
-
-It is not required for the Shadow Cloud hypothesis to be reviewed.
-
-The primary mechanism-level framing is:
+The primary hypothesis remains:
 
 > Mobile-native LOTL-like Apple platform-state anomaly.
 
 ---
 
-## Relationship to LIMINAL-style telecom / proximity concepts
+## Relationship to historical TTP comparison
 
-LIMINAL-style or telecom/proximity concepts are referenced only as comparison models.
+Historical TTP comparison is used only as secondary operational-history context.
+
+It may help frame:
+
+* long-term low-noise behavior
+* legitimate-service use
+* staged refinement
+* trace suppression
+* old-doctrine leakage
+* operational seam failure
+* environment-specific adaptation
+
+However, historical TTP comparison is not asserted as attribution.
+
+It is not the central framing.
+
+The central framing is:
+
+> Mobile-native LOTL-like Apple platform-state anomaly.
+
+---
+
+## Relationship to telecom / proximity concepts
+
+Telecom / proximity concepts are referenced only as condition or context comparisons.
 
 They may be useful for thinking about:
 
@@ -330,11 +316,11 @@ They may be useful for thinking about:
 * proximity-linked behavior
 * SIM / baseband context
 * network-edge or mobile-network interaction
+* radio-environment anchors
 * condition-based state changes
 
 However, this repository does not claim:
 
-* LIMINAL PANDA attribution
 * telecom operator attribution
 * confirmed baseband compromise
 * confirmed rogue base station
@@ -353,7 +339,7 @@ They are not treated as standalone attribution evidence.
 
 ## Relationship to commercial spyware models
 
-Mercenary spyware, zero-click spyware, Pegasus-style, Predator-style, Intellexa-style, NSO-style, or similar commercial surveillance models may be referenced as comparison points only.
+Commercial spyware, mercenary spyware, zero-click spyware, or similar mobile surveillance models may be referenced as comparison points only.
 
 They may be relevant because mobile surveillance cases can involve:
 
@@ -365,13 +351,11 @@ They may be relevant because mobile surveillance cases can involve:
 
 However, this repository does not claim:
 
-* Pegasus deployment
-* Predator deployment
-* Intellexa deployment
-* NSO involvement
-* commercial spyware-family attribution
+* commercial spyware deployment
+* known spyware-family attribution
 * confirmed zero-click exploit
 * confirmed exploit chain
+* confirmed spyware payload
 
 These models are comparison references only.
 
@@ -814,8 +798,9 @@ It only estimates how strongly the observed structure resembles a public operati
 
 Examples:
 
-* APT42-style alignment means similarity to account / cloud / mobile-surveillance doctrine.
-* APT32-style alignment means similarity to historical operational doctrine, seam failures, or old-doctrine leakage.
+* Account / cloud / mobile-surveillance alignment means similarity to account / cloud / mobile-surveillance doctrine.
+* Historical TTP alignment means similarity to long-term, low-noise, legitimate-service-oriented operation, seam failures, or old-doctrine leakage.
+* Telecom / proximity alignment means similarity to telecom, proximity, and condition-linked state comparison.
 * LOTL-like alignment means similarity to a mechanism where normal-looking platform states or legitimate functions become the anomaly surface.
 * Backup-ledger seam alignment means the Manifest.db / backup-ledger abnormality is structurally consistent with a mobile LOTL-like platform-state review model.
 * Mobile-native LOTL-like alignment means the broader structure is consistent with a mobile adaptation of LOTL logic where account, calendar, document, policy, backup, telecom, and evidence-preservation states become the review surface.
@@ -884,7 +869,7 @@ This document claims only the following:
 * iMazing is treated as an acquisition surface, not an asserted cause.
 * Apple backup state is treated as a review surface, not proof of Apple causation.
 * Microsoft / Outlook / Office surfaces are future review surfaces only, not public evidence of causation.
-* APT42, APT32, LIMINAL-style, mercenary spyware, Microsoft app surfaces, and LOTL references are comparison points or review surfaces only.
+* Public TTP comparison, historical TTP comparison, telecom / proximity comparison, commercial spyware models, Microsoft app surfaces, and LOTL references are comparison points or review surfaces only.
 * The review target is the cross-layer Apple ecosystem seam structure.
 * The hypothesis is falsifiable.
 * Normal explanations are welcome and should be documented.
@@ -902,10 +887,9 @@ This document does not claim:
 * confirmed exploit chain
 * confirmed spyware
 * confirmed MDM enrollment
-* APT42 attribution
-* APT32 attribution
-* LIMINAL PANDA attribution
+* actor attribution
 * state attribution
+* government attribution
 * Apple attribution
 * iMazing attribution
 * Microsoft attribution
