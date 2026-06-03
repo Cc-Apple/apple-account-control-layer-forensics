@@ -173,6 +173,16 @@ This matters because Manifest.db is a core backup ledger.
 
 If the ledger itself becomes opaque, damaged, or structurally abnormal across generations, then standard backup trust assumptions become questionable.
 
+This repository now also frames the Manifest.db issue as a possible **backup-ledger seam** within a mobile LOTL-like Apple platform-state anomaly.
+
+This does not mean that iMazing is treated as the cause.
+
+The safer interpretation is that iMazing may be the acquisition surface through which abnormal Apple backup state becomes observable.
+
+See:
+
+* `docs/backup_ledger_seam_mobile_lotl.md`
+
 ---
 
 ### 2. usageClientId transitions
@@ -277,6 +287,30 @@ Instead, it may reveal itself where different systems must connect:
 * resource pressure ↔ user attempt to preserve evidence
 
 The hypothesis is that Shadow Cloud-like activity would leave its clearest traces at these integration seams.
+
+---
+
+## Backup-ledger seam addendum
+
+The `docs/` directory includes a backup-layer addendum:
+
+* `docs/backup_ledger_seam_mobile_lotl.md`  
+  Frames the Manifest.db / backup-ledger issue as a possible backup-ledger seam within a mobile LOTL-like Apple platform-state anomaly.
+
+This addendum does not claim that iMazing caused the anomaly.
+
+It treats iMazing as an acquisition surface through which abnormal Apple backup state may become observable.
+
+The central review question is whether normal Apple / iOS / iMazing backup behavior can explain repeated Manifest.db / backup-ledger abnormality across preserved backup generations, especially when aligned with trust-state, restriction-state, daemon-layer, telecom, and evidence-preservation anomalies.
+
+In short:
+
+> Not living off tools.  
+> Living off Apple backup state.
+
+This is a supporting technical interpretation.
+
+It does not replace the broader Shadow Cloud model.
 
 ---
 
@@ -388,6 +422,31 @@ It clarifies their role:
 * APT32-style historical transfer remains a secondary operational-history comparison.
 * LOTL-like Apple platform-state abuse is the preferred mechanism-level framing.
 * No attribution is asserted.
+
+---
+
+## Backup-layer technical addendum
+
+The `docs/` directory also includes a backup-ledger technical addendum:
+
+* `docs/backup_ledger_seam_mobile_lotl.md`  
+  Reviews the Manifest.db / backup-ledger issue as a possible evidence-preservation seam within a mobile LOTL-like Apple platform-state anomaly.
+
+This addendum clarifies:
+
+* iMazing is not presented as the cause.
+* iMazing may be the acquisition surface.
+* Apple backup state is the review surface.
+* Manifest.db may be the observable backup-ledger seam.
+* The key review question is whether normal Apple / iOS / iMazing behavior can reproduce the repeated Manifest.db / backup-ledger abnormality.
+
+This document is a technical expansion of the DFRWS poster framing.
+
+It does not require a change to the poster.
+
+The poster is the summary.
+
+The GitHub document is the detailed backup-layer review note.
 
 ---
 
@@ -576,6 +635,9 @@ The main validation hypotheses are:
 7. **Evidence-Suppression Objective**
    The objective may include suppression of the user’s ability to preserve, export, explain, or validate evidence.
 
+8. **LOTL-like Platform-State Abuse**
+   The anomaly may not appear through a visible malicious tool, payload, C2, configuration profile, or confirmed MDM enrollment. Instead, normal-looking Apple platform states, including trust state, restriction state, backup state, telecom state, and evidence-preservation state, may become the anomaly surface.
+
 These hypotheses are validation targets only.
 
 They do not assert:
@@ -596,3 +658,5 @@ See also:
 * `SUMMARY_ONE_PAGE.md`
 * `reports/10_working_hypothesis_matrix.md`
 * `machine_summary.yaml`
+* `docs/ttp_framing_addendum_lotl_platform_state.md`
+* `docs/backup_ledger_seam_mobile_lotl.md`
