@@ -12,11 +12,15 @@ This is treated as a backup path / backup service / backup-ledger anomaly candid
 
 It is not treated as an attribution indicator.
 
-Under the updated Shadow Cloud framing, the Manifest.db issue may represent a **backup-ledger seam** within a mobile LOTL-like Apple platform-state anomaly.
+Under the updated Shadow Cloud framing, the `Manifest.db` issue may represent a **backup-ledger seam** within a mobile-native LOTL-like Apple platform-state anomaly.
 
 This does not mean that iMazing is treated as the cause.
 
 The safer interpretation is that iMazing may be the acquisition surface through which abnormal Apple backup state becomes observable.
+
+`Manifest.db` is not treated as the root cause.
+
+It is treated as a possible byproduct or observable evidence-preservation seam.
 
 ---
 
@@ -37,9 +41,13 @@ Apple backup state
 =
 review surface
 
+Manifest.db / backup-ledger abnormality
+=
+byproduct / observable evidence-preservation seam
+
 Shadow Cloud context
 =
-mobile LOTL-like platform-state anomaly
+mobile-native LOTL-like Apple platform-state anomaly
 
 Attribution
 =
@@ -55,7 +63,42 @@ Living off Apple backup state.
 
 This framing does not claim that iMazing caused the anomaly.
 
-It asks whether normal Apple / iOS / iMazing backup behavior can reproduce the repeated Manifest.db / backup-ledger abnormality across preserved backup generations.
+It asks whether normal Apple / iOS / iMazing backup behavior can reproduce the repeated `Manifest.db` / backup-ledger abnormality across preserved backup generations.
+
+---
+
+## Relationship to the maximum working hypothesis
+
+The current maximum working hypothesis is:
+
+> Mobile-native LOTL-like Apple platform-state anomaly.
+
+This means that a PC / enterprise-style Living-off-the-Land concept may have a mobile-native equivalent, where legitimate mobile apps, accounts, cloud identity, calendar, document, policy, backup, telecom, and evidence-preservation states become the observable control surface.
+
+In this model:
+
+* Outlook / Microsoft account-cloud-calendar-document surfaces are possible future review surfaces.
+* `Manifest.db` is not treated as the root cause.
+* `Manifest.db` / backup-ledger abnormality is treated as a possible byproduct or observable evidence-preservation seam.
+* iMazing is not treated as the cause.
+* Apple backup state is treated as the review surface.
+* Attribution is not asserted.
+
+The proposed sequence is:
+
+```text
+mobile-native LOTL-like account / cloud / calendar / document / policy state
+↓
+Apple trust state / restriction state / backup state / keybag-encryption state / evidence-preservation state
+↓
+iMazing / iOS backup acquisition
+↓
+Manifest.db / backup-ledger abnormality becomes observable
+```
+
+This means `Manifest.db` is not the first step.
+
+`Manifest.db` is where abnormal platform state may become visible during preservation.
 
 ---
 
@@ -88,6 +131,8 @@ If `Manifest.db` repeatedly fails to behave as a normal SQLite database across m
 8. Abnormal Apple backup state / trust state / keybag state
 9. Evidence-preservation degradation
 10. Deliberate or induced control-layer artifact
+11. Mobile-native LOTL-like platform-state anomaly byproduct
+12. Microsoft app residue / Outlook calendar residue, if preserved artifacts later support that review path
 
 This repository does not assert which explanation is correct.
 
@@ -125,6 +170,7 @@ This is especially relevant when combined with:
 * storage pressure
 * evidence-preservation difficulty
 * RTCR / Manifest.plist / Status.plist relationship questions
+* possible account-cloud-calendar-document review surfaces
 
 The review issue is not only file readability.
 
@@ -157,6 +203,7 @@ However, the investigation focus remains the repeated opaque `Manifest.db` struc
 * multi-generation reproducibility
 * iMazing success / backend artifact reviewability mismatch
 * broader Shadow Cloud platform-state anomaly structure
+* possible account-cloud-calendar-document state if later supported by preserved artifacts
 
 ---
 
@@ -253,6 +300,56 @@ If no, the backup-ledger seam remains a high-value forensic review target.
 
 ---
 
+## Relationship to Outlook / Microsoft surfaces
+
+Outlook / Microsoft mobile surfaces are not used in this document as proof of the `Manifest.db` anomaly.
+
+They are relevant only as possible future review surfaces within the broader maximum hypothesis.
+
+Relevant future review surfaces may include:
+
+* Outlook
+* Exchange
+* Microsoft 365
+* Teams
+* OneDrive
+* SharePoint
+* Office
+* Excel
+* Word
+* PowerPoint
+* Microsoft Authenticator
+* Microsoft Edge
+* Company Portal
+* Intune / MAM
+* OAuth
+* access tokens
+* refresh tokens
+* Microsoft Graph
+* calendar invites
+* meeting objects
+* ICS files
+* attachments
+* document-provider state
+* FileProvider behavior
+* app protection policy
+* selective wipe / managed app state
+
+This document does not claim:
+
+* Outlook caused the `Manifest.db` anomaly
+* Microsoft caused the `Manifest.db` anomaly
+* Microsoft mobile apps directly modified `Manifest.db`
+* Microsoft mobile apps directly modified backup keybags
+* Microsoft mobile apps directly modified iOS backup services
+* Microsoft mobile apps directly modified Apple backup state
+
+The safe interpretation is:
+
+> Microsoft / Outlook surfaces may be relevant as account-cloud-calendar-document-policy surfaces for future review. They are not asserted as causes of the Manifest.db anomaly.
+
+---
+
 ## White-explanation-first review
 
 This anomaly must be tested against normal explanations first.
@@ -332,6 +429,20 @@ Why this may be insufficient:
 * Comparable devices under comparable conditions should show the same pattern.
 * If the pattern aligns with ScreenTime / ManagedSettings / MDMStatus:false / daemon repetition / CommCenter / evidence-preservation difficulty, a single backup bug may not explain the broader structure.
 
+### 7. Microsoft app residue / Outlook calendar residue
+
+Possible explanation:
+
+* Outlook / Microsoft-related traces, if reviewed later, may be normal app residue.
+* Meeting or schedule-like traces may come from ordinary ICS files, old calendar invites, app cache, account residue, or notification history.
+* Microsoft app state may be unrelated to the backup-ledger issue.
+
+Why this may be insufficient:
+
+* If preserved artifacts show Outlook / Microsoft traces repeatedly aligning with backup, restriction, account, telecom, or evidence-preservation anomalies, ordinary residue may not fully explain the structure.
+* If low-use or non-use status is confirmed, unexpected Microsoft traces may carry investigative value.
+* If traces correlate with key windows rather than appearing randomly, the surface may require deeper review.
+
 ---
 
 ## White-explanation pressure
@@ -352,8 +463,9 @@ A complete normal explanation must account for all of the following together:
 * possible iMazing success / backend artifact mismatch
 * RTCR / Manifest.plist / Status.plist review questions
 * relationship to broader platform-state anomaly signals
+* possible Outlook / Microsoft review-surface relevance if preserved artifacts support it
 
-If normal Apple / iOS / iMazing behavior can reproduce the full structure, the hypothesis should be weakened.
+If normal Apple / iOS / iMazing / Microsoft-app behavior can reproduce the full structure, the hypothesis should be weakened.
 
 If not, the backup-ledger seam interpretation remains technically meaningful.
 
@@ -372,7 +484,9 @@ If not, the backup-ledger seam interpretation remains technically meaningful.
 9. Do clean control devices under the same iMazing / iOS / PC workflow show the same behavior?
 10. Could this pattern indicate a backup-layer or account/control-layer anomaly?
 11. Does the issue correlate with ScreenTime / ManagedSettings / MDMStatus:false / daemon-layer / CommCenter / evidence-preservation windows?
-12. Should this be treated as a backup-ledger seam within a mobile LOTL-like platform-state anomaly?
+12. Should this be treated as a backup-ledger seam within a mobile-native LOTL-like platform-state anomaly?
+13. If Outlook / Microsoft artifacts are later reviewed, are they ordinary residue or correlated account-cloud-calendar-document-policy surfaces?
+14. Can normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior explain the full cross-layer structure?
 
 ---
 
@@ -385,16 +499,23 @@ Backup-ledger seam in mobile LOTL-like platform-state anomaly:
 82 / 100
 ```
 
-This score does not mean:
+Relationship to the maximum hypothesis:
 
 ```text
-82% probability of attack.
+Mobile-native LOTL-like Apple platform-state anomaly:
+88 / 100
 ```
 
-It means:
+These scores do not mean:
 
 ```text
-The backup-ledger seam hypothesis explains the observed structure better than isolated normal explanations, but still requires qualified artifact-level review.
+82% or 88% probability of attack.
+```
+
+They mean:
+
+```text
+The backup-ledger seam hypothesis and the broader mobile-native LOTL-like platform-state model explain the observed structure better than isolated normal explanations, but still require qualified artifact-level review.
 ```
 
 Score breakdown:
@@ -423,7 +544,7 @@ Conservative public score:
 
 ## Relationship to Shadow Cloud
 
-This Manifest.db anomaly is one technical branch of the broader Shadow Cloud model.
+This `Manifest.db` anomaly is one technical branch of the broader Shadow Cloud model.
 
 It connects most strongly to:
 
@@ -431,7 +552,8 @@ It connects most strongly to:
 * Backup-ledger Seam in Mobile LOTL-like Platform-State Anomaly
 * Evidence-Suppression Objective
 * Trust-Graph Poisoning
-* LOTL-like Platform-State Abuse
+* LOTL-like Platform-State Anomaly
+* Mobile-native LOTL-like Apple Platform-State Anomaly
 
 It does not prove any of those hypotheses alone.
 
@@ -439,19 +561,24 @@ It provides a backup-layer review target.
 
 ---
 
-## Relationship to detailed addendum
+## Relationship to detailed addenda
 
 The detailed backup-layer addendum is:
 
 * `docs/backup_ledger_seam_mobile_lotl.md`
 
-That document expands the relationship between:
+The maximum hypothesis addendum is:
+
+* `docs/mobile_lotl_maximum_hypothesis.md`
+
+These documents expand the relationship between:
 
 * `Manifest.db`
 * backup-ledger behavior
-* mobile LOTL-like platform-state anomaly
+* mobile-native LOTL-like platform-state anomaly
 * iMazing as acquisition surface
 * Apple backup state as review surface
+* Outlook / Microsoft surfaces as future review surfaces
 * white-explanation-first review
 
 ---
@@ -467,6 +594,7 @@ This document does not claim:
 * Apple attribution
 * iMazing attribution
 * Microsoft attribution
+* Outlook causation
 * state attribution
 * actor attribution
 * spyware-family attribution
@@ -481,8 +609,8 @@ This document does not claim:
 
 ## One-line summary
 
-The Manifest.db anomaly is not treated as simple encrypted-backup unreadability.
+The `Manifest.db` anomaly is not treated as simple encrypted-backup unreadability.
 
 It is treated as repeated backup-ledger structural abnormality requiring review.
 
-Under the updated Shadow Cloud framing, it may represent a backup-ledger seam within a mobile LOTL-like Apple platform-state anomaly, with iMazing treated as the acquisition surface rather than the cause.
+Under the updated Shadow Cloud framing, it may represent a backup-ledger seam within a mobile-native LOTL-like Apple platform-state anomaly, with iMazing treated as the acquisition surface rather than the cause, and `Manifest.db` treated as a byproduct or observable evidence-preservation seam rather than the root cause.
