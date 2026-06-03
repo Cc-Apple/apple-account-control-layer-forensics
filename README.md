@@ -28,6 +28,45 @@ They appear as structural contradictions.
 
 ---
 
+## Updated TTP framing: LOTL-like Apple platform-state abuse
+
+The current recommended framing is:
+
+> Shadow Cloud is a non-attribution, LOTL-like Apple platform-state / trust-state abuse hypothesis.
+
+This means the strongest traces are not expected to appear primarily in malware payloads, C2 infrastructure, exploit chains, configuration profiles, or visible MDM enrollment.
+
+Instead, the suspected anomaly surface is Apple platform state itself:
+
+* Apple ID trust state
+* iCloud trust state
+* trusted-device behavior
+* usageClientId / usage-state transitions
+* ScreenTime / ManagedSettings
+* backup-ledger behavior
+* Manifest.db / Manifest.plist / Status.plist
+* RTCR / RTCReporting
+* CommCenter / Baseband / SIM / OTP context
+* BSSID / RSSI proximity context
+* evidence-preservation behavior
+
+In short:
+
+> Not living off tools.  
+> Living off Apple platform state.
+
+APT42-style account / cloud / mobile-surveillance doctrine remains useful as a public TTP comparison reference.
+
+APT32-style historical TTP transfer remains useful as a secondary operational-history comparison.
+
+Neither is used as attribution.
+
+See:
+
+* `docs/ttp_framing_addendum_lotl_platform_state.md`
+
+---
+
 ## Core challenge
 
 The central question is simple:
@@ -63,6 +102,24 @@ APT32, APT42, LIMINAL PANDA, mercenary spyware models, and living-off-the-land t
 The purpose is not attribution.
 
 The purpose is structural comparison.
+
+### TTP-framing clarification
+
+This repository should not be read as an actor-centered APT claim.
+
+The preferred technical framing is now mechanism-centered:
+
+* **Shadow Cloud** = working hypothesis name
+* **LOTL-like Apple platform-state abuse** = proposed TTP mechanism
+* **APT42-style ACMS** = account / cloud / mobile-surveillance comparison reference
+* **APT32-style historical transfer** = secondary operational-history comparison
+* **Attribution** = not asserted
+
+This clarification reduces the risk that APT names are mistaken for attribution claims.
+
+The central question is not which actor performed the activity.
+
+The central question is whether normal Apple / iOS / iCloud / iMazing behavior can explain a long-term, cross-device pattern in which trust state, restriction state, backup state, telecom state, and evidence-preservation behavior appear to cluster at the same seams.
 
 ---
 
@@ -316,6 +373,24 @@ The `reports/` directory contains the structured analysis set:
 
 ---
 
+## TTP framing addendum
+
+The `docs/` directory includes an additional TTP-framing document:
+
+* `docs/ttp_framing_addendum_lotl_platform_state.md`  
+  Reframes Shadow Cloud as a non-attribution, LOTL-like Apple platform-state / trust-state abuse hypothesis.
+
+This addendum does not replace the existing APT42 / APT32 / LIMINAL-style comparison reports.
+
+It clarifies their role:
+
+* APT42-style ACMS remains an account / cloud / mobile-surveillance comparison reference.
+* APT32-style historical transfer remains a secondary operational-history comparison.
+* LOTL-like Apple platform-state abuse is the preferred mechanism-level framing.
+* No attribution is asserted.
+
+---
+
 ## Evidence materials
 
 The `evidence/` directory contains:
@@ -521,4 +596,3 @@ See also:
 * `SUMMARY_ONE_PAGE.md`
 * `reports/10_working_hypothesis_matrix.md`
 * `machine_summary.yaml`
-
