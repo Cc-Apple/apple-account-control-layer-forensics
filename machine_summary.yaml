@@ -1,153 +1,273 @@
 ttp_framing_update_lotl_platform_state:
-  status: "public_non_attribution_framing_update"
-  date_added: "2026-06"
-  purpose: >
-    Clarify the Shadow Cloud working hypothesis as a LOTL-like Apple
-    platform-state / trust-state abuse hypothesis, while keeping APT42,
-    APT32, LIMINAL-style, mercenary spyware, and LOTL references as
-    comparison points only.
+status: "public_non_attribution_framing_update"
+date_added: "2026-06"
+purpose: >
+Clarify the Shadow Cloud working hypothesis as a LOTL-like Apple
+platform-state / trust-state abuse hypothesis, while keeping APT42,
+APT32, LIMINAL-style, mercenary spyware, and LOTL references as
+comparison points only.
 
-  primary_framing:
-    hypothesis_name: "Shadow Cloud"
-    mechanism: "LOTL-like Apple platform-state / trust-state abuse"
-    short_formula: "Not living off tools. Living off Apple platform state."
-    trace_location: "not in payloads, but in Apple ecosystem seams"
+primary_framing:
+hypothesis_name: "Shadow Cloud"
+mechanism: "LOTL-like Apple platform-state / trust-state abuse"
+short_formula: "Not living off tools. Living off Apple platform state."
+trace_location: "not in payloads, but in Apple ecosystem seams"
 
-  hypothesis_stack:
-    shadow_cloud:
-      role: "working hypothesis name"
-      attribution: "not asserted"
+hypothesis_stack:
+shadow_cloud:
+role: "working hypothesis name"
+attribution: "not asserted"
 
-    lotl_like_apple_platform_state_abuse:
-      role: "proposed TTP mechanism"
-      description: >
-        A mechanism-level framing in which normal-looking Apple platform states,
-        trust states, restriction states, backup states, telecom states, and
-        evidence-preservation behavior may become the anomaly surface.
-      attribution: "not asserted"
+```
+lotl_like_apple_platform_state_abuse:
+  role: "proposed TTP mechanism"
+  description: >
+    A mechanism-level framing in which normal-looking Apple platform states,
+    trust states, restriction states, backup states, telecom states, and
+    evidence-preservation behavior may become the anomaly surface.
+  attribution: "not asserted"
 
-    apt42_style_acms:
-      role: "comparison reference"
-      meaning: "account / cloud / mobile-surveillance doctrine"
-      attribution: "not asserted"
+apt42_style_acms:
+  role: "comparison reference"
+  meaning: "account / cloud / mobile-surveillance doctrine"
+  attribution: "not asserted"
 
-    apt32_style_historical_transfer:
-      role: "secondary comparison reference"
-      meaning: "historical TTP transfer / old-doctrine leakage / operational-history comparison"
-      attribution: "not asserted"
+apt32_style_historical_transfer:
+  role: "secondary comparison reference"
+  meaning: "historical TTP transfer / old-doctrine leakage / operational-history comparison"
+  attribution: "not asserted"
 
-    liminal_style_telecom_proximity:
-      role: "tertiary comparison reference"
-      meaning: "telecom / proximity / condition-linked state comparison"
-      attribution: "not asserted"
+liminal_style_telecom_proximity:
+  role: "tertiary comparison reference"
+  meaning: "telecom / proximity / condition-linked state comparison"
+  attribution: "not asserted"
+```
 
-  apple_platform_state_surfaces:
-    - "Apple ID trust state"
-    - "iCloud trust state"
-    - "trusted-device behavior"
-    - "usageClientId / usage-state transitions"
-    - "ScreenTime"
-    - "ManagedSettings"
-    - "FamilyControls"
-    - "MDMStatus:false with management-adjacent daemon activity"
-    - "Manifest.db / Manifest.plist / Status.plist"
-    - "backup-ledger behavior"
-    - "RTCR / RTCReporting"
-    - "CommCenter"
-    - "Baseband"
-    - "SIM / OTP / financial device-trust context"
-    - "BSSID / RSSI proximity context"
-    - "storage pressure"
-    - "backup failure"
-    - "screenshot / recording difficulty"
-    - "evidence-preservation interference"
+apple_platform_state_surfaces:
+- "Apple ID trust state"
+- "iCloud trust state"
+- "trusted-device behavior"
+- "usageClientId / usage-state transitions"
+- "ScreenTime"
+- "ManagedSettings"
+- "FamilyControls"
+- "MDMStatus:false with management-adjacent daemon activity"
+- "Manifest.db / Manifest.plist / Status.plist"
+- "backup-ledger behavior"
+- "RTCR / RTCReporting"
+- "CommCenter"
+- "Baseband"
+- "SIM / OTP / financial device-trust context"
+- "BSSID / RSSI proximity context"
+- "storage pressure"
+- "backup failure"
+- "screenshot / recording difficulty"
+- "evidence-preservation interference"
 
-  distinction_from_traditional_lotl:
-    traditional_lotl:
-      summary: "uses legitimate tools, valid accounts, native utilities, or normal administrative workflows"
-      examples:
-        - "PowerShell"
-        - "WMI"
-        - "RDP"
-        - "PsExec"
-        - "SSH"
-        - "VPN access"
-        - "cloud console activity"
-        - "valid accounts"
-        - "native administrative tools"
+distinction_from_traditional_lotl:
+traditional_lotl:
+summary: "uses legitimate tools, valid accounts, native utilities, or normal administrative workflows"
+examples:
+- "PowerShell"
+- "WMI"
+- "RDP"
+- "PsExec"
+- "SSH"
+- "VPN access"
+- "cloud console activity"
+- "valid accounts"
+- "native administrative tools"
 
-    shadow_cloud_platform_state:
-      summary: "may use or distort legitimate Apple platform state"
-      examples:
-        - "Apple ID / iCloud trust state"
-        - "ScreenTime / ManagedSettings state"
-        - "backup-ledger state"
-        - "Manifest.db behavior"
-        - "CommCenter / Baseband / SIM / OTP context"
-        - "usageClientId continuity"
-        - "evidence-preservation behavior"
+```
+shadow_cloud_platform_state:
+  summary: "may use or distort legitimate Apple platform state"
+  examples:
+    - "Apple ID / iCloud trust state"
+    - "ScreenTime / ManagedSettings state"
+    - "backup-ledger state"
+    - "Manifest.db behavior"
+    - "CommCenter / Baseband / SIM / OTP context"
+    - "usageClientId continuity"
+    - "evidence-preservation behavior"
+```
 
-  comparison_scores:
-    old_framing_without_lotl:
-      score: 72
-      summary: >
-        Useful but overly actor-adjacent. APT42/APT32 comparison helped explain
-        account/cloud/mobile surveillance and historical TTP transfer, but did
-        not fully explain payload absence, Apple platform-state anomalies, or
-        evidence-preservation interference.
+comparison_scores:
+old_framing_without_lotl:
+score: 72
+summary: >
+Useful but overly actor-adjacent. APT42/APT32 comparison helped explain
+account/cloud/mobile surveillance and historical TTP transfer, but did
+not fully explain payload absence, Apple platform-state anomalies, or
+evidence-preservation interference.
 
-    updated_framing_with_lotl_like_platform_state:
-      score: 86
-      summary: >
-        Stronger mechanism-level framing. Explains why traces may appear in
-        normal-looking Apple ecosystem states rather than malware payloads,
-        and reduces attribution risk by focusing on platform-state abuse
-        instead of named actors.
+```
+updated_framing_with_lotl_like_platform_state:
+  score: 86
+  summary: >
+    Stronger mechanism-level framing. Explains why traces may appear in
+    normal-looking Apple ecosystem states rather than malware payloads,
+    and reduces attribution risk by focusing on platform-state abuse
+    instead of named actors.
 
-    score_delta:
-      value: 14
-      interpretation: >
-        LOTL-like Apple platform-state framing significantly improves coherence
-        while preserving APT42 and APT32 as comparison references.
+score_delta:
+  value: 14
+  interpretation: >
+    LOTL-like Apple platform-state framing significantly improves coherence
+    while preserving APT42 and APT32 as comparison references.
+```
 
-  key_review_questions:
-    - "Can Manifest.db / backup-ledger behavior be reproduced as normal iOS / iMazing backup behavior?"
-    - "Can MDMStatus:false normally coexist with repeated management-adjacent daemon activity in the observed pattern?"
-    - "Can usageClientId / usage-state transitions be explained by normal account/device behavior?"
-    - "Can ScreenTime / ManagedSettings / restriction-layer behavior be explained by defaults, user settings, Family Sharing, or normal account state?"
-    - "Can CommCenter / Baseband / SIM / OTP context be explained as independent normal events?"
-    - "Can BSSID / RSSI proximity anchors be explained as ordinary Wi-Fi roaming artifacts?"
-    - "Can evidence-preservation failures be explained by storage, local PC issues, app behavior, or backup-tool behavior?"
-    - "Can the alpha / beta phase shift be explained by observer-side changes, collection bias, iOS updates, or backup-method changes?"
-    - "Does the cross-device structure remain after normal explanations are applied?"
-    - "If normal explanations fail, does the remaining pattern resemble LOTL-like Apple platform-state abuse?"
+key_review_questions:
+- "Can Manifest.db / backup-ledger behavior be reproduced as normal iOS / iMazing backup behavior?"
+- "Can MDMStatus:false normally coexist with repeated management-adjacent daemon activity in the observed pattern?"
+- "Can usageClientId / usage-state transitions be explained by normal account/device behavior?"
+- "Can ScreenTime / ManagedSettings / restriction-layer behavior be explained by defaults, user settings, Family Sharing, or normal account state?"
+- "Can CommCenter / Baseband / SIM / OTP context be explained as independent normal events?"
+- "Can BSSID / RSSI proximity anchors be explained as ordinary Wi-Fi roaming artifacts?"
+- "Can evidence-preservation failures be explained by storage, local PC issues, app behavior, or backup-tool behavior?"
+- "Can the alpha / beta phase shift be explained by observer-side changes, collection bias, iOS updates, or backup-method changes?"
+- "Does the cross-device structure remain after normal explanations are applied?"
+- "If normal explanations fail, does the remaining pattern resemble LOTL-like Apple platform-state abuse?"
 
-  non_attribution_boundary:
-    does_not_claim:
-      - "confirmed malware"
-      - "confirmed payload"
-      - "confirmed C2"
-      - "confirmed exploit chain"
-      - "confirmed spyware"
-      - "confirmed MDM enrollment"
-      - "APT42 attribution"
-      - "APT32 attribution"
-      - "LIMINAL PANDA attribution"
-      - "state attribution"
-      - "Apple attribution"
-      - "iMazing attribution"
-      - "telecom-provider attribution"
-      - "attacker identity"
+non_attribution_boundary:
+does_not_claim:
+- "confirmed malware"
+- "confirmed payload"
+- "confirmed C2"
+- "confirmed exploit chain"
+- "confirmed spyware"
+- "confirmed MDM enrollment"
+- "APT42 attribution"
+- "APT32 attribution"
+- "LIMINAL PANDA attribution"
+- "state attribution"
+- "Apple attribution"
+- "iMazing attribution"
+- "telecom-provider attribution"
+- "attacker identity"
 
-  linked_documents:
-    - "README.md"
-    - "SUMMARY_ONE_PAGE.md"
-    - "docs/ttp_framing_addendum_lotl_platform_state.md"
-    - "reports/06_ttp_comparison_apt32_apt42_liminal.md"
-    - "reports/07_limitations_and_non_attribution.md"
+linked_documents:
+- "README.md"
+- "SUMMARY_ONE_PAGE.md"
+- "docs/ttp_framing_addendum_lotl_platform_state.md"
+- "docs/backup_ledger_seam_mobile_lotl.md"
+- "reports/06_ttp_comparison_apt32_apt42_liminal.md"
+- "reports/07_limitations_and_non_attribution.md"
+- "reports/10_working_hypothesis_matrix.md"
 
-  practical_reviewer_takeaway: >
-    The central question is not which APT group did this. The central question is
-    whether normal Apple / iOS / iCloud / iMazing behavior can explain a long-term,
-    cross-device structure in which trust state, restriction state, backup state,
-    telecom state, and evidence-preservation behavior appear to cluster at the same seams.
+practical_reviewer_takeaway: >
+The central question is not which APT group did this. The central question is
+whether normal Apple / iOS / iCloud / iMazing behavior can explain a long-term,
+cross-device structure in which trust state, restriction state, backup state,
+telecom state, and evidence-preservation behavior appear to cluster at the same seams.
+
+backup_ledger_seam_mobile_lotl:
+status: "public_non_attribution_backup_layer_addendum"
+document: "docs/backup_ledger_seam_mobile_lotl.md"
+
+framing:
+hypothesis_name: "Backup-ledger seam in mobile LOTL-like platform-state anomaly"
+short_formula: "Living off Apple backup state"
+relationship_to_shadow_cloud: >
+This is a focused backup-layer branch of the broader Shadow Cloud working
+hypothesis. It frames Manifest.db / backup-ledger abnormality as a possible
+evidence-preservation seam within a mobile LOTL-like Apple platform-state
+anomaly.
+attribution: "not asserted"
+
+core_interpretation:
+imazing_role: "acquisition surface"
+apple_backup_state_role: "review surface"
+manifest_db_role: "observable backup-ledger seam"
+summary: >
+iMazing is not presented as the cause. The hypothesis is that abnormal
+Apple backup state, trust state, keybag/encryption state, pairing state,
+storage-pressure state, or evidence-preservation state may become observable
+through the iMazing / iOS backup workflow as Manifest.db / backup-ledger
+abnormality.
+
+observed_concerns:
+- "Manifest.db not normally openable as SQLite"
+- "SQLite-level failure such as file is not a database"
+- "expected SQLite header absent in reviewed raw samples"
+- "iMazing success / backend artifact mismatch"
+- "multiple preserved backup generations"
+- "possible RTCR / Manifest.plist / Status.plist relationship"
+- "evidence-preservation relevance"
+
+normal_explanation_candidates:
+- "encrypted backup / keybag behavior"
+- "iMazing implementation or display behavior"
+- "partial or interrupted backup"
+- "local PC / USB / file lock / security software"
+- "storage pressure / low free space"
+- "ordinary iOS / iMazing backup bug"
+
+score_assessment:
+manifest_db_alone: 74
+manifest_db_plus_multiple_backup_generations: 80
+manifest_db_plus_imazing_success_backend_mismatch: 82
+manifest_db_plus_rtcr_status_manifest_correlation: 84
+manifest_db_plus_full_shadow_cloud_structure: 86
+conservative_public_addendum_score: 82
+score_meaning: >
+This is not an attack probability score. It means the backup-ledger seam
+hypothesis explains the observed structure better than isolated normal
+explanations, while still requiring qualified artifact-level review.
+
+white_explanation_pressure:
+summary: >
+A single normal explanation may explain one artifact. The difficulty is
+explaining repeated Manifest.db abnormality, expected SQLite header absence,
+SQLite file-is-not-a-database errors, multiple backup generations, iMazing
+success/backend mismatch, RTCR / Status.plist / Manifest.plist relationships,
+ScreenTime / ManagedSettings signals, MDMStatus:false daemon repetition,
+CommCenter / Baseband context, usageClientId transitions, storage pressure,
+and evidence-preservation difficulty together.
+
+strengthening_conditions:
+- "Manifest.db repeatedly not valid SQLite after proper handling"
+- "expected SQLite header absent in raw reviewed samples"
+- "issue appears across multiple preserved backup generations"
+- "iMazing success state does not match backend artifact reviewability"
+- "Status.plist / Manifest.plist / RTCR indicate meaningful backup state despite Manifest.db abnormality"
+- "control devices under the same acquisition environment produce normal Manifest.db"
+- "issue correlates with ScreenTime / ManagedSettings / MDMStatus:false / daemon repetition / CommCenter / evidence-preservation events"
+- "encrypted versus unencrypted backup comparisons do not fully explain the issue"
+
+weakening_conditions:
+- "Manifest.db opens normally as SQLite after proper decryption and handling"
+- "observed error is expected under ordinary encrypted backup conditions"
+- "clean control devices reproduce the same Manifest.db behavior under the same conditions"
+- "Status.plist clearly indicates partial or failed backup state"
+- "iMazing documentation or reproducible testing fully explains the observed state"
+- "Windows / USB / antivirus / file-lock conditions reproduce the same artifact pattern"
+- "low storage alone reproduces the observed backup-ledger behavior"
+- "issue does not correlate with broader trust-state, restriction-state, daemon-layer, telecom, or evidence-preservation pattern"
+
+public_boundary:
+does_not_claim:
+- "malware"
+- "payload"
+- "C2"
+- "exploit chain"
+- "confirmed MDM enrollment"
+- "Apple attribution"
+- "iMazing attribution"
+- "Microsoft attribution"
+- "state attribution"
+- "spyware-family attribution"
+- "attacker identity"
+
+linked_documents:
+- "docs/backup_ledger_seam_mobile_lotl.md"
+- "docs/ttp_framing_addendum_lotl_platform_state.md"
+- "reports/00_manifest_db_anomaly_core_point.md"
+- "reports/01_manifest_db_anomaly.md"
+- "reports/07_limitations_and_non_attribution.md"
+
+practical_reviewer_takeaway: >
+The central question is not whether iMazing caused the issue. The central
+question is whether normal Apple / iOS / iMazing backup behavior can explain
+repeated Manifest.db / backup-ledger abnormality across preserved backup
+generations, especially when aligned with broader trust-state, restriction-state,
+daemon-layer, telecom, and evidence-preservation anomalies.
