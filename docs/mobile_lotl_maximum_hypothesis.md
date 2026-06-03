@@ -68,11 +68,14 @@ Outlook / Microsoft account-cloud-calendar-document surface
 Manifest.db / backup-ledger seam
 = byproduct / observable evidence-preservation seam
 
-APT42-style ACMS
-= account / cloud / mobile-surveillance comparison reference
+Account / cloud / mobile-surveillance comparison
+= public comparison reference
 
-APT32-style historical transfer
+Historical TTP comparison
 = secondary operational-history comparison reference
+
+Telecom / proximity comparison
+= tertiary condition / context comparison
 
 Attribution
 = not asserted
@@ -118,13 +121,13 @@ Manifest.db / backup-ledger abnormality may therefore be a byproduct or observab
 
 ---
 
-## Why this is stronger than the earlier framing
+## Why this is stronger than earlier framing
 
-Earlier versions of the model used APT42-style account/cloud/mobile-surveillance logic and APT32-style historical transfer logic as comparison references.
+Earlier versions of the model used account / cloud / mobile-surveillance concepts and historical TTP comparison concepts as public comparison references.
 
 Those comparisons remain useful.
 
-However, they are actor-adjacent.
+However, they are actor-adjacent if overused.
 
 The current maximum hypothesis is stronger because it is mechanism-centered.
 
@@ -173,16 +176,14 @@ Traditional Living-off-the-Land activity usually involves:
 
 Examples include:
 
-* PowerShell
-* WMI
-* PsExec
-* RDP
-* SSH
-* VPN
+* native utilities
+* valid accounts
+* remote access paths
 * cloud console activity
-* OAuth token abuse
-* valid account abuse
-* Microsoft 365 / Exchange / Graph API abuse
+* email / identity systems
+* token-based access
+* document or collaboration platforms
+* enterprise management surfaces
 
 ### Mobile-native LOTL-like model
 
@@ -297,7 +298,7 @@ The stronger interpretation is that it may be a byproduct or observable seam.
 The sequence is:
 
 ```text
-mobile-native LOTL-like account/cloud/calendar/document/policy state
+mobile-native LOTL-like account / cloud / calendar / document / policy state
 ↓
 Apple trust state / restriction state / backup state / keybag-encryption state / evidence-preservation state
 ↓
@@ -392,8 +393,8 @@ The individual parts are not exotic by themselves.
 Known components include:
 
 * LOTL concepts
-* valid account abuse
-* OAuth / token abuse
+* valid account use
+* OAuth / token abuse concepts
 * Microsoft 365 / Exchange / Graph surfaces
 * mobile app policy surfaces
 * iOS backup / keybag / encryption concepts
@@ -480,7 +481,7 @@ Fit:
 Reason:
 
 * repeated usageClientId transitions
-* device/session/account-state discontinuity questions
+* device / session / account-state discontinuity questions
 * relationship to trust graph and backup lineage
 
 Interpretation:
@@ -684,19 +685,17 @@ This document does not claim:
 * confirmed exploit chain
 * confirmed MDM enrollment
 * confirmed spyware-family deployment
-* APT42 attribution
-* APT32 attribution
-* LIMINAL PANDA attribution
+* actor attribution
 * state attribution
+* government attribution
 * Apple attribution
 * iMazing attribution
 * Microsoft attribution
+* Outlook causation
 * telecom-provider attribution
 * baseband compromise
 * SIM compromise
 * OTP interception
-* Outlook causation
-* Microsoft causation
 * attacker identity
 
 This document also does not claim that subjective Outlook observations are standalone proof.
@@ -716,7 +715,9 @@ This document should be read together with:
 * `docs/backup_ledger_seam_mobile_lotl.md`
 * `reports/00_manifest_db_anomaly_core_point.md`
 * `reports/01_manifest_db_anomaly.md`
+* `reports/06_public_ttp_mechanism_comparison.md`
 * `reports/07_limitations_and_non_attribution.md`
+* `reports/09_secondary_historical_ttp_comparison.md`
 * `reports/10_working_hypothesis_matrix.md`
 
 ---
@@ -726,13 +727,13 @@ This document should be read together with:
 The central question is not:
 
 ```text
-Which APT group did this?
+Which actor did this?
 ```
 
 The central question is:
 
 ```text
-Can normal Apple / iOS / iCloud / iMazing / Microsoft app behavior explain the long-term, cross-device clustering of account state, calendar/document state, restriction state, backup state, telecom state, proximity context, and evidence-preservation behavior?
+Can normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior explain the long-term, cross-device clustering of account state, calendar/document state, restriction state, backup state, telecom state, proximity context, and evidence-preservation behavior?
 ```
 
 For the backup layer, the narrower question remains:
