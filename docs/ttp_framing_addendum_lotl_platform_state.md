@@ -1,251 +1,48 @@
-# TTP Framing Addendum: Shadow Cloud as LOTL-like Apple Platform-State Abuse
+# TTP Framing Addendum: LOTL-like Apple Platform-State Anomaly
 
 ## Status
 
-Public technical framing addendum.
+Public technical addendum.
 
-This document is a non-attribution TTP-framing update for the Shadow Cloud working hypothesis.
+This document provides a non-attribution TTP framing update for the Shadow Cloud working hypothesis.
 
-It does not modify the underlying observations.
+It does not add raw artifacts.
 
-It only clarifies how the observed structure should be framed for qualified review.
+It does not change the evidence base.
+
+It does not claim malware, C2, exploit chain, spyware-family attribution, MDM enrollment, Apple attribution, iMazing attribution, Microsoft attribution, telecom-provider attribution, or attacker identity.
 
 ---
 
 ## Purpose
 
-Earlier versions of this repository compared the observed structure mainly with:
+This addendum clarifies the preferred technical framing for Shadow Cloud.
 
-- APT42-style account / cloud / mobile-surveillance doctrine
-- APT32-style historical TTP transfer or operational philosophy shift
-- Apple ecosystem trust-state, backup-layer, restriction-layer, telecom, and evidence-preservation seams
+Earlier framing used APT42-style account / cloud / mobile-surveillance concepts and APT32-style historical transfer concepts as comparison references.
 
-That framing remains useful, but it can be confusing if APT names are read as attribution.
+Those comparisons remain useful.
 
-This addendum clarifies a more accurate framing:
+However, the stronger current framing is mechanism-centered:
 
-> Shadow Cloud is best understood as a non-attribution, LOTL-like Apple platform-state / trust-state abuse hypothesis.
+> Shadow Cloud is a non-attribution, LOTL-like Apple platform-state anomaly hypothesis.
 
-In short:
+The central point is:
 
-> Not living off tools.  
-> Living off Apple platform state.
+> The strongest traces may appear not in payloads, but in Apple ecosystem seams.
 
 ---
 
-## One-sentence framing
-
-Shadow Cloud is a non-attribution, LOTL-like Apple platform-state abuse hypothesis in which the strongest traces appear not in malware payloads, but in Apple ecosystem seams: account trust, iCloud state, ScreenTime / ManagedSettings, backup ledger behavior, telecom state, proximity context, and evidence preservation.
-
----
-
-## What changed
-
-### Previous framing
-
-The earlier framing emphasized:
-
-- APT42-style account / cloud / mobile-surveillance similarity
-- possible APT32-style historical TTP transfer or operational philosophy shift
-- visible flaws or seam failures appearing during long-term observation
-
-This was useful, but it risked over-centering named APT groups.
-
-### Updated framing
-
-The updated framing separates the case into four layers:
-
-1. **Shadow Cloud**  
-   The working hypothesis name for the observed Apple ecosystem seam anomaly.
-
-2. **LOTL-like Apple platform-state abuse**  
-   The proposed TTP mechanism explaining why the strongest traces appear in normal-looking Apple ecosystem states rather than in malware payloads.
-
-3. **APT42-style ACMS comparison**  
-   A public TTP comparison reference for account / cloud / mobile surveillance doctrine.
-
-4. **APT32-style historical TTP transfer hypothesis**  
-   A secondary comparison hypothesis for older operational doctrine, legacy TTP transfer, or old-doctrine leakage.
-
----
-
-## What did not change
-
-This addendum does not change the evidence base.
-
-It does not add new raw artifacts.
-
-It does not claim malware.
-
-It does not claim C2.
-
-It does not claim MDM enrollment.
-
-It does not claim attribution to APT42, APT32, Apple, iMazing, any state actor, or any known spyware family.
-
-The core review question remains:
-
-> Can the observed long-term, cross-device Apple ecosystem artifact structure be explained as normal Apple / iOS / iCloud / iMazing behavior, user-side artifact, local environment issue, isolated device failure, or ordinary configuration state — or does it merit deeper forensic review as a possible platform-state / evidence-preservation anomaly?
-
----
-
-## Why LOTL-like framing matters
-
-Traditional Living-off-the-Land activity is usually discussed in enterprise environments.
-
-Common examples include:
-
-- PowerShell
-- WMI
-- RDP
-- PsExec
-- SSH
-- VPN access
-- cloud console activity
-- valid accounts
-- native administrative tools
-
-The key idea is that the actor does not necessarily bring a clearly malicious tool.
-
-Instead, the actor blends into normal tools, normal accounts, normal processes, and normal operations.
-
-The Shadow Cloud hypothesis appears conceptually similar, but the observed surface is different.
-
-The suspected surface is not primarily enterprise tools.
-
-The suspected surface is Apple platform state.
-
----
-
-## Traditional LOTL versus Shadow Cloud
-
-### Traditional LOTL
-
-Traditional LOTL can be summarized as:
-
-> Living off existing tools and accounts.
-
-Typical surfaces include:
-
-- operating system tools
-- admin tools
-- valid accounts
-- cloud consoles
-- remote access tools
-- enterprise identity systems
-- normal-looking administrative activity
-
-### Shadow Cloud / Apple platform-state framing
-
-Shadow Cloud can be summarized as:
-
-> Living off Apple platform state.
-
-Observed or hypothesized surfaces include:
-
-- Apple ID trust state
-- iCloud trust state
-- trusted-device graph
-- usageClientId / usage-state transitions
-- ScreenTime
-- ManagedSettings
-- FamilyControls
-- MDMStatus:false with management-adjacent daemon activity
-- iMazing / iOS backup structures
-- Manifest.db / Manifest.plist / Status.plist
-- RTCReporting / RTCR
-- CommCenter
-- Baseband
-- SIM / OTP / financial device-trust context
-- BSSID / RSSI proximity context
-- storage pressure
-- backup failure
-- screenshot / recording difficulty
-- evidence-preservation interference
-
----
-
-## Key distinction
-
-Traditional LOTL:
-
-> Uses legitimate tools.
-
-Shadow Cloud framing:
-
-> May use or distort legitimate platform state.
-
-This distinction matters because a reviewer looking only for malware payloads, C2 infrastructure, exploit chains, configuration profiles, or visible MDM enrollment may miss the relevant anomaly surface.
-
-The proposed review target is not only whether a malicious binary exists.
-
-The proposed review target is whether Apple ecosystem state behaves normally across account, policy, backup, telecom, and evidence-preservation layers.
-
----
-
-## Relationship to APT42-style ACMS
-
-APT42-style public reporting is still relevant as a comparison model because it emphasizes:
-
-- account targeting
-- cloud access
-- credential / MFA / OTP targeting
-- mobile surveillance
-- long-term monitoring
-- low-noise collection
-- cross-layer observation of human, authentication, cloud, and mobile behavior
-
-However, Shadow Cloud is not presented as APT42 attribution.
-
-The similarity is doctrinal:
-
-> account / cloud / mobile-surveillance thinking.
-
-The difference is the suspected surface:
-
-> Apple trust state, restriction state, backup ledger, telecom context, and evidence-preservation seams.
-
-Therefore, APT42-style ACMS remains a comparison reference, not an attribution claim.
-
----
-
-## Relationship to APT32-style historical TTP transfer
-
-APT32-style historical comparison remains useful only as a secondary hypothesis.
-
-It may help frame:
-
-- older operational doctrine
-- long-term persistence thinking
-- legitimate-service abuse
-- staged operational refinement
-- visible seam failures or old-doctrine leakage
-- possible transfer or adaptation of operational philosophy
-
-However, APT32 is not the central framing.
-
-APT32 is not attribution.
-
-APT32 is not required for the Shadow Cloud hypothesis to be reviewed.
-
-The primary framing is now:
-
-> LOTL-like Apple platform-state / trust-state abuse.
-
-APT32 remains only a historical or comparative TTP reference.
-
----
-
-## Updated hypothesis stack
-
-The recommended hypothesis stack is:
+## Core framing
 
 ```text
 Shadow Cloud
 = working hypothesis name
 
-LOTL-like Apple platform-state abuse
-= proposed TTP mechanism
+LOTL-like Apple platform-state anomaly / abuse
+= proposed mechanism-level framing
+
+Backup-ledger seam in mobile LOTL-like platform-state anomaly
+= focused backup-layer branch
 
 APT42-style ACMS
 = account / cloud / mobile-surveillance comparison reference
@@ -253,224 +50,469 @@ APT42-style ACMS
 APT32-style historical transfer
 = secondary operational-history comparison
 
+LIMINAL-style telecom / proximity concepts
+= tertiary telecom/proximity comparison reference
+
 Attribution
 = not asserted
 ```
 
----
+This framing is not actor-centered.
 
-## Why this framing improves the case
-
-This framing improves the case for several reasons.
-
-### 1. It reduces attribution risk
-
-Named APT groups can make the case look like an attribution claim.
-
-LOTL-like platform-state framing keeps the focus on mechanism, not actor.
-
-### 2. It better explains payload absence
-
-If the strongest traces are in platform state, then the absence of a confirmed malware payload or C2 infrastructure is not automatically fatal to the review question.
-
-### 3. It better explains normal-looking artifacts
-
-Many observed items can look benign in isolation:
-
-- iCloud sync issue
-- ScreenTime restriction
-- backup failure
-- storage pressure
-- daemon crash
-- account state transition
-- SIM / OTP re-authentication
-- Wi-Fi / BSSID / RSSI event
-- Manifest.db abnormality
-
-The LOTL-like framing asks whether these normal-looking surfaces form a cross-layer pattern.
-
-### 4. It fits iPhone constraints
-
-iOS is highly closed from the user perspective.
-
-Important areas are difficult to inspect directly:
-
-- sandboxed application state
-- system daemon internals
-- Apple account state
-- iCloud trust state
-- backup/keybag/encryption behavior
-- baseband / CommCenter / SIM state
-- internal restriction and policy state
-
-Therefore, an iPhone-centered variant of LOTL-like behavior may be harder to observe than traditional enterprise LOTL.
-
-### 5. It matches the DFRWS poster framing
-
-The DFRWS poster uses the phrase:
-
-> not in payloads, but in seams
-
-This is consistent with LOTL-like Apple platform-state abuse.
+It is mechanism-centered.
 
 ---
 
-## Current review targets under this framing
-
-The primary review targets are:
-
-1. **Manifest.db / backup-ledger behavior**  
-   Whether repeated non-SQLite or structurally abnormal Manifest.db behavior can be explained by normal iOS / iMazing backup behavior.
-
-2. **MDMStatus:false contradiction**  
-   Whether visible management absence can normally coexist with repeated management-adjacent daemon activity.
-
-3. **usageClientId / usage-state transitions**  
-   Whether observed usage-state transitions are normal account/device behavior or signal trust-state discontinuity.
-
-4. **ScreenTime / ManagedSettings / restriction state**  
-   Whether restriction-like behavior can be explained by ordinary local settings, Family Sharing, ScreenTime defaults, or account-driven policy state.
-
-5. **CommCenter / Baseband / SIM / OTP context**  
-   Whether telecom and financial device-trust re-evaluation indicators are independent normal events or part of a broader state pattern.
-
-6. **Evidence-preservation interference**  
-   Whether backup failure, storage pressure, screenshot / recording difficulty, and log-preservation degradation are coincidental or part of the same anomaly surface.
-
-7. **Alpha-to-beta structural shift**  
-   Whether the observed timeline shift from distributed anomalies to more consolidated restriction / daemon / backup / telecom / preservation clustering can be explained by observer-side changes, iOS updates, backup-method changes, or ordinary behavior.
-
----
-
-## Alpha / beta phase interpretation
-
-The alpha / beta framing is not a conclusion.
-
-It is a timeline review model.
-
-### Alpha-phase candidate
-
-Approximate period:
+## Short formula
 
 ```text
-2025-07 to 2026-03
+Not living off tools.
+Living off Apple platform state.
 ```
 
-Observed pattern:
-
-- distributed backup / Manifest.db / RTCR anomalies
-- usageClientId / usage-state transitions
-- Apple ID / iCloud trust discontinuities
-- resource pressure
-- log-preservation difficulty
-- cross-device signals with less consolidated structure
-
-### Beta / transitional control-layer candidate
-
-Approximate period:
+For the backup layer:
 
 ```text
-2026-03 to 2026-05
+Not living off tools.
+Living off Apple backup state.
 ```
 
-Observed pattern:
+---
 
-- ScreenTime / ManagedSettings restriction-layer signals
-- MDMStatus:false with management-adjacent daemon activity
-- managedappdistributiond / dmd / ScreenTimeAgent clustering
-- CommCenter / Baseband / SFA / CKKS / CloudServices context
-- BSSID / RSSI proximity signals
-- backup failure
-- storage pressure
-- screenshot / recording difficulty
-- evidence-preservation interference
+## Why LOTL is relevant
 
-### Transition note
+Traditional Living-off-the-Land activity usually refers to the use of legitimate tools, valid accounts, native utilities, administrative workflows, cloud consoles, or normal-looking processes.
 
-No deliberate configuration, iOS update, or backup-method change by the observer is known at the transition point.
+Examples include:
 
-The shift was identified retrospectively during timeline and log-cluster review.
+* PowerShell
+* WMI
+* RDP
+* PsExec
+* SSH
+* VPN access
+* cloud console activity
+* valid accounts
+* native administrative tools
 
-This transition itself should be treated as a review question, not as proof.
+The Shadow Cloud model appears conceptually similar, but the suspected surface is different.
+
+The suspected surface is not primarily an enterprise toolset.
+
+The suspected surface is Apple platform state itself.
 
 ---
 
-## Falsifiable review questions
+## Apple platform-state surfaces
 
-This framing is intended to be falsifiable.
+The relevant Apple ecosystem surfaces include:
 
-A qualified reviewer could weaken or falsify the hypothesis by showing that:
+* Apple ID trust state
+* iCloud trust state
+* trusted-device behavior
+* usageClientId / usage-state transitions
+* ScreenTime
+* ManagedSettings
+* FamilyControls
+* MDMStatus:false with management-adjacent daemon activity
+* Manifest.db / Manifest.plist / Status.plist
+* backup-ledger behavior
+* RTCR / RTCReporting
+* CommCenter
+* Baseband
+* SIM / OTP / financial device-trust context
+* BSSID / RSSI proximity context
+* storage pressure
+* backup failure
+* screenshot / recording difficulty
+* evidence-preservation interference
 
-1. Manifest.db behavior is normal for the reviewed backup state.
-2. The observed SQLite errors are expected under ordinary encryption, lock, or tool conditions.
-3. MDMStatus:false plus management-adjacent daemon activity is normal for the observed iOS versions and contexts.
-4. usageClientId transitions are normal account/device behavior.
-5. ScreenTime / ManagedSettings states are default, user-configured, or Family Sharing-related.
-6. CommCenter / Baseband / SIM / OTP events are independent normal events.
-7. BSSID / RSSI proximity anchors are ordinary Wi-Fi roaming artifacts.
-8. Evidence-preservation failures are explainable by storage, app behavior, local PC environment, or ordinary backup-tool behavior.
-9. The alpha / beta timeline shift is caused by observer-side collection changes, device changes, iOS updates, backup-method changes, or dataset bias.
+The review target is therefore not only:
 
-If normal explanations can reproduce the observed structure, the hypothesis should be weakened or rejected.
+```text
+Is there a malicious binary?
+```
 
----
+The review target is:
 
-## What this addendum claims
-
-This addendum claims only the following:
-
-- The observed structure may be better framed as LOTL-like Apple platform-state abuse than as an actor-centered APT claim.
-- APT42 remains useful as an account / cloud / mobile-surveillance comparison reference.
-- APT32 remains useful only as a historical TTP transfer or old-doctrine leakage comparison.
-- Shadow Cloud remains non-attribution.
-- The review target is the cross-layer Apple ecosystem seam structure, not a named actor.
-
----
-
-## What this addendum does not claim
-
-This addendum does not claim:
-
-- confirmed malware
-- confirmed C2
-- confirmed exploit chain
-- confirmed MDM enrollment
-- confirmed spyware
-- APT42 attribution
-- APT32 attribution
-- state attribution
-- Apple attribution
-- iMazing attribution
-- attacker identity
+```text
+Does Apple platform state behave normally across trust, restriction, backup, telecom, proximity, and evidence-preservation layers?
+```
 
 ---
 
-## Recommended wording for reviewers
+## Difference from traditional LOTL
 
-A concise reviewer-facing wording is:
+Traditional LOTL:
 
-> Shadow Cloud is a non-attribution, LOTL-like Apple platform-state abuse hypothesis. The strongest traces appear not in malware payloads or visible MDM enrollment, but in Apple ecosystem seams: account trust, iCloud state, ScreenTime / ManagedSettings, backup ledger behavior, telecom context, proximity signals, and evidence-preservation behavior.
+```text
+Uses legitimate tools.
+```
 
-An even shorter wording is:
+Shadow Cloud:
 
-> Not living off tools. Living off Apple platform state.
+```text
+May use or distort legitimate platform state.
+```
+
+Traditional LOTL:
+
+```text
+Traces may appear in native tools, admin logs, cloud logs, and valid-account activity.
+```
+
+Shadow Cloud:
+
+```text
+Traces may appear in Apple ID state, iCloud state, ScreenTime state, backup-ledger state, CommCenter/Baseband context, and evidence-preservation behavior.
+```
+
+Traditional LOTL:
+
+```text
+Often enterprise / endpoint / cloud-admin centered.
+```
+
+Shadow Cloud:
+
+```text
+Mobile / account / backup / restriction / telecom / evidence-preservation centered.
+```
 
 ---
 
-## Repository impact
+## Backup-ledger seam branch
 
-This addendum should be read alongside:
+The updated Shadow Cloud model now includes a focused backup-layer branch:
 
-- the main repository overview
-- the one-page technical summary
-- the Manifest.db anomaly report
-- the non-attribution and limitations report
-- the support-invisible restriction anchor
-- the MDM-false management daemon failure-chain anchor
+> Backup-ledger seam in mobile LOTL-like platform-state anomaly.
 
-It does not replace those documents.
+This branch focuses on Manifest.db / backup-ledger abnormality.
 
-It only updates the TTP framing layer.
+The key point is:
+
+```text
+iMazing is not presented as the cause.
+iMazing may be the acquisition surface.
+Apple backup state is the review surface.
+Manifest.db may be the observable backup-ledger seam.
+```
+
+The central backup-layer question is:
+
+```text
+Can normal Apple / iOS / iMazing backup behavior explain repeated Manifest.db / backup-ledger abnormality across preserved backup generations?
+```
+
+---
+
+## Why Manifest.db matters
+
+Manifest.db is normally a core iOS backup ledger.
+
+If Manifest.db repeatedly appears as:
+
+* non-SQLite
+* opaque
+* high-entropy
+* not normally openable as SQLite
+* lacking expected SQLite header behavior in reviewed raw samples
+* returning SQLite-level failure such as `file is not a database`
+
+then the backup ledger becomes a high-value review target.
+
+This does not prove the entire case.
+
+It does not prove malware.
+
+It does not prove iMazing fault.
+
+It does not prove Apple fault.
+
+It means the backup-ledger layer may be part of the anomaly surface.
+
+---
+
+## Living off Apple backup state
+
+For the backup layer, the narrowed formula is:
+
+```text
+Living off Apple backup state.
+```
+
+This means the suspected anomaly surface may include:
+
+* backup state
+* backup encryption state
+* keybag state
+* pairing / trust state
+* device lock state
+* iOS backup service behavior
+* Manifest.db / Manifest.plist / Status.plist / Info.plist
+* RTCR / RTCReporting
+* iMazing / iOS acquisition workflow
+* storage pressure
+* backup success / backend artifact mismatch
+* evidence-preservation behavior
+
+The question is not:
+
+```text
+Did iMazing cause this?
+```
+
+The question is:
+
+```text
+Did the iMazing / iOS backup workflow expose abnormal Apple backup state that requires independent review?
+```
+
+---
+
+## Why this improves the model
+
+The previous APT42 / APT32 comparison was useful but actor-adjacent.
+
+It helped explain:
+
+* account targeting
+* cloud access
+* mobile-surveillance logic
+* long-term low-noise behavior
+* historical TTP transfer
+* old-doctrine leakage
+
+However, it did not fully explain why the strongest traces appear in:
+
+* Apple platform state
+* backup-ledger behavior
+* restriction state
+* MDMStatus:false / daemon repetition
+* usageClientId transitions
+* CommCenter / Baseband context
+* evidence-preservation difficulty
+
+The LOTL-like Apple platform-state framing explains this more directly.
+
+It shifts the question from:
+
+```text
+Which APT group does this resemble?
+```
+
+to:
+
+```text
+Can normal Apple / iOS / iCloud / iMazing behavior explain this cross-layer state pattern?
+```
+
+---
+
+## Structural fit comparison
+
+```text
+Old framing without LOTL-like platform-state model:
+72 / 100
+
+Updated framing with LOTL-like Apple platform-state anomaly:
+86 / 100
+
+Backup-ledger seam branch:
+82 / 100
+```
+
+These are not attack-probability scores.
+
+They are structural-fit scores.
+
+They mean:
+
+```text
+The updated mechanism-level framing explains the observed structure better than isolated actor-comparison framing, while still requiring qualified artifact-level review.
+```
+
+---
+
+## Why the score improves
+
+The LOTL-like platform-state framing improves coherence because it explains:
+
+* why payload / C2 / exploit-chain evidence may be absent
+* why normal-looking Apple states may be the main observation surface
+* why ScreenTime / ManagedSettings and MDMStatus:false can matter without visible MDM enrollment
+* why Manifest.db / backup-ledger behavior can be part of the evidence-preservation surface
+* why iMazing may be relevant as an acquisition surface without being accused as the cause
+* why usageClientId / trust-state transitions matter
+* why CommCenter / Baseband / SIM / OTP context may belong to the same structure
+* why BSSID / RSSI proximity anchors may act as condition or timeline signals
+* why storage pressure, backup failure, and screenshot / recording difficulty may be evidence-preservation signals
+* why Alpha / Beta phase-shift behavior can be reviewed as platform-state convergence rather than actor attribution
+
+---
+
+## White-explanation-first review
+
+This addendum does not ask reviewers to accept the hypothesis.
+
+It asks reviewers to test normal explanations first.
+
+Normal explanation candidates include:
+
+* normal Apple / iOS behavior
+* iCloud sync behavior
+* user-side settings
+* Family Sharing / ScreenTime defaults
+* iMazing backup behavior
+* encrypted backup / keybag handling
+* partial or interrupted backup
+* local PC / USB / antivirus / file-lock conditions
+* low storage / disk pressure
+* ordinary iOS backup bugs
+* ordinary CommCenter / Baseband events
+* ordinary Wi-Fi roaming artifacts
+* ordinary app cache or document-provider behavior
+
+The hypothesis should be weakened if normal explanations reproduce the full structure.
+
+The hypothesis becomes stronger only if normal explanations fail to explain the cross-layer pattern.
+
+---
+
+## Key review questions
+
+Reviewers should ask:
+
+1. Can Manifest.db / backup-ledger behavior be reproduced as normal iOS / iMazing backup behavior?
+2. Can encrypted backup / keybag handling fully explain the Manifest.db state?
+3. Can iMazing success / backend artifact mismatch be reproduced on clean control devices?
+4. Can MDMStatus:false normally coexist with repeated management-adjacent daemon activity in the observed pattern?
+5. Can usageClientId / usage-state transitions be explained by normal account or device behavior?
+6. Can ScreenTime / ManagedSettings / restriction-layer behavior be explained by defaults, user settings, Family Sharing, or normal account state?
+7. Can CommCenter / Baseband / SIM / OTP context be explained as independent normal events?
+8. Can BSSID / RSSI proximity anchors be explained as ordinary Wi-Fi roaming artifacts?
+9. Can evidence-preservation failures be explained by storage, local PC issues, app behavior, or backup-tool behavior?
+10. Can the Alpha / Beta phase shift be explained by observer-side changes, collection bias, iOS updates, or backup-method changes?
+11. Does the cross-device structure remain after normal explanations are applied?
+12. If normal explanations fail, does the remaining pattern resemble LOTL-like Apple platform-state anomaly?
+
+---
+
+## Relationship to APT42
+
+APT42-style public reporting remains useful as a comparison reference because it emphasizes:
+
+* account targeting
+* credential and cloud access
+* mobile-surveillance logic
+* long-term monitoring
+* low-noise collection
+* human / authentication / cloud / mobile overlap
+
+However, APT42 is not asserted as attribution.
+
+APT42-style ACMS is used only as an account / cloud / mobile-surveillance comparison reference.
+
+---
+
+## Relationship to APT32
+
+APT32-style historical comparison remains useful as a secondary operational-history comparison.
+
+It may help frame:
+
+* historical TTP transfer
+* legitimate-service abuse
+* staged refinement
+* trace suppression
+* old-doctrine leakage
+* operational seam failure
+
+However, APT32 is not asserted as attribution.
+
+APT32 is not the central framing.
+
+---
+
+## Relationship to LIMINAL-style telecom / proximity concepts
+
+LIMINAL-style telecom / proximity concepts are used only as a tertiary comparison reference.
+
+They may help frame:
+
+* telecom / proximity conditions
+* SIM / Baseband / CommCenter context
+* radio-environment triggers
+* condition-linked state changes
+
+No telecom actor attribution is asserted.
+
+No baseband compromise is asserted.
+
+No SIM compromise is asserted.
+
+No OTP interception is asserted.
+
+---
+
+## Relationship to Microsoft / Outlook / Office surfaces
+
+Microsoft mobile apps such as Outlook, OneDrive, Teams, Office, Excel, or PDF/document-related surfaces are not used here as public evidence for the Manifest.db anomaly.
+
+User-observed Outlook / meeting / schedule-like traces may be useful as a future internal review anchor.
+
+However, without preserved public artifact support in this package, they are not used as public support for the backup-ledger hypothesis.
+
+The safe interpretation is:
+
+```text
+Microsoft mobile apps may be relevant as legitimate account-cloud-calendar-document surfaces for future review.
+They are not asserted as causes of the Manifest.db anomaly.
+```
+
+No Microsoft attribution is asserted.
+
+---
+
+## Non-attribution boundary
+
+This addendum does not assert:
+
+* malware
+* payload
+* C2
+* exploit chain
+* confirmed spyware
+* confirmed MDM enrollment
+* APT42 attribution
+* APT32 attribution
+* LIMINAL PANDA attribution
+* state attribution
+* Apple attribution
+* iMazing attribution
+* Microsoft attribution
+* telecom-provider attribution
+* baseband compromise
+* SIM compromise
+* OTP interception
+* attacker identity
+
+All named public models are comparison references only.
+
+---
+
+## Relationship to supporting documents
+
+This addendum should be read together with:
+
+* `docs/backup_ledger_seam_mobile_lotl.md`
+* `reports/00_manifest_db_anomaly_core_point.md`
+* `reports/01_manifest_db_anomaly.md`
+* `reports/06_ttp_comparison_apt32_apt42_liminal.md`
+* `reports/07_limitations_and_non_attribution.md`
+* `reports/10_working_hypothesis_matrix.md`
+* `SUMMARY_ONE_PAGE.md`
+* `machine_summary.yaml`
 
 ---
 
@@ -478,12 +520,22 @@ It only updates the TTP framing layer.
 
 The central question is not:
 
-> Which APT group did this?
+```text
+Which APT group did this?
+```
 
 The central question is:
 
-> Can normal Apple / iOS / iCloud / iMazing behavior explain a long-term, cross-device structure in which trust state, restriction state, backup state, telecom state, and evidence-preservation behavior appear to cluster at the same seams?
+```text
+Can normal Apple / iOS / iCloud / iMazing behavior explain a long-term, cross-device structure in which trust state, restriction state, backup state, telecom state, and evidence-preservation behavior appear to cluster at the same seams?
+```
+
+For the backup layer, the narrower question is:
+
+```text
+Can normal Apple / iOS / iMazing backup behavior explain repeated Manifest.db / backup-ledger abnormality across preserved backup generations, especially when aligned with broader trust-state, restriction-state, daemon-layer, telecom, and evidence-preservation anomalies?
+```
 
 If yes, the hypothesis should be weakened.
 
-If no, the case may represent a forensic blind spot in how iOS platform-state, backup-ledger behavior, restriction state, and evidence preservation are currently reviewed.
+If no, the case may represent a forensic blind spot in how iOS platform-state, backup-ledger behavior, restriction state, telecom context, and evidence preservation are currently reviewed.
