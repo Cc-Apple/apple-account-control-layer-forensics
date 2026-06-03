@@ -4,7 +4,9 @@
 
 This repository requests technical triage, not attribution.
 
-The dataset summarizes approximately 11 months of forensic observations across 9+ Apple devices, including owner devices and comparison devices. The core question is whether the observed artifacts are normal Apple / iOS behavior or whether they merit deeper forensic triage as a possible Apple account / cloud / backup / restriction-layer / proximity-communication / evidence-preservation control operation.
+The dataset summarizes approximately 11 months of forensic observations across 9+ Apple devices, including owner devices and comparison devices.
+
+The core question is whether the observed artifacts are normal Apple / iOS / iCloud / iMazing behavior, Microsoft app residue, ordinary account-calendar-document behavior, user-side artifacts, local environment issues, isolated device failures, or whether they merit deeper forensic triage as a possible Apple account / cloud / backup / restriction-layer / proximity-communication / evidence-preservation control anomaly.
 
 The current strongest mechanism-level hypothesis is:
 
@@ -12,7 +14,7 @@ The current strongest mechanism-level hypothesis is:
 
 This is not an attribution claim.
 
-This is not a claim that a named actor, vendor, product, or service caused the observed behavior.
+This is not a claim that any named actor, government, vendor, product, service, or organization caused the observed behavior.
 
 The model asks whether a PC / enterprise-style Living-off-the-Land concept may have a mobile-native equivalent, where legitimate mobile apps, accounts, cloud identity, calendar, document, policy, backup, telecom, and evidence-preservation states become the observable control surface.
 
@@ -48,11 +50,14 @@ Outlook / Microsoft account-cloud-calendar-document surface
 Manifest.db / backup-ledger seam
 = byproduct / observable evidence-preservation seam
 
-APT42-style ACMS
-= account / cloud / mobile-surveillance comparison reference
+Account / cloud / mobile-surveillance comparison
+= public comparison reference
 
-APT32-style historical transfer
+Historical TTP comparison
 = secondary operational-history comparison reference
+
+Telecom / proximity comparison
+= tertiary condition / context comparison
 
 Attribution
 = not asserted
@@ -98,7 +103,11 @@ See also:
 
 ### 1. Manifest.db anomaly
 
-Multiple backup generations showed `Manifest.db` behaving as non-SQLite / opaque / high-entropy structures. The issue is not merely encrypted backup handling. The primary concern is repeated abnormal `Manifest.db` behavior at the backup path / backup service / backup-ledger layer.
+Multiple backup generations showed `Manifest.db` behaving as non-SQLite / opaque / high-entropy structures.
+
+The issue is not merely encrypted backup handling.
+
+The primary concern is repeated abnormal `Manifest.db` behavior at the backup path / backup service / backup-ledger layer.
 
 ### Backup-ledger seam interpretation
 
@@ -119,25 +128,63 @@ See also:
 
 * `docs/backup_ledger_seam_mobile_lotl.md`
 
+---
+
 ### 2. usageClientId transitions
 
-Repeated usageClientId switching and discontinuity were observed across logs and devices. This appears closer to account / usage-state transition than a single app infection.
+Repeated usageClientId switching and discontinuity were observed across logs and devices.
+
+This appears closer to account / usage-state transition than a single app infection.
+
+This is not treated as proof of compromise.
+
+It is treated as a recurring structural signal requiring comparison against normal baselines.
+
+---
 
 ### 3. Restriction-layer signals without visible MDM
 
 ScreenTime / Game Center / Content & Privacy / ManagedSettings / FamilyControls signals were observed while visible MDM / supervised / userIsManaged indicators were not present.
 
+The issue is the apparent mismatch:
+
+* restriction-layer behavior appears
+* management-adjacent traces appear
+* ordinary visible device-management indicators are absent or false
+
+The review question is whether visible management absence can normally coexist with the observed management-adjacent and restriction-adjacent artifact pattern.
+
+---
+
 ### 4. March 2026 beta-phase candidate
 
-Normalized analysis showed a density increase in restriction-layer, ID / cloud, resource-pressure, and operational-trace categories during March 2026.
+Normalized analysis showed a density increase in restriction-layer, ID / cloud, resource-pressure, operational-trace, telecom, and proximity-related categories during March 2026.
+
+This period is treated as a possible phase shift or beta-phase candidate.
+
+This is a review question, not a conclusion.
+
+---
 
 ### 5. March 12, 2026 mini1 core event
 
-A mini1 Analytics log showed strong proximity / communication patterns involving SIMTransfer, BluetoothDiscovery, CommCenter, BasebandPowerCycle, PrivacyProxy, RSSI, Nearby, and resource reactions.
+A mini1 Analytics log showed proximity / communication patterns involving SIMTransfer, BluetoothDiscovery, CommCenter, BasebandPowerCycle, PrivacyProxy, RSSI, Nearby, and resource reactions.
+
+This event is important because it connects telecom, proximity, privacy, and resource-pressure signals in a tight time window.
+
+It is not treated as standalone attribution evidence.
+
+---
 
 ### 6. March 7, 2026 15G Wi-Fi / BSSID anchor
 
-WiFiConnectionQuality / sysdiagnose artifacts showed a physical Wi-Fi anchor with RSSI, channel, and lastJoined timestamps. This is treated as a location anchor only, not attribution to a person or device.
+WiFiConnectionQuality / sysdiagnose artifacts showed a physical Wi-Fi anchor with RSSI, channel, and lastJoined timestamps.
+
+This is treated as a location and timeline anchor only.
+
+It is not treated as attribution to a person, actor, device, or organization.
+
+---
 
 ### 7. Outlook / Microsoft surface as future review anchor
 
@@ -179,13 +226,16 @@ This repository does not claim Outlook causation.
 
 ## Updated TTP Framing
 
-The observed structure was previously compared mainly with:
+The observed structure was previously compared mainly with public reporting around:
 
-* APT42-style credential / account / cloud / mobile-surveillance operations
-* APT32-style historical TTP transfer or operational philosophy shift
-* LIMINAL-style telecom / proximity concepts
+* account / cloud / mobile-surveillance operations
+* historical long-term, low-noise, legitimate-service-oriented operations
+* telecom / proximity concepts
+* commercial spyware or mobile-surveillance models
 
-That comparison remains useful, but it should not be read as attribution.
+Those comparisons remain useful.
+
+They should not be read as attribution.
 
 The updated framing is mechanism-centered:
 
@@ -199,11 +249,14 @@ Mobile-native LOTL-like Apple platform-state anomaly
 Backup-ledger seam in mobile LOTL-like platform-state anomaly
 = focused backup-layer branch
 
-APT42-style ACMS
-= account / cloud / mobile-surveillance comparison reference
+Account / cloud / mobile-surveillance comparison
+= public comparison reference
 
-APT32-style historical transfer
+Historical TTP comparison
 = secondary operational-history comparison
+
+Telecom / proximity comparison
+= tertiary condition / context comparison
 
 Attribution
 = not asserted
@@ -254,19 +307,31 @@ See also:
 
 ---
 
-## TTP Comparison
+## Public TTP Mechanism Comparison
 
-APT42-style public reporting remains relevant as a comparison model because it emphasizes account targeting, cloud access, mobile surveillance, long-term monitoring, low-noise collection, and cross-layer observation of human, authentication, cloud, and mobile behavior.
+Public TTP comparison remains useful only as mechanism context.
 
-However, an APT42-native model does not fully explain the number and type of operational inconsistencies observed in this dataset.
+The purpose is not to associate this case with any named group.
 
-APT32-style historical comparison also remains useful only as a secondary hypothesis. It may help frame older operational doctrine, legitimate-service abuse, staged refinement, trace suppression, or old-doctrine leakage.
+The purpose is to test whether known public operational concepts help reviewers evaluate the observed structure.
 
-However, APT32 is not the central framing.
+Useful comparison categories include:
 
-The stronger current hypothesis is:
+* account / cloud / mobile-surveillance comparison
+* historical TTP comparison
+* telecom / proximity comparison
+* commercial spyware model comparison
+* Microsoft app surface comparison
+* LOTL-like platform-state comparison
 
-> Shadow Cloud is a mobile-native LOTL-like Apple platform-state anomaly hypothesis, with APT42-style ACMS used as an account / cloud / mobile-surveillance comparison reference and APT32-style historical transfer used only as a secondary operational-history comparison.
+The primary mechanism-level hypothesis remains:
+
+> Mobile-native LOTL-like Apple platform-state anomaly.
+
+See also:
+
+* `reports/06_public_ttp_mechanism_comparison.md`
+* `reports/09_secondary_historical_ttp_comparison.md`
 
 No attribution is asserted.
 
@@ -321,8 +386,9 @@ The following layers repeatedly appeared together:
 * LOTL-like Apple platform-state framing: high structural fit, estimated 86 / 100
 * Backup-ledger seam in mobile LOTL-like platform-state anomaly: high structural fit, estimated 82 / 100
 * Outlook / Microsoft entry-surface hypothesis: internal review anchor, estimated 75 / 100
-* APT42-style account / cloud / mobile-surveillance structural alignment: high, estimated 80-88 / 100
-* APT32-style legacy TTP / seam-failure alignment: medium to high, estimated 72-78 / 100
+* Account / cloud / mobile-surveillance comparison: useful public comparison reference, estimated 80-88 / 100
+* Historical TTP comparison: secondary operational-history comparison, estimated 72-78 / 100
+* Telecom / proximity comparison: tertiary condition / context comparison, estimated 70-76 / 100
 * Shadow Cloud phase estimate: late beta / transitional control-layer model, approximately 75-82% maturity in 2026-05
 
 These are structural-fit scores.
@@ -337,9 +403,9 @@ This is not an attribution claim.
 
 This repository does not establish:
 
-* APT42 attribution
-* APT32 attribution
+* actor attribution
 * state attribution
+* government attribution
 * Apple attribution
 * iMazing attribution
 * Microsoft attribution
@@ -349,6 +415,11 @@ This repository does not establish:
 * confirmed payload
 * confirmed exploit chain
 * confirmed MDM enrollment
+* confirmed spyware-family deployment
+* telecom compromise
+* baseband compromise
+* SIM compromise
+* OTP interception
 
 The purpose is to request qualified technical review of whether the observed cross-artifact structure is meaningful and whether a formal mobile forensic review is justified.
 
@@ -397,6 +468,8 @@ The key question is:
 
 > Is policy state acting as persistence?
 
+---
+
 ### 2. Backup-layer Anti-Forensics
 
 Backup-layer artifacts may represent an anti-forensic surface affecting evidence preservation and third-party review.
@@ -415,6 +488,8 @@ Relevant areas include:
 The key question is:
 
 > Is the backup layer preserving evidence normally, or becoming part of the anomaly?
+
+---
 
 ### 3. Backup-ledger Seam in Mobile LOTL-like Platform-State Anomaly
 
@@ -443,6 +518,8 @@ The key question is:
 
 > Can repeated Manifest.db / backup-ledger abnormality be reproduced as normal Apple / iOS / iMazing behavior, or does it remain aligned with broader trust-state, restriction-state, daemon-layer, telecom, and evidence-preservation anomalies?
 
+---
+
 ### 4. Trust-Graph Poisoning
 
 The center of gravity may not be a single compromised device.
@@ -459,6 +536,8 @@ The anomaly may involve distortion of a broader trust graph, including:
 The key question is:
 
 > Is the trusted relationship itself being distorted across devices, accounts, backups, or authentication events?
+
+---
 
 ### 5. Evidence-Suppression Objective
 
@@ -477,6 +556,8 @@ Relevant signals include:
 The key question is:
 
 > Did the system behave normally when the user attempted to preserve evidence?
+
+---
 
 ### 6. LOTL-like Platform-State Anomaly
 
@@ -500,6 +581,8 @@ Relevant areas include:
 The key question is:
 
 > Is this a case of normal Apple platform state, or a LOTL-like anomaly surface where platform state itself becomes the control surface?
+
+---
 
 ### 7. Mobile-native LOTL-like Apple Platform-State Anomaly
 
@@ -539,6 +622,7 @@ These hypotheses do not assert:
 * malware attribution
 * actor attribution
 * state attribution
+* government attribution
 * Apple-side causation
 * iMazing causation
 * Microsoft causation
@@ -549,6 +633,9 @@ These hypotheses do not assert:
 * confirmed C2
 * confirmed payload
 * confirmed exploit chain
+* baseband compromise
+* SIM compromise
+* OTP interception
 
 They are intended only to guide qualified DFIR / CTI / mobile forensic / platform-security review.
 
@@ -562,7 +649,7 @@ The preferred outcome is a reproducible explanation that supports, weakens, or f
 
 The central question is not:
 
-> Which APT group did this?
+> Which actor did this?
 
 The central question is:
 
@@ -574,4 +661,4 @@ For the backup layer, the narrower question is:
 
 If yes, the hypothesis should be weakened.
 
-If no, the case may represent a forensic blind spot in how iOS platform-state, backup-ledger behavior, restriction state, account-cloud-calendar-document state, and evidence preservation are currently reviewed.
+If no, the case may represent a forensic blind spot in how iOS platform-state, backup-ledger behavior, restriction state, account-cloud-calendar-document state, telecom context, and evidence preservation are currently reviewed.
