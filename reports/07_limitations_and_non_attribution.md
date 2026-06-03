@@ -16,7 +16,7 @@ This repository does not claim certainty.
 
 This repository requests qualified technical review.
 
-The observed dataset appears to show repeated structural anomalies across Apple account, iCloud, backup, restriction, daemon, telecom, proximity, and evidence-preservation layers.
+The observed dataset appears to show repeated structural anomalies across Apple account, iCloud, backup, restriction, daemon, telecom, proximity, account-calendar-document, and evidence-preservation layers.
 
 However, the current public package does not establish:
 
@@ -32,17 +32,70 @@ However, the current public package does not establish:
 * confirmed Apple attribution
 * confirmed iMazing attribution
 * confirmed Microsoft attribution
+* confirmed Outlook causation
 * confirmed telecom compromise
 * confirmed baseband compromise
+* confirmed SIM compromise
 * confirmed OTP interception
 
 The central question remains:
 
-> Can the observed long-term, cross-device Apple ecosystem artifact structure be explained as normal Apple / iOS / iCloud / iMazing behavior, user-side artifact, local environment issue, isolated device failure, or ordinary configuration state?
+> Can the observed long-term, cross-device Apple ecosystem artifact structure be explained as normal Apple / iOS / iCloud / iMazing behavior, Microsoft app residue, ordinary account-calendar-document behavior, user-side artifact, local environment issue, isolated device failure, or ordinary configuration state?
 
 If yes, the hypothesis should be weakened or rejected.
 
 If no, the case may merit deeper forensic review as a possible Apple platform-state / backup-ledger / evidence-preservation anomaly.
+
+---
+
+## Maximum working hypothesis boundary
+
+The current maximum mechanism-level hypothesis is:
+
+> Shadow Cloud may represent a mobile-native LOTL-like Apple platform-state anomaly.
+
+This is not an attribution claim.
+
+This is not a confirmed abuse claim.
+
+This is not a claim that any named actor, vendor, product, app, or service caused the observed behavior.
+
+The model asks whether a PC / enterprise-style Living-off-the-Land concept may have a mobile-native equivalent, where legitimate mobile apps, accounts, cloud identity, calendar, document, policy, backup, telecom, and evidence-preservation states become the observable control surface.
+
+The current hierarchy is:
+
+```text
+Shadow Cloud
+= non-attribution working hypothesis
+
+Mobile-native LOTL-like Apple platform-state anomaly
+= maximum current mechanism-level hypothesis
+
+Outlook / Microsoft account-cloud-calendar-document surface
+= possible entry / state surface candidate for future review
+
+Manifest.db / backup-ledger seam
+= byproduct / observable evidence-preservation seam
+
+APT42-style ACMS
+= account / cloud / mobile-surveillance comparison reference
+
+APT32-style historical transfer
+= secondary operational-history comparison reference
+
+Attribution
+= not asserted
+```
+
+The key boundary is:
+
+* Manifest.db is not treated as the root cause.
+* Manifest.db / backup-ledger abnormality is treated as a possible byproduct or observable evidence-preservation seam.
+* Outlook / Microsoft mobile surfaces are not treated as proven causes.
+* Outlook / Microsoft surfaces are treated as possible account-cloud-calendar-document entry or state surfaces for future review.
+* iMazing is not treated as the cause.
+* iMazing is treated as an acquisition surface.
+* Apple backup state is treated as the review surface.
 
 ---
 
@@ -69,6 +122,7 @@ The primary review target is whether Apple ecosystem state itself appears to beh
 * RTCR / RTCReporting
 * CommCenter / Baseband / SIM / OTP context
 * BSSID / RSSI proximity context
+* account-cloud-calendar-document state
 * evidence-preservation behavior
 
 In short:
@@ -86,7 +140,7 @@ It is not attribution.
 
 It is not a confirmed abuse claim.
 
-It is not a claim that any named actor, vendor, tool, or service performed the observed activity.
+It is not a claim that any named actor, vendor, tool, app, or service performed the observed activity.
 
 ---
 
@@ -127,6 +181,41 @@ It should also not be read as:
 Where public-facing language requires maximum caution, this repository prefers:
 
 > LOTL-like Apple platform-state anomaly.
+
+---
+
+## Relationship to mobile-native LOTL-like model
+
+The mobile-native LOTL-like model is an extension of the mechanism-level framing.
+
+It does not claim that PC LOTL tools are running on iPhone.
+
+It does not claim:
+
+```text
+PowerShell on iPhone.
+```
+
+The mobile-native question is different:
+
+> Can normal-looking mobile platform state become the control and observation surface?
+
+Relevant mobile-native surfaces may include:
+
+* legitimate mobile apps
+* legitimate account state
+* legitimate cloud state
+* legitimate calendar / meeting state
+* legitimate document-provider state
+* legitimate token / OAuth state
+* legitimate policy / restriction state
+* legitimate backup state
+* legitimate telecom / SIM / OTP state
+* legitimate evidence-preservation behavior
+
+The model is treated as a review hypothesis only.
+
+It must be tested against normal explanations first.
 
 ---
 
@@ -227,7 +316,7 @@ It is not required for the Shadow Cloud hypothesis to be reviewed.
 
 The primary mechanism-level framing is:
 
-> LOTL-like Apple platform-state anomaly.
+> Mobile-native LOTL-like Apple platform-state anomaly.
 
 ---
 
@@ -357,7 +446,7 @@ If iMazing or ordinary iOS backup behavior explains the observed Manifest.db / b
 
 This repository does not claim Microsoft attribution.
 
-This repository does not claim that Outlook, OneDrive, Teams, Office, Excel, Word, PowerPoint, Microsoft 365, Microsoft Authenticator, Microsoft Edge, Intune, or any Microsoft service caused the Manifest.db anomaly.
+This repository does not claim that Outlook, OneDrive, Teams, Office, Excel, Word, PowerPoint, Microsoft 365, Microsoft Authenticator, Microsoft Edge, Intune, Company Portal, or any Microsoft service caused the Manifest.db anomaly.
 
 This repository does not claim that Microsoft mobile apps directly modified Manifest.db, backup keybags, iOS backup services, or Apple backup state.
 
@@ -386,6 +475,8 @@ The safe interpretation is:
 No Microsoft causation is asserted.
 
 No Microsoft attribution is asserted.
+
+No Outlook causation is asserted.
 
 ---
 
@@ -506,6 +597,7 @@ This does not mean:
 * iMazing caused the anomaly
 * Apple caused the anomaly
 * Microsoft caused the anomaly
+* Outlook caused the anomaly
 
 If normal explanations reproduce the observed behavior across preserved backup generations, the hypothesis should be weakened.
 
@@ -697,6 +789,8 @@ They are not used alone to establish:
 * spyware deployment
 * attribution
 * vendor causation
+* Microsoft causation
+* Outlook causation
 
 Any subjective observation must be supported by artifact-level review before it can contribute to technical conclusions.
 
@@ -724,6 +818,7 @@ Examples:
 * APT32-style alignment means similarity to historical operational doctrine, seam failures, or old-doctrine leakage.
 * LOTL-like alignment means similarity to a mechanism where normal-looking platform states or legitimate functions become the anomaly surface.
 * Backup-ledger seam alignment means the Manifest.db / backup-ledger abnormality is structurally consistent with a mobile LOTL-like platform-state review model.
+* Mobile-native LOTL-like alignment means the broader structure is consistent with a mobile adaptation of LOTL logic where account, calendar, document, policy, backup, telecom, and evidence-preservation states become the review surface.
 
 Scores should be treated as triage aids, not conclusions.
 
@@ -745,7 +840,8 @@ This hypothesis should be weakened or rejected if qualified review shows that:
 10. Evidence-preservation failures are explained by storage, app behavior, local PC environment, or ordinary backup-tool behavior.
 11. Alpha / beta timeline shift is caused by dataset bias, collection changes, iOS updates, backup-method changes, or user-side configuration changes.
 12. Cross-device recurrence is explained by normal shared Apple ecosystem behavior, shared account state, shared backup practice, or shared analysis bias.
-13. Microsoft / Outlook / Office traces, if reviewed later, are fully explained by ordinary account, calendar, app, or document-provider behavior and do not correlate with the broader structure.
+13. Microsoft / Outlook / Office traces, if reviewed later, are fully explained by ordinary account, calendar, app, meeting, document-provider, or policy behavior and do not correlate with the broader structure.
+14. The apparent mobile-native LOTL-like pattern disappears after normal controls are applied.
 
 If normal explanations reproduce the observed structure, the Shadow Cloud hypothesis should be reduced, revised, or rejected.
 
@@ -764,6 +860,8 @@ The hypothesis would be strengthened only by qualified review showing that:
 * MDMStatus:false does not normally coexist with the observed management-adjacent daemon pattern
 * usageClientId transitions are not normal under the reviewed conditions
 * CommCenter / Baseband / SIM / OTP context aligns with trust-state or restriction-state changes
+* Outlook / Microsoft traces exist in preserved artifacts during key windows and cannot be explained as ordinary residue
+* account-cloud-calendar-document state correlates with backup, restriction, telecom, or evidence-preservation anomalies
 * evidence-preservation failures cluster around critical review moments beyond expected normal behavior
 * cross-device recurrence survives control comparison
 * raw artifact review supports the public summary structure
@@ -781,6 +879,7 @@ This document claims only the following:
 * The repository is non-attribution.
 * Shadow Cloud is a working hypothesis.
 * The updated preferred framing is LOTL-like Apple platform-state anomaly.
+* The current maximum mechanism-level hypothesis is mobile-native LOTL-like Apple platform-state anomaly.
 * The backup-layer branch is a backup-ledger seam in a mobile LOTL-like platform-state anomaly.
 * iMazing is treated as an acquisition surface, not an asserted cause.
 * Apple backup state is treated as a review surface, not proof of Apple causation.
@@ -810,6 +909,7 @@ This document does not claim:
 * Apple attribution
 * iMazing attribution
 * Microsoft attribution
+* Outlook causation
 * telecom-provider attribution
 * attacker identity
 * criminal attribution
@@ -819,6 +919,7 @@ This document does not claim:
 * that BSSID / RSSI alone proves proximity-based attack
 * that Outlook / Microsoft app traces caused the backup anomaly
 * that LOTL-like framing identifies an actor
+* that mobile-native LOTL-like framing identifies an actor
 
 ---
 
@@ -838,7 +939,7 @@ It is an attempt to organize long-term, cross-device Apple ecosystem artifacts i
 
 The preferred reviewer question is:
 
-> Can normal Apple / iOS / iCloud / iMazing behavior explain the observed cross-layer structure?
+> Can normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior explain the observed cross-layer structure?
 
 For the backup layer, the narrower question is:
 
@@ -846,4 +947,4 @@ For the backup layer, the narrower question is:
 
 If yes, document the normal explanation.
 
-If no, the case may represent a forensic blind spot in how iOS platform-state, backup-ledger behavior, restriction state, telecom context, and evidence preservation are currently reviewed.
+If no, the case may represent a forensic blind spot in how iOS platform-state, backup-ledger behavior, restriction state, account-cloud-calendar-document state, telecom context, and evidence preservation are currently reviewed.
