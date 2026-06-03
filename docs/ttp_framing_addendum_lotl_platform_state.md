@@ -10,7 +10,7 @@ It does not add raw artifacts.
 
 It does not change the evidence base.
 
-It does not claim malware, C2, exploit chain, spyware-family attribution, MDM enrollment, Apple attribution, iMazing attribution, Microsoft attribution, Outlook causation, telecom-provider attribution, or attacker identity.
+It does not claim malware, C2, exploit chain, spyware-family attribution, MDM enrollment, Apple attribution, iMazing attribution, Microsoft attribution, Outlook causation, telecom-provider attribution, actor attribution, government attribution, or attacker identity.
 
 ---
 
@@ -18,7 +18,7 @@ It does not claim malware, C2, exploit chain, spyware-family attribution, MDM en
 
 This addendum clarifies the preferred technical framing for Shadow Cloud.
 
-Earlier framing used APT42-style account / cloud / mobile-surveillance concepts and APT32-style historical transfer concepts as comparison references.
+Earlier framing used account / cloud / mobile-surveillance concepts, historical TTP comparison, and telecom / proximity comparison as public reference material.
 
 Those comparisons remain useful.
 
@@ -42,7 +42,7 @@ Mobile-native LOTL-like Apple platform-state anomaly
 = maximum current mechanism-level hypothesis
 
 LOTL-like Apple platform-state anomaly
-= proposed mechanism-level framing
+= mechanism-level framing
 
 Backup-ledger seam in mobile LOTL-like platform-state anomaly
 = focused backup-layer branch
@@ -50,14 +50,14 @@ Backup-ledger seam in mobile LOTL-like platform-state anomaly
 Outlook / Microsoft account-cloud-calendar-document surface
 = possible entry / state surface candidate for future review
 
-APT42-style ACMS
-= account / cloud / mobile-surveillance comparison reference
+Account / cloud / mobile-surveillance comparison
+= public comparison reference
 
-APT32-style historical transfer
+Historical TTP comparison
 = secondary operational-history comparison
 
-LIMINAL-style telecom / proximity concepts
-= tertiary telecom/proximity comparison reference
+Telecom / proximity comparison
+= tertiary condition / context comparison
 
 Attribution
 = not asserted
@@ -86,21 +86,19 @@ Living off Apple backup state.
 
 ## Why LOTL is relevant
 
-Traditional Living-off-the-Land activity usually refers to the use of legitimate tools, valid accounts, native utilities, administrative workflows, cloud consoles, or normal-looking processes.
+Traditional Living-off-the-Land activity usually refers to the use of legitimate tools, valid accounts, native utilities, administrative workflows, cloud consoles, identity systems, document platforms, or normal-looking processes.
 
 Examples include:
 
-* PowerShell
-* WMI
-* RDP
-* PsExec
-* SSH
-* VPN access
-* cloud console activity
+* legitimate tools
 * valid accounts
-* native administrative tools
-* Microsoft 365 / Exchange / Graph API surfaces
-* OAuth / token abuse
+* native utilities
+* remote access paths
+* cloud console activity
+* email / identity systems
+* token-based access
+* document or collaboration platforms
+* enterprise management surfaces
 
 The Shadow Cloud model appears conceptually similar, but the suspected surface is different.
 
@@ -209,7 +207,7 @@ May use or distort legitimate platform state.
 Traditional LOTL:
 
 ```text
-Traces may appear in native tools, admin logs, cloud logs, and valid-account activity.
+Traces may appear in native tools, admin logs, cloud logs, identity logs, and valid-account activity.
 ```
 
 Shadow Cloud:
@@ -381,6 +379,8 @@ It does not prove iMazing fault.
 
 It does not prove Apple fault.
 
+It does not prove Microsoft fault.
+
 It means the backup-ledger layer may be part of the anomaly surface.
 
 ---
@@ -473,8 +473,8 @@ The individual parts are not exotic by themselves.
 Known components include:
 
 * LOTL concepts
-* valid account abuse
-* OAuth / token abuse
+* valid account use
+* OAuth / token abuse concepts
 * Microsoft 365 / Exchange / Graph surfaces
 * mobile app policy surfaces
 * iOS backup / keybag / encryption concepts
@@ -497,7 +497,7 @@ as the review surface
 
 ## Why this improves the model
 
-The previous APT42 / APT32 comparison was useful but actor-adjacent.
+Earlier public TTP comparison was useful but actor-adjacent if overused.
 
 It helped explain:
 
@@ -506,6 +506,7 @@ It helped explain:
 * mobile-surveillance logic
 * long-term low-noise behavior
 * historical TTP transfer
+* staged refinement
 * old-doctrine leakage
 
 However, it did not fully explain why the strongest traces appear in:
@@ -524,7 +525,7 @@ The mobile-native LOTL-like Apple platform-state framing explains this more dire
 It shifts the question from:
 
 ```text
-Which APT group does this resemble?
+Which actor does this resemble?
 ```
 
 to:
@@ -705,7 +706,7 @@ Outlook / Microsoft surfaces are a strong internal review anchor, but not yet pu
 ## Structural fit comparison
 
 ```text
-Old framing without LOTL-like platform-state model:
+Old actor-adjacent public TTP framing:
 72 / 100
 
 Updated framing with LOTL-like Apple platform-state anomaly:
@@ -806,9 +807,9 @@ Reviewers should ask:
 
 ---
 
-## Relationship to APT42
+## Relationship to account / cloud / mobile-surveillance comparison
 
-APT42-style public reporting remains useful as a comparison reference because it emphasizes:
+Account / cloud / mobile-surveillance comparison remains useful as public reference material because it emphasizes:
 
 * account targeting
 * credential and cloud access
@@ -817,34 +818,34 @@ APT42-style public reporting remains useful as a comparison reference because it
 * low-noise collection
 * human / authentication / cloud / mobile overlap
 
-However, APT42 is not asserted as attribution.
+However, it is not asserted as attribution.
 
-APT42-style ACMS is used only as an account / cloud / mobile-surveillance comparison reference.
+It is used only as a public comparison reference.
 
 ---
 
-## Relationship to APT32
+## Relationship to historical TTP comparison
 
-APT32-style historical comparison remains useful as a secondary operational-history comparison.
+Historical TTP comparison remains useful as secondary operational-history context.
 
 It may help frame:
 
 * historical TTP transfer
-* legitimate-service abuse
+* legitimate-service use
 * staged refinement
 * trace suppression
 * old-doctrine leakage
 * operational seam failure
 
-However, APT32 is not asserted as attribution.
+However, it is not asserted as attribution.
 
-APT32 is not the central framing.
+It is not the central framing.
 
 ---
 
-## Relationship to LIMINAL-style telecom / proximity concepts
+## Relationship to telecom / proximity comparison
 
-LIMINAL-style telecom / proximity concepts are used only as a tertiary comparison reference.
+Telecom / proximity concepts are used only as tertiary condition or context references.
 
 They may help frame:
 
@@ -853,7 +854,7 @@ They may help frame:
 * radio-environment triggers
 * condition-linked state changes
 
-No telecom actor attribution is asserted.
+No telecom attribution is asserted.
 
 No baseband compromise is asserted.
 
@@ -895,10 +896,9 @@ This addendum does not assert:
 * exploit chain
 * confirmed spyware
 * confirmed MDM enrollment
-* APT42 attribution
-* APT32 attribution
-* LIMINAL PANDA attribution
+* actor attribution
 * state attribution
+* government attribution
 * Apple attribution
 * iMazing attribution
 * Microsoft attribution
@@ -909,7 +909,7 @@ This addendum does not assert:
 * OTP interception
 * attacker identity
 
-All named public models are comparison references only.
+Named public threat reports, public TTP references, commercial spyware models, Microsoft app surfaces, telecom / proximity concepts, and LOTL references are comparison points or possible review surfaces only.
 
 ---
 
@@ -921,8 +921,9 @@ This addendum should be read together with:
 * `docs/backup_ledger_seam_mobile_lotl.md`
 * `reports/00_manifest_db_anomaly_core_point.md`
 * `reports/01_manifest_db_anomaly.md`
-* `reports/06_ttp_comparison_apt32_apt42_liminal.md`
+* `reports/06_public_ttp_mechanism_comparison.md`
 * `reports/07_limitations_and_non_attribution.md`
+* `reports/09_secondary_historical_ttp_comparison.md`
 * `reports/10_working_hypothesis_matrix.md`
 * `SUMMARY_ONE_PAGE.md`
 * `machine_summary.yaml`
@@ -934,7 +935,7 @@ This addendum should be read together with:
 The central question is not:
 
 ```text
-Which APT group did this?
+Which actor did this?
 ```
 
 The central question is:
