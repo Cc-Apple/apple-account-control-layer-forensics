@@ -2,10 +2,11 @@ ttp_framing_update_lotl_platform_state:
 status: "public_non_attribution_framing_update"
 date_added: "2026-06"
 purpose: >
-Clarify the Shadow Cloud working hypothesis as a LOTL-like Apple
-platform-state / trust-state anomaly hypothesis, while keeping APT42,
-APT32, LIMINAL-style, mercenary spyware, Microsoft app surfaces, and LOTL
-references as comparison points or future review surfaces only.
+Clarify the Shadow Cloud working hypothesis as a mobile-native LOTL-like
+Apple platform-state / trust-state anomaly hypothesis, while keeping public
+TTP reports, historical TTP material, telecom / proximity concepts,
+commercial spyware models, Microsoft app surfaces, and LOTL references as
+comparison points or future review surfaces only.
 
 primary_framing:
 hypothesis_name: "Shadow Cloud"
@@ -31,7 +32,7 @@ mobile_native_lotl_like_apple_platform_state_anomaly:
   attribution: "not asserted"
 
 lotl_like_apple_platform_state_anomaly:
-  role: "proposed TTP mechanism"
+  role: "mechanism-level framing"
   description: >
     A mechanism-level framing in which normal-looking Apple platform states,
     trust states, restriction states, backup states, telecom states, and
@@ -56,18 +57,18 @@ outlook_microsoft_surface:
   attribution: "not asserted"
   public_proof_status: "not established"
 
-apt42_style_acms:
-  role: "comparison reference"
+account_cloud_mobile_surveillance_comparison:
+  role: "public comparison reference"
   meaning: "account / cloud / mobile-surveillance doctrine"
   attribution: "not asserted"
 
-apt32_style_historical_transfer:
-  role: "secondary comparison reference"
-  meaning: "historical TTP transfer / old-doctrine leakage / operational-history comparison"
+historical_ttp_comparison:
+  role: "secondary operational-history comparison"
+  meaning: "historical TTP comparison / old-doctrine leakage / operational-history comparison"
   attribution: "not asserted"
 
-liminal_style_telecom_proximity:
-  role: "tertiary comparison reference"
+telecom_proximity_comparison:
+  role: "tertiary condition / context comparison"
   meaning: "telecom / proximity / condition-linked state comparison"
   attribution: "not asserted"
 ```
@@ -98,17 +99,14 @@ distinction_from_traditional_lotl:
 traditional_lotl:
 summary: "uses legitimate tools, valid accounts, native utilities, or normal administrative workflows"
 examples:
-- "PowerShell"
-- "WMI"
-- "RDP"
-- "PsExec"
-- "SSH"
-- "VPN access"
-- "cloud console activity"
+- "native utilities"
 - "valid accounts"
-- "native administrative tools"
-- "Microsoft 365 / Exchange / Graph API surfaces"
-- "OAuth / token abuse"
+- "remote access paths"
+- "cloud console activity"
+- "email / identity systems"
+- "token-based access"
+- "document or collaboration platforms"
+- "enterprise management surfaces"
 
 ```
 mobile_native_lotl_like_model:
@@ -127,13 +125,13 @@ mobile_native_lotl_like_model:
 ```
 
 comparison_scores:
-old_framing_without_lotl:
+old_actor_adjacent_framing:
 score: 72
 summary: >
-Useful but overly actor-adjacent. APT42/APT32 comparison helped explain
-account/cloud/mobile surveillance and historical TTP transfer, but did
-not fully explain payload absence, Apple platform-state anomalies, or
-evidence-preservation interference.
+Useful but overly actor-adjacent. Public TTP comparison helped explain
+account / cloud / mobile surveillance and historical TTP transfer, but
+did not fully explain payload absence, Apple platform-state anomalies,
+backup-ledger behavior, or evidence-preservation interference.
 
 ```
 updated_framing_with_lotl_like_platform_state:
@@ -176,11 +174,25 @@ outlook_microsoft_entry_surface:
     closely related to traditional LOTL models. They are not public proof in
     this package.
 
-score_delta_lotl_added:
-  value: 14
-  interpretation: >
-    LOTL-like Apple platform-state framing significantly improves coherence
-    while preserving APT42 and APT32 as comparison references.
+account_cloud_mobile_surveillance_comparison:
+  score_range: "80-88"
+  summary: >
+    Useful public comparison reference for account, cloud, mobile-surveillance,
+    trusted-device, and authentication-adjacent doctrine. Not attribution.
+
+historical_ttp_comparison:
+  score_range: "72-78"
+  summary: >
+    Useful only as secondary operational-history comparison for long-term,
+    low-noise, legitimate-service-oriented behavior, staged refinement,
+    trace suppression, and residual seam failures. Not attribution.
+
+telecom_proximity_comparison:
+  score_range: "70-76"
+  summary: >
+    Useful only as tertiary context for telecom, proximity, radio-environment,
+    SIM, Baseband, CommCenter, BSSID/RSSI, and condition-linked state review.
+    Not attribution.
 ```
 
 key_review_questions:
@@ -209,15 +221,15 @@ does_not_claim:
 - "confirmed exploit chain"
 - "confirmed spyware"
 - "confirmed MDM enrollment"
-- "APT42 attribution"
-- "APT32 attribution"
-- "LIMINAL PANDA attribution"
+- "actor attribution"
 - "state attribution"
+- "government attribution"
 - "Apple attribution"
 - "iMazing attribution"
 - "Microsoft attribution"
 - "Outlook causation"
 - "telecom-provider attribution"
+- "commercial spyware-family attribution"
 - "baseband compromise"
 - "SIM compromise"
 - "OTP interception"
@@ -231,12 +243,13 @@ linked_documents:
 - "docs/backup_ledger_seam_mobile_lotl.md"
 - "reports/00_manifest_db_anomaly_core_point.md"
 - "reports/01_manifest_db_anomaly.md"
-- "reports/06_ttp_comparison_apt32_apt42_liminal.md"
+- "reports/06_public_ttp_mechanism_comparison.md"
 - "reports/07_limitations_and_non_attribution.md"
+- "reports/09_secondary_historical_ttp_comparison.md"
 - "reports/10_working_hypothesis_matrix.md"
 
 practical_reviewer_takeaway: >
-The central question is not which APT group did this. The central question is
+The central question is not which actor did this. The central question is
 whether normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior can
 explain a long-term, cross-device structure in which trust state, restriction
 state, account-calendar-document state, backup state, telecom state, and
@@ -287,6 +300,7 @@ normal_explanation_candidates:
 - "local PC / USB / file lock / security software"
 - "storage pressure / low free space"
 - "ordinary iOS / iMazing backup bug"
+- "Microsoft app residue / Outlook calendar residue if preserved artifacts support that review path"
 
 score_assessment:
 manifest_db_alone: 74
@@ -308,7 +322,8 @@ SQLite file-is-not-a-database errors, multiple backup generations, iMazing
 success/backend mismatch, RTCR / Status.plist / Manifest.plist relationships,
 ScreenTime / ManagedSettings signals, MDMStatus:false daemon repetition,
 CommCenter / Baseband context, usageClientId transitions, storage pressure,
-and evidence-preservation difficulty together.
+evidence-preservation difficulty, and possible Outlook / Microsoft review
+surface relevance together.
 
 strengthening_conditions:
 - "Manifest.db repeatedly not valid SQLite after proper handling"
@@ -319,6 +334,7 @@ strengthening_conditions:
 - "control devices under the same acquisition environment produce normal Manifest.db"
 - "issue correlates with ScreenTime / ManagedSettings / MDMStatus:false / daemon repetition / CommCenter / evidence-preservation events"
 - "encrypted versus unencrypted backup comparisons do not fully explain the issue"
+- "Outlook / Microsoft traces, if reviewed later, appear in preserved artifacts during key windows and correlate with account-cloud-calendar-document state rather than ordinary residue"
 
 weakening_conditions:
 - "Manifest.db opens normally as SQLite after proper decryption and handling"
@@ -329,6 +345,7 @@ weakening_conditions:
 - "Windows / USB / antivirus / file-lock conditions reproduce the same artifact pattern"
 - "low storage alone reproduces the observed backup-ledger behavior"
 - "issue does not correlate with broader trust-state, restriction-state, daemon-layer, telecom, or evidence-preservation pattern"
+- "Outlook / Microsoft traces, if reviewed later, are ordinary residue and do not correlate with the broader structure"
 
 public_boundary:
 does_not_claim:
@@ -342,7 +359,9 @@ does_not_claim:
 - "Microsoft attribution"
 - "Outlook causation"
 - "state attribution"
-- "spyware-family attribution"
+- "commercial spyware-family attribution"
+- "actor attribution"
+- "government attribution"
 - "attacker identity"
 
 linked_documents:
@@ -351,7 +370,9 @@ linked_documents:
 - "docs/ttp_framing_addendum_lotl_platform_state.md"
 - "reports/00_manifest_db_anomaly_core_point.md"
 - "reports/01_manifest_db_anomaly.md"
+- "reports/06_public_ttp_mechanism_comparison.md"
 - "reports/07_limitations_and_non_attribution.md"
+- "reports/09_secondary_historical_ttp_comparison.md"
 - "reports/10_working_hypothesis_matrix.md"
 
 practical_reviewer_takeaway: >
@@ -359,7 +380,8 @@ The central question is not whether iMazing caused the issue. The central
 question is whether normal Apple / iOS / iMazing backup behavior can explain
 repeated Manifest.db / backup-ledger abnormality across preserved backup
 generations, especially when aligned with broader trust-state, restriction-state,
-daemon-layer, telecom, and evidence-preservation anomalies.
+daemon-layer, telecom, account-cloud-calendar-document, and evidence-preservation
+anomalies.
 
 mobile_lotl_maximum_hypothesis:
 status: "public_non_attribution_maximum_working_hypothesis"
@@ -534,10 +556,9 @@ does_not_claim:
 - "confirmed exploit chain"
 - "confirmed MDM enrollment"
 - "confirmed spyware-family deployment"
-- "APT42 attribution"
-- "APT32 attribution"
-- "LIMINAL PANDA attribution"
+- "actor attribution"
 - "state attribution"
+- "government attribution"
 - "Apple attribution"
 - "iMazing attribution"
 - "Microsoft attribution"
@@ -554,7 +575,9 @@ linked_documents:
 - "docs/backup_ledger_seam_mobile_lotl.md"
 - "README.md"
 - "SUMMARY_ONE_PAGE.md"
+- "reports/06_public_ttp_mechanism_comparison.md"
 - "reports/07_limitations_and_non_attribution.md"
+- "reports/09_secondary_historical_ttp_comparison.md"
 - "reports/10_working_hypothesis_matrix.md"
 
 practical_reviewer_takeaway: >
@@ -564,3 +587,51 @@ account state, calendar/document state, restriction state, backup state,
 telecom state, proximity context, and evidence-preservation behavior. If not,
 this may represent an under-described mobile-native LOTL-like platform-state
 anomaly.
+
+report_index:
+reports:
+- file: "reports/00_manifest_db_anomaly_core_point.md"
+role: "Manifest.db core technical point"
+
+```
+- file: "reports/01_manifest_db_anomaly.md"
+  role: "Manifest.db anomaly report"
+
+- file: "reports/02_usageclientid_shift.md"
+  role: "usageClientId transition and discontinuity report"
+
+- file: "reports/03_screentime_gamecenter_restrictions.md"
+  role: "ScreenTime / Game Center / Content & Privacy / ManagedSettings / FamilyControls restriction-layer report"
+
+- file: "reports/04_march2026_beta_phase.md"
+  role: "March 2026 density-shift and beta-phase candidate report"
+
+- file: "reports/05_bssid_proximity_anchor.md"
+  role: "BSSID / RSSI / Wi-Fi location-anchor report"
+
+- file: "reports/06_public_ttp_mechanism_comparison.md"
+  role: "Public non-attribution TTP mechanism comparison"
+
+- file: "reports/07_limitations_and_non_attribution.md"
+  role: "Limitations, non-attribution statement, and evidence-boundary clarification"
+
+- file: "reports/08_automotive_sector_risk_scenario.md"
+  role: "Automotive-sector risk scenario"
+
+- file: "reports/09_secondary_historical_ttp_comparison.md"
+  role: "Secondary historical TTP comparison"
+
+- file: "reports/10_working_hypothesis_matrix.md"
+  role: "Reviewer-facing working hypothesis matrix"
+```
+
+deprecated_or_replaced:
+- old_file: "reports/06_ttp_comparison_apt32_apt42_liminal.md"
+replacement: "reports/06_public_ttp_mechanism_comparison.md"
+reason: "renamed to reduce actor-centered wording and improve non-attribution framing"
+
+```
+- old_file: "reports/09_operational_seam_similarity_apt32_oceanlotus.md"
+  replacement: "reports/09_secondary_historical_ttp_comparison.md"
+  reason: "renamed to reduce actor-centered wording and improve non-attribution framing"
+```
