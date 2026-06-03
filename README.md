@@ -483,8 +483,8 @@ The `reports/` directory contains the structured analysis set:
 * `05_bssid_proximity_anchor.md`
   BSSID / RSSI / Wi-Fi location-anchor report.
 
-* `06_ttp_comparison_apt32_apt42_liminal.md`
-  Public TTP comparison report. This file keeps named public reporting as comparison references only and places the primary mechanism-level framing on mobile-native LOTL-like platform-state behavior.
+* `06_public_ttp_mechanism_comparison.md`
+  Public TTP mechanism comparison. This report keeps account / cloud / mobile-surveillance comparison, historical TTP comparison, telecom / proximity comparison, Microsoft app surfaces, and LOTL references only as comparison or future review surfaces, while the primary mechanism-level hypothesis remains mobile-native LOTL-like Apple platform-state anomaly.
 
 * `07_limitations_and_non_attribution.md`
   Limitations, non-attribution statement, and evidence-boundary clarification.
