@@ -6,7 +6,7 @@ This file defines a reviewer-facing hypothesis matrix for the Shadow Cloud worki
 
 These are not attribution claims.
 
-They are not claims that APT32, APT42, LIMINAL PANDA, any government, any company, or any known spyware family executed this activity.
+They are not claims that APT32, APT42, LIMINAL PANDA, any government, any company, any vendor, any telecom provider, or any known spyware family executed this activity.
 
 They are structured working hypotheses intended to make the Shadow Cloud model testable by qualified DFIR, CTI, mobile forensic, platform-security, and OS-security reviewers.
 
@@ -16,6 +16,7 @@ The purpose is to separate:
 - possible interpretations
 - validation paths
 - falsification paths
+- mechanism-level TTP framing
 
 from direct attribution or speculation.
 
@@ -23,16 +24,30 @@ from direct attribution or speculation.
 
 ## Core model being tested
 
-Shadow Cloud is treated as a working hypothesis for a possible Apple account / iCloud / backup / restriction-layer / telecom / proximity control-surface anomaly.
+Shadow Cloud is treated as a working hypothesis for a possible Apple account / iCloud / backup / restriction-layer / telecom / proximity / evidence-preservation anomaly.
 
 The model does not assume that a classic malware payload must be visible.
 
-Instead, the strongest traces may appear at the seams between legitimate Apple services and abnormal control behavior.
+Instead, the strongest traces may appear at the seams between legitimate Apple services and abnormal platform-state behavior.
+
+The current recommended framing is:
+
+> Shadow Cloud is a non-attribution, LOTL-like Apple platform-state / trust-state abuse hypothesis.
+
+In short:
+
+> Not living off tools.  
+> Living off Apple platform state.
+
+This means the primary review target is not a named actor.
+
+The primary review target is whether Apple ecosystem state itself behaves normally across account, policy, backup, telecom, proximity, and evidence-preservation layers.
 
 The main seam areas are:
 
 - Apple ID state
 - iCloud / trusted-device behavior
+- usageClientId / usage-state transitions
 - ScreenTime / restriction-layer behavior
 - ManagedSettings / FamilyControls traces
 - visible MDM state versus management-adjacent daemon activity
@@ -42,6 +57,34 @@ The main seam areas are:
 - CommCenter / Baseband / SIM / OTP trust behavior
 - BSSID / RSSI / proximity-related signals
 - resource pressure and evidence-preservation interference
+
+---
+
+## Updated hypothesis stack
+
+The recommended hypothesis stack is:
+
+```text
+Shadow Cloud
+= working hypothesis name
+
+LOTL-like Apple platform-state abuse
+= proposed TTP mechanism
+
+APT42-style ACMS
+= account / cloud / mobile-surveillance comparison reference
+
+APT32-style historical transfer
+= secondary operational-history comparison
+
+LIMINAL-style telecom / proximity concepts
+= tertiary telecom/proximity comparison reference
+
+Attribution
+= not asserted
+```
+
+This matrix should be read as mechanism-centered, not actor-centered.
 
 ---
 
@@ -80,6 +123,7 @@ not only:
 - restriction behavior surviving restore, migration, or Apple ID lineage changes
 - mismatch between visible management state and effective restriction behavior
 - correlation between ScreenTime / ManagedSettings / daemon activity and user-observed control symptoms
+- restriction-like behavior clustering with account / cloud / backup / telecom state changes
 
 ### What would weaken or falsify it
 
@@ -87,6 +131,7 @@ not only:
 - reproducible normal Apple behavior explaining the same pattern
 - no cross-device or cross-generation continuity
 - vendor-confirmed benign explanation for all relevant policy-state transitions
+- clean control devices reproducing the same restriction pattern under normal settings
 
 ### Current confidence
 
@@ -108,6 +153,8 @@ They may instead represent an anti-forensic layer affecting evidence preservatio
 
 - Manifest.db abnormality
 - non-SQLite or opaque Manifest behavior
+- SQLite-level failure such as `file is not a database` in reviewed samples
+- expected SQLite header absence in reviewed raw Manifest.db samples
 - backup generation inconsistency
 - RTCR generation anomalies
 - encrypted versus unencrypted backup differences
@@ -129,6 +176,7 @@ The relevant question becomes:
 - reproducible mismatch between backup success status and artifact validity
 - abnormal RTCR / Manifest / Status / Info plist relationships
 - comparison devices showing normal backup ledgers under similar conditions
+- repeated SQLite-level failures that cannot be explained by normal backup encryption or keybag state
 
 ### What would weaken or falsify it
 
@@ -136,6 +184,7 @@ The relevant question becomes:
 - identical Manifest behavior reproduced on clean control devices
 - normal SQLite access after proper decryption and tool handling
 - no meaningful difference between affected and control backups
+- all SQLite failures explained by ordinary encryption, lock state, corruption, partial backup, local PC, or tool conditions
 
 ### Current confidence
 
@@ -153,7 +202,7 @@ Not proven.
 
 The center of gravity may not be a single infected device.
 
-The anomaly may involve distortion of a broader trust graph, including Apple ID lineage, trusted devices, backup lineage, SIM / OTP state, and financial device trust.
+The anomaly may involve distortion of a broader trust graph, including Apple ID lineage, trusted devices, backup lineage, usage state, SIM / OTP state, and financial device trust.
 
 ### Observed indicator categories
 
@@ -165,6 +214,7 @@ The anomaly may involve distortion of a broader trust graph, including Apple ID 
 - financial applications requesting re-authentication
 - bank-side “device changed?” type indicators
 - backup lineage inconsistency
+- account / cloud / device trust-state discontinuity
 
 ### Why it matters
 
@@ -185,6 +235,7 @@ not only:
 - correlation between device trust anomalies and financial re-authentication events
 - repeated identity discontinuity in logs
 - difference between owner devices and clean comparison devices
+- usageClientId discontinuity aligning with backup, restriction, telecom, or account-cloud state changes
 
 ### What would weaken or falsify it
 
@@ -192,6 +243,7 @@ not only:
 - no cross-device continuity
 - no relation between trust-state anomalies and authentication events
 - clean vendor-side confirmation that all trusted-device states are normal
+- usageClientId transitions fully explained by normal analytics, restore, migration, or app behavior
 
 ### Current confidence
 
@@ -218,6 +270,7 @@ They may function as proximity or condition triggers used to change state when t
 - movement or arrival-time correlation
 - device behavior changes around physical proximity events
 - repeated proximity-linked daemon activity
+- telecom / account / restriction state changes near radio-environment anchors
 
 ### Why it matters
 
@@ -237,6 +290,7 @@ not only:
 - time correlation between human proximity events and daemon / restriction / telecom events
 - similar behavior after travel, arrival, or network environment change
 - control devices showing no equivalent state change under similar conditions
+- proximity anchors aligning with account / backup / restriction / evidence-preservation anomalies
 
 ### What would weaken or falsify it
 
@@ -244,6 +298,7 @@ not only:
 - no repeatable time correlation
 - no link between proximity signals and control-layer symptoms
 - clean network environment reproducing the same results
+- telecom / proximity artifacts fully explained as independent normal events
 
 ### Current confidence
 
@@ -270,6 +325,7 @@ The goal may include plausible deniability.
 - backup failure or partial backup behavior
 - sync delay / deletion / log preservation anomalies
 - normal-looking error categories masking cross-layer correlation
+- visible MDM absence while management-adjacent activity repeats
 
 ### Why it matters
 
@@ -280,9 +336,10 @@ It would produce many individually dismissible symptoms that become meaningful o
 ### What would support this hypothesis
 
 - repeated clustering of individually minor errors around evidence-relevant events
-- cross-device recurrence of similar “benign-looking” failure modes
+- cross-device recurrence of similar benign-looking failure modes
 - strong time correlation between user action and evidence-preservation degradation
 - comparison devices lacking the same clustered pattern
+- normal-looking Apple platform states aligning in abnormal cross-layer sequences
 
 ### What would weaken or falsify it
 
@@ -290,6 +347,7 @@ It would produce many individually dismissible symptoms that become meaningful o
 - no timing relationship to evidence-relevant activity
 - same pattern appears on clean control devices
 - storage and backup problems are fully explained by local configuration or hardware failure
+- all daemon failures are isolated, expected, and unrelated to account / restriction / backup / telecom states
 
 ### Current confidence
 
@@ -315,6 +373,7 @@ The strongest anomalies may be exposed at the seams because the model is incompl
 - device-specific failure modes
 - repeated but imperfect cross-layer coupling
 - stronger contradictions during transition windows
+- transition from distributed backup / trust / usage signals to more consolidated restriction / daemon / telecom / preservation clustering
 
 ### Why it matters
 
@@ -333,6 +392,7 @@ The relevant question becomes:
 - decreasing visible contradiction across later periods
 - different devices showing different test roles
 - comparison devices acting as negative or partial controls
+- alpha-to-beta shift remaining after correcting for collection bias, device changes, iOS updates, and backup-method changes
 
 ### What would weaken or falsify it
 
@@ -340,6 +400,7 @@ The relevant question becomes:
 - no repeatable phase windows
 - no difference between affected and comparison devices
 - all anomalies explained by unrelated local failures
+- apparent phase shift caused by observer-side collection changes, dataset expansion, iOS updates, or changed analysis method
 
 ### Current confidence
 
@@ -367,6 +428,7 @@ This would make evidence preservation itself part of the contested surface.
 - SFA or related artifact preservation difficulty
 - deletion / logd / resource-pressure patterns
 - inability to capture key moments despite user effort
+- backend artifact abnormality despite apparent user-side preservation attempt
 
 ### Why it matters
 
@@ -383,6 +445,7 @@ The relevant question becomes:
 - cross-device or cross-period recurrence
 - successful preservation on control devices under similar conditions
 - failure modes aligning with the most important event windows
+- backup / Manifest / RTCR anomalies aligning with preservation attempts
 
 ### What would weaken or falsify it
 
@@ -390,12 +453,105 @@ The relevant question becomes:
 - no timing relationship to important events
 - same failures reproduced on clean devices
 - no link between preservation failure and control-layer anomalies
+- all preservation failures explained by local PC, iMazing, USB, storage, network, or app conditions
 
 ### Current confidence
 
 High as a reviewer-facing hypothesis.
 
 Not proven.
+
+---
+
+## Hypothesis 8: LOTL-like Platform-State Abuse
+
+### Meaning
+
+The observed structure may not depend on a visible malicious tool, obvious payload, classic C2 infrastructure, configuration profile, or visible MDM enrollment.
+
+Instead, the anomaly may appear as normal-looking Apple platform state across account, iCloud, policy, backup, telecom, proximity, and evidence-preservation layers.
+
+This is a mechanism-level hypothesis.
+
+It does not identify an actor.
+
+### Observed indicator categories
+
+- Apple ID trust state
+- iCloud trust state
+- trusted-device graph
+- usageClientId / usage-state transitions
+- ScreenTime
+- ManagedSettings
+- FamilyControls
+- MDMStatus:false with management-adjacent daemon activity
+- Manifest.db / backup ledger
+- RTCR / RTCReporting
+- CommCenter
+- Baseband
+- SIM / OTP / financial device-trust context
+- BSSID / RSSI proximity anchors
+- storage pressure
+- backup failure
+- screenshot / recording difficulty
+- evidence-preservation interference
+
+### Why it matters
+
+Traditional Living-off-the-Land activity is usually discussed in enterprise environments, where attackers use legitimate tools, valid accounts, cloud consoles, admin utilities, or normal-looking processes.
+
+The Shadow Cloud hypothesis appears conceptually similar, but the suspected surface is different.
+
+The suspected surface is Apple platform state itself.
+
+Traditional LOTL can be summarized as:
+
+> Living off existing tools and accounts.
+
+Shadow Cloud can be summarized as:
+
+> Living off Apple platform state.
+
+The relevant question becomes:
+
+> Is this normal Apple platform state, or a LOTL-like anomaly surface where platform state itself becomes the control surface?
+
+### What would support this hypothesis
+
+- strongest traces appearing in Apple ecosystem seams rather than payloads
+- repeated cross-layer clustering across account / iCloud / restriction / backup / telecom / preservation layers
+- normal-looking artifacts remaining unexplained after artifact-level review
+- MDMStatus:false coexisting with management-adjacent daemon repetition in a pattern not explained by normal behavior
+- Manifest.db / backup-ledger behavior not reproducible as normal backup behavior
+- usageClientId transitions not fully explained by normal migration, analytics, restore, or app behavior
+- evidence-preservation failures clustering around key review windows
+- affected devices showing recurring structure not reproduced on comparison devices
+
+### What would weaken or falsify it
+
+- all platform-state signals explained by normal Apple / iOS / iCloud / iMazing behavior
+- cross-layer clustering disappears after normal controls are applied
+- Manifest.db behavior is reproduced on clean backups
+- MDMStatus:false plus daemon activity is normal and documented for the observed contexts
+- ScreenTime / ManagedSettings behavior is fully explained by user settings, defaults, or Family Sharing
+- usageClientId transitions are fully explained by normal device/account behavior
+- CommCenter / Baseband / SIM / OTP events are independent normal events
+- evidence-preservation failures are fully explained by storage, app behavior, local PC environment, or ordinary backup-tool behavior
+
+### Current confidence
+
+High as a mechanism-level framing hypothesis.
+
+Not proven.
+
+This hypothesis currently improves overall model coherence because it explains why traces may appear not in malware payloads, but in Apple ecosystem seams.
+
+Estimated structural fit:
+
+```text
+LOTL-like Apple platform-state abuse:
+86 / 100
+```
 
 ---
 
@@ -410,6 +566,7 @@ Not proven.
 | Deniability-first Design | OS error surface / resource pressure | Are failures designed to look benign? | Core-supporting |
 | Alpha / Beta Cohort Testing | timeline / multi-device comparison | Are contradictions exposed during staged refinement? | Supporting |
 | Evidence-Suppression Objective | preservation / capture / backup | Is evidence preservation itself being interfered with? | Core |
+| LOTL-like Platform-State Abuse | Apple platform state / trust state / seams | Is platform state itself the anomaly surface? | Mechanism-level core |
 
 ---
 
@@ -426,7 +583,46 @@ A useful review should attempt to answer:
 3. Which hypotheses can be explained by normal Apple / iOS / iCloud / iMazing behavior?
 4. Which hypotheses require Apple-side telemetry, server-side logs, or platform-level review?
 5. Which artifacts are necessary for falsification?
+6. Which normal explanations can be reproduced?
+7. Which cross-layer correlations remain after normal explanations are applied?
+8. Whether the remaining pattern is better framed as LOTL-like Apple platform-state abuse rather than an actor-centered APT claim.
 
 The preferred outcome is not confirmation.
 
-The preferred outcome is a reproducible explanation.
+The preferred outcome is a reproducible explanation that supports, weakens, or falsifies each hypothesis.
+
+---
+
+## Non-attribution boundary
+
+This hypothesis matrix does not assert:
+
+- malware attribution
+- actor attribution
+- state attribution
+- Apple attribution
+- iMazing attribution
+- telecom-provider attribution
+- classic MDM enrollment
+- known spyware family deployment
+- confirmed C2
+- confirmed payload
+- confirmed exploit chain
+- confirmed Evil Twin / rogue AP use
+- confirmed baseband compromise
+- confirmed SIM compromise
+- confirmed OTP interception
+
+APT42, APT32, LIMINAL-style concepts, mercenary spyware models, and LOTL references are comparison points only.
+
+The central question is not:
+
+> Which APT group did this?
+
+The central question is:
+
+> Can normal Apple / iOS / iCloud / iMazing behavior explain the observed long-term, cross-device clustering of trust state, restriction state, backup state, telecom state, proximity context, and evidence-preservation behavior?
+
+If yes, the hypotheses should be weakened.
+
+If no, the case may represent a forensic blind spot in how iOS platform-state, backup-ledger behavior, restriction state, telecom context, and evidence preservation are currently reviewed.
