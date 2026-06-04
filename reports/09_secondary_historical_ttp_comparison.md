@@ -1,312 +1,404 @@
-# 09. Secondary Historical TTP Comparison and Mobile-native LOTL-like Platform-State Model
-
-## Status
-
-Public non-attribution historical TTP comparison.
-
-This document is a mechanism-level comparison note.
-
-It does not assert attribution.
-
-It does not identify any actor, state, government, company, vendor, product, service, telecom provider, backup tool vendor, cloud provider, mobile app vendor, or known spyware family as responsible for the observed activity.
-
-Named public threat reports, when referenced elsewhere in this repository, are used only as historical TTP comparison material.
-
-The primary hypothesis remains:
-
-> Mobile-native LOTL-like Apple platform-state anomaly.
-
----
+# Secondary Historical TTP Comparison: Non-Attribution Mechanism Context
 
 ## Purpose
 
-This report compares the observed Shadow Cloud seam structure with general public reporting about historical long-term, low-noise, legitimate-service-oriented operations.
+This report provides secondary historical TTP comparison context for the Shadow Cloud review package.
 
-The purpose is not to associate this case with any named group.
+The purpose is mechanism comparison, not attribution.
 
-The purpose is to test whether certain operational patterns are useful comparison points.
+This report does not claim that any named actor, state, government, vendor, telecom provider, backup tool, mobile application, or known intrusion set caused the reviewed observations.
 
-The central question is not:
+This report does not claim that historical public reporting identifies the responsible party.
 
-> Which actor does this resemble?
+This report does not claim that traditional PC-style Living-off-the-Land techniques executed directly on iOS.
 
-The central question is:
+The current framing is:
 
-> Can normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior explain the observed long-term, cross-device clustering of trust state, restriction state, account-calendar-document state, backup state, telecom state, proximity context, and evidence-preservation behavior?
+Shadow Cloud is a non-attribution forensic model for mobile-native LOTL-like Apple platform-state anomalies.
 
----
-
-## Safe framing
-
-The current hierarchy is:
-
-```text
-Shadow Cloud
-= non-attribution working hypothesis
-
-Mobile-native LOTL-like Apple platform-state anomaly
-= maximum current mechanism-level hypothesis
-
-LOTL-like Apple platform-state anomaly
-= mechanism-level framing
-
-Backup-ledger seam in mobile LOTL-like platform-state anomaly
-= focused backup-layer branch
-
-Outlook / Microsoft account-cloud-calendar-document surface
-= possible future review surface
-
-Historical TTP comparison
-= secondary context only
-
-Attribution
-= not asserted
-```
-
-This file should be read as mechanism-centered, not actor-centered.
+The proposed unit of analysis is the platform-state seam, not a conventional payload, toolset, or actor label.
 
 ---
 
-## Why this file avoids actor-centered wording
+## Why Historical TTP Comparison Is Included
 
-This document intentionally avoids placing named groups or governments at the center of the report.
+Historical TTP comparison is useful only as background mechanism context.
 
-Even negative statements can create unwanted association if repeated too often.
+It may help reviewers think about patterns such as:
 
-For that reason, this document uses generalized wording such as:
-
-- historical TTP comparison
-- long-term low-noise operations
-- legitimate-service-oriented operations
+- long-term observation
+- low-noise activity
+- legitimate-service dependency
+- account-state dependency
+- cloud-state dependency
 - staged refinement
-- trace-suppression behavior
-- operational seam failures
-- account / cloud / mobile-surveillance comparison
-- telecom / proximity comparison
-- mobile-native LOTL-like platform-state comparison
+- gradual operational changes
+- trace minimization
+- residual seam failures
+- evidence-preservation pressure
+- policy or restriction-state effects
+- document / calendar / account surfaces
+- telecom or device-trust context
 
-This is safer and technically cleaner.
+This comparison is secondary.
 
-The observed dataset is better reviewed as a mechanism-level platform-state problem than as an actor-identification problem.
+The primary review model remains:
 
----
+> mobile-native LOTL-like Apple platform-state anomaly.
 
-## Main hypothesis
+Historical comparison does not prove attribution.
 
-The current strongest mechanism-level hypothesis is:
+Historical comparison does not prove compromise.
 
-> Mobile-native LOTL-like Apple platform-state anomaly.
-
-This means the review should test whether a PC / enterprise-style Living-off-the-Land concept may have a mobile-native equivalent.
-
-The mobile-native equivalent is not:
-
-```text
-PowerShell on iPhone.
-```
-
-The mobile-native equivalent may be:
-
-```text
-Normal-looking mobile platform state becoming the control and observation surface.
-```
-
-Relevant mobile-native state surfaces may include:
-
-- legitimate mobile apps
-- legitimate account state
-- legitimate cloud identity
-- legitimate calendar / meeting state
-- legitimate document-provider state
-- legitimate token / OAuth state
-- legitimate policy / restriction state
-- legitimate backup state
-- legitimate telecom / SIM / OTP state
-- legitimate evidence-preservation behavior
+Historical comparison does not replace artifact-level review.
 
 ---
 
-## Traditional LOTL versus mobile-native LOTL-like model
+## What This Report Does Not Claim
 
-Traditional Living-off-the-Land activity is usually discussed in PC, endpoint, enterprise, and cloud-administration contexts.
+This report does not claim:
 
-Traditional LOTL may involve:
+- actor attribution
+- state attribution
+- government attribution
+- vendor attribution
+- Apple attribution
+- iMazing attribution
+- Microsoft attribution
+- Outlook causation
+- telecom-provider attribution
+- historical actor attribution
+- confirmed malware
+- confirmed payload
+- confirmed C2
+- confirmed exploit chain
+- confirmed spyware-family deployment
+- confirmed MDM enrollment
+- confirmed supervision
+- confirmed baseband compromise
+- confirmed SIM compromise
+- confirmed OTP interception
+- attacker identity
+- that public historical reporting proves responsibility
+- that PC-style LOTL techniques executed directly on iOS
+- that Manifest.db alone proves compromise
+- that subjective observations are standalone proof
 
-- legitimate tools
-- valid accounts
-- native utilities
-- existing administrative workflows
-- cloud consoles
-- remote access paths
-- email / cloud / identity systems
-- token-based access
-- document or collaboration platforms
+---
 
-The mobile-native model does not require the same PC-side tooling.
+## Correct Use of Historical Comparison
 
-Instead, the mobile-native version may involve legitimate state surfaces, such as:
+Correct reading:
 
-- account state
-- cloud state
-- calendar state
-- document state
-- notification state
-- policy state
-- restriction state
-- backup state
-- telecom state
-- evidence-preservation state
+> Historical TTP comparison helps reviewers identify possible mechanism patterns.
 
-Short formula:
+Incorrect reading:
 
-```text
+> Historical TTP comparison identifies the actor.
+
+Correct reading:
+
+> Long-term, low-noise, legitimate-service-oriented behavior may be useful as comparison context.
+
+Incorrect reading:
+
+> Similarity to historical reporting proves responsibility.
+
+Correct reading:
+
+> Platform-state seams may be reviewed as possible mobile-native analogues of legitimate-state tradecraft.
+
+Incorrect reading:
+
+> Desktop or enterprise techniques directly executed on iOS.
+
+---
+
+## Current Shadow Cloud Review Model
+
+The current model is:
+
+> mobile-native LOTL-like Apple platform-state anomaly.
+
+Short formulation:
+
 Traditional LOTL:
 Living off tools.
 
 Shadow Cloud:
 Living off Apple platform state.
 
-Backup-layer branch:
+Backup branch:
 Living off Apple backup state.
-```
+
+This model asks whether legitimate Apple ecosystem states can become the observable surface of recurring forensic anomalies.
+
+Relevant states include:
+
+- account/cloud trust state
+- restriction state
+- backup-ledger state
+- evidence-preservation behavior
+- telecom context
+- FileProvider state
+- account/document-provider state
+- auxiliary Microsoft-adjacent surfaces
 
 ---
 
-## Why historical TTP comparison remains useful
+## Normal-Hypothesis Reduction
 
-Historical public TTP reporting remains useful as secondary context because it can help compare operational logic.
+Historical similarity is not enough.
 
-Useful comparison themes include:
+Ordinary explanations must be tested first.
 
-- long-term low-noise activity
-- legitimate-service use
-- account and cloud access patterns
-- staged refinement
-- patient observation
-- trace suppression
-- residual seam failures
-- operational adaptation
-- old-doctrine leakage during transition
-- environment-specific behavior
+The following are treated as noise or normal-hypothesis candidates unless stronger cross-layer coupling remains:
 
-These themes are relevant because Shadow Cloud observations appear strongest at seams rather than in a single payload.
+- ordinary encrypted-backup opacity
+- high-entropy artifacts alone
+- broad keyword hits
+- weak temporal joins
+- non-core devices
+- pre-March observations
+- candidates without Manifest defects or backup/evidence overlap
+- isolated device failures
+- local PC / USB / storage explanations
+- Microsoft app residue without cross-layer coupling
+- ordinary account-calendar-document behavior
+- ordinary iOS crash clustering
+- ordinary storage pressure
+- ordinary telecom/baseband events
+- ordinary FileProvider behavior
+- ordinary ScreenTime / Family Sharing / local restriction settings
 
-However, this comparison does not establish attribution.
+The purpose is not to prove a malicious explanation.
 
-It is only a way to ask whether certain operational patterns help explain the observed structure.
+The purpose is to test whether normal explanations can reproduce the full cross-layer structure.
 
 ---
 
-## Why historical TTP comparison is not the primary model
+## Final Retained Core Lines
 
-Historical actor-centered comparison is not the best primary frame for this case.
+After final filtering limited to two primary devices, two March-April 2026 core review lines remained in the broader Shadow Cloud model.
 
-The public package does not center on:
+These are review targets, not conclusions.
 
-- known actor infrastructure
-- known actor malware
-- known actor C2
-- known actor code reuse
-- known actor certificate reuse
-- known actor phishing-kit reuse
-- known actor domain reuse
-- known spyware-family signature
-- confirmed exploit chain
-- confirmed payload
+1. 2026-03-15 to 2026-03-21  
+   Centered on 2026-03-17 to 2026-03-19
 
-The public package instead centers on Apple ecosystem seams:
+2. 2026-03-29 to 2026-04-04  
+   Centered on 2026-03-31 to 2026-04-02
+
+This historical comparison report does not add a new evidence claim.
+
+It only provides secondary mechanism context for evaluating retained platform-state seams.
+
+---
+
+## Comparison Theme 1: Long-Term Low-Noise Structure
+
+Historical public reporting often describes long-term activity where obvious noisy indicators may be limited.
+
+Relevant mechanism concept:
+
+- persistence through patience
+- low operational noise
+- gradual refinement
+- long observation windows
+- limited visible payload evidence
+- reliance on legitimate-state surfaces
+
+Shadow Cloud review relevance:
+
+- approximately eleven months of observations
+- repeated platform-state seams
+- apparent phase refinement
+- retained March-April core review lines after reduction
+
+Boundary:
+
+This does not prove a historical actor relationship.
+
+This only supports a review question about whether long-term low-noise structures can appear in mobile platform-state seams.
+
+---
+
+## Comparison Theme 2: Legitimate-Service Dependency
+
+Historical public reporting often describes use of legitimate services, accounts, documents, or cloud systems.
+
+Relevant mechanism concept:
+
+- valid account use
+- cloud service dependency
+- document and collaboration surfaces
+- email or calendar surfaces
+- identity and token surfaces
+- normal-looking service behavior
+
+Shadow Cloud review relevance:
 
 - Apple ID trust state
 - iCloud trust state
-- trusted-device behavior
-- backup state
-- Manifest.db / backup-ledger behavior
-- ScreenTime / ManagedSettings state
-- MDMStatus:false with management-adjacent daemon activity
-- usageClientId / usage-state transitions
-- CommCenter / Baseband / SIM / OTP context
-- BSSID / RSSI proximity anchors
+- FileProvider state
+- account/document-provider state
+- auxiliary Microsoft-adjacent surfaces
+- calendar / document / provider review surfaces
+
+Boundary:
+
+This report does not claim Microsoft causation.
+
+This report does not claim Outlook causation.
+
+This report does not claim account compromise.
+
+The comparison is mechanism context only.
+
+---
+
+## Comparison Theme 3: Policy or Restriction-State Effects
+
+Historical mechanism comparison may include situations where control is expressed through legitimate configuration, policy, access state, or account state.
+
+Relevant mechanism concept:
+
+- policy-like persistence
+- restriction-state effects
+- user-facing control without obvious payload
+- support-invisible or hard-to-explain settings
+- access limitation
+- account-state dependency
+
+Shadow Cloud review relevance:
+
+- ScreenTime
+- ManagedSettings
+- FamilyControls
+- DMD / Digital Health
+- MDMStatus:false context
+- visible-management absence
+- Apple ID sign-out restriction behavior
+
+Boundary:
+
+This report does not claim confirmed MDM enrollment.
+
+This report does not claim hidden management.
+
+This report does not claim supervision.
+
+The review question is whether ordinary iOS behavior can reproduce the observed restriction-state pattern.
+
+---
+
+## Comparison Theme 4: Evidence-Preservation Pressure
+
+Historical comparison may include trace suppression, delayed discovery, or difficulty preserving complete evidence.
+
+Relevant mechanism concept:
+
+- reduced visibility
+- incomplete artifacts
+- preservation difficulty
+- normal-looking failure paths
+- acquisition-time ambiguity
+- logs or backups that are difficult to interpret
+
+Shadow Cloud review relevance:
+
 - storage pressure
-- evidence-preservation difficulty
-- possible account-cloud-calendar-document surfaces
+- backup failure paths
+- screenshot / recording difficulty reports
+- log-preservation difficulty
+- backup-generation inconsistency
+- acquisition-surface mismatch
+- Manifest-related review ambiguity
 
-Therefore, the primary hypothesis should remain:
+Boundary:
 
-> Mobile-native LOTL-like Apple platform-state anomaly.
+Subjective observations are not standalone proof.
 
-Historical TTP comparison remains secondary.
-
----
-
-## Operational seam concept
-
-An operational seam is a point where different systems, workflows, or trust layers must connect.
-
-A sophisticated operation may hide individual components well, but still leave contradictions where layers meet.
-
-Relevant seams in this case include:
-
-- Apple ID ↔ iCloud
-- iCloud ↔ trusted-device graph
-- trusted-device graph ↔ backup lineage
-- backup state ↔ Manifest.db
-- backup encryption ↔ keybag state
-- iMazing acquisition ↔ raw backup artifact reviewability
-- ScreenTime ↔ ManagedSettings
-- restriction state ↔ visible management indicators
-- daemon activity ↔ policy state
-- CommCenter ↔ Baseband / SIM / OTP context
-- BSSID / RSSI ↔ physical-world timeline
-- storage pressure ↔ evidence preservation
-- account-cloud-calendar-document state ↔ backup and evidence-preservation state
-
-The Shadow Cloud model argues that the clearest traces may appear at these seams.
+Evidence-preservation difficulty is relevant only when coupled with independent artifacts.
 
 ---
 
-## Mobile-native LOTL-like model as primary mechanism
+## Comparison Theme 5: Backup-Ledger / Acquisition Surface
 
-The mobile-native LOTL-like model explains the observed dataset more directly than historical actor-centered comparison.
+Historical TTP comparison is not usually centered on iOS backup ledgers.
 
-It explains why the strongest traces may appear in:
+However, the mechanism idea of evidence visibility shifting to collection surfaces is useful.
 
-- trust state
-- restriction state
-- backup state
-- account-calendar-document state
-- telecom state
-- evidence-preservation state
+Relevant mechanism concept:
 
-rather than in:
+- acquisition-surface mismatch
+- apparent success versus backend reviewability
+- evidence chain ambiguity
+- preservation layer as review surface
 
-- malware payload
-- C2 infrastructure
-- exploit chain
-- known spyware signature
-- configuration profile
-- visible MDM enrollment
+Shadow Cloud review relevance:
 
-The main question is therefore:
+- Manifest.db
+- Manifest.plist
+- Status.plist
+- RTCR / RTCReporting
+- sidecar mismatch
+- success-like mismatch
+- encrypted versus unencrypted backup behavior
+- iMazing / iOS backup generation state
 
-> Can normal platform behavior reproduce the full cross-layer state pattern?
+Boundary:
 
-not:
+Manifest.db unreadability or high entropy alone is not treated as evidence of compromise.
 
-> Which named actor does this resemble?
+The stronger review target is temporal coupling between backup-ledger defects and independent platform-state seams.
 
 ---
 
-## Outlook / Microsoft surface as possible future review surface
+## Comparison Theme 6: Telecom / Device-Trust Context
 
-Outlook / Microsoft surfaces are not treated as public proof.
+Historical comparison may include telecom, authentication, device trust, or proximity context.
 
-They are not treated as causes.
+Relevant mechanism concept:
 
-They are not treated as attribution evidence.
+- device-trust state
+- authentication timing
+- SIM or carrier context
+- telecom-adjacent timing
+- local network or proximity context
+- account-device relationship
 
-They are treated only as possible future review surfaces.
+Shadow Cloud review relevance:
 
-Relevant Microsoft-related surfaces may include:
+- CommCenter
+- Baseband
+- TelephonyBaseband
+- SIM context
+- device-trust signals
+- financial re-authentication context
+- BSSID / RSSI context where relevant
+
+Boundary:
+
+This report does not claim telecom compromise.
+
+This report does not claim baseband compromise.
+
+This report does not claim SIM compromise.
+
+This report does not claim OTP interception.
+
+Telecom context is a review surface only.
+
+---
+
+## Relationship to Microsoft / Outlook Surfaces
+
+Microsoft / Outlook surfaces are not treated as proven causes.
+
+They are treated only as possible future review surfaces or auxiliary correlative surfaces.
+
+Relevant possible future review surfaces include:
 
 - Outlook
 - Exchange
@@ -315,9 +407,6 @@ Relevant Microsoft-related surfaces may include:
 - OneDrive
 - SharePoint
 - Office
-- Excel
-- Word
-- PowerPoint
 - Microsoft Authenticator
 - Microsoft Edge
 - Company Portal
@@ -330,405 +419,145 @@ Relevant Microsoft-related surfaces may include:
 - meeting objects
 - ICS files
 - attachments
-- document-provider behavior
+- document-provider state
 - FileProvider behavior
 - app protection policy
 - selective wipe / managed app state
 
-Current safe interpretation:
+This report does not claim:
 
-> Outlook / Microsoft surfaces may be relevant as account-cloud-calendar-document-policy surfaces for future review. They are not asserted as causes of the Manifest.db anomaly.
-
-Current structural fit:
-
-```text
-Outlook / Microsoft entry-surface hypothesis:
-75 / 100
-```
-
-This is an internal-review fit score.
-
-It is not public proof.
-
-It is not attribution.
-
-It is not causation.
-
----
-
-## Manifest.db as byproduct / backup-ledger seam
-
-The Manifest.db issue is not treated as the root cause.
-
-It is treated as a possible byproduct or observable evidence-preservation seam.
-
-Proposed sequence:
-
-```text
-mobile-native LOTL-like account / cloud / calendar / document / policy state
-↓
-Apple trust state / restriction state / backup state / keybag-encryption state / evidence-preservation state
-↓
-iMazing / iOS backup acquisition
-↓
-Manifest.db / backup-ledger abnormality becomes observable
-```
-
-This makes Manifest.db a high-value review artifact.
-
-It does not make Manifest.db proof of attribution.
-
-Current structural fit:
-
-```text
-Manifest.db as byproduct / backup-ledger seam:
-82 / 100
-```
-
-This does not mean:
-
-```text
-82% probability of attack.
-```
-
-It means:
-
-```text
-The backup-ledger seam hypothesis explains the observed structure better than isolated normal explanations, while still requiring qualified artifact-level review.
-```
-
----
-
-## Historical operational similarity
-
-Historical TTP comparison remains useful in a narrow way.
-
-The useful comparison is not technical artifact reuse.
-
-The useful comparison is operational doctrine.
-
-### Useful comparison areas
-
-Historical public TTP reporting may help compare:
-
-- long-term low-noise operation
-- legitimate-service use
-- operational patience
-- staged refinement
-- trace suppression
-- residual seam failures
-- environment-specific adaptation
-- old-doctrine leakage during transition
-- cross-layer operational behavior
-
-### Limited comparison areas
-
-The current public package does not establish:
-
-- actor-specific malware
-- actor-specific C2
-- actor-specific infrastructure
-- actor-specific certificate reuse
-- actor-specific code reuse
-- actor-specific phishing-kit reuse
-- actor-specific domain reuse
-- actor-specific toolmark reuse
-- actor attribution
-
-Therefore, historical TTP comparison must remain secondary.
-
----
-
-## Observed seam fit table
-
-| Observed seam | Mobile-native LOTL fit | Historical TTP comparison fit | Notes |
-|---|---:|---:|---|
-| Manifest.db / backup-ledger abnormality | 82 / 100 | 55 / 100 | Stronger as backup-ledger seam than actor-specific signal |
-| ScreenTime / ManagedSettings / MDMStatus:false | 84 / 100 | 60 / 100 | Stronger as policy-state anomaly |
-| usageClientId / usage-state transitions | 78 / 100 | 62 / 100 | Useful as trust-state seam |
-| CommCenter / Baseband / SIM / OTP context | 76 / 100 | 65 / 100 | Telecom / proximity comparison remains supporting only |
-| BSSID / RSSI proximity anchors | 70 / 100 | 60 / 100 | Timeline / condition anchor, not attribution |
-| Evidence-preservation difficulty | 84 / 100 | 70 / 100 | Trace-suppression comparison is useful but not primary |
-| Outlook / Microsoft account-cloud-calendar-document surface | 75 / 100 | 58 / 100 | Stronger under LOTL / Microsoft cloud-surface logic |
-| Alpha / beta phase shift | 82 / 100 | 72 / 100 | Staged-refinement comparison remains useful only as secondary analogy |
-
----
-
-## Updated score interpretation
-
-Earlier historical operational-seam similarity was estimated around:
-
-```text
-77 / 100
-```
-
-This remains useful only as a secondary operational-history comparison.
-
-The updated mechanism-level scores are:
-
-```text
-Mobile-native LOTL-like Apple platform-state anomaly:
-88 / 100
-
-LOTL-like Apple platform-state anomaly:
-86 / 100
-
-Backup-ledger seam branch:
-82 / 100
-
-Account / cloud / mobile-surveillance comparison:
-80-88 / 100
-
-Historical transfer / operational seam comparison:
-72-78 / 100
-
-Outlook / Microsoft entry-surface hypothesis:
-75 / 100
-```
-
-These scores are structural-fit scores.
-
-They are not attribution scores.
-
-They are not attack-probability scores.
-
-They do not establish actor identity.
-
----
-
-## Why mobile-native LOTL is stronger than historical actor-centered comparison
-
-The mobile-native LOTL-like model explains more of the observed structure because it directly addresses:
-
-- payload absence
-- C2 absence
-- visible MDM absence
-- normal-looking platform states
-- Apple ID / iCloud trust state
-- backup state
-- Manifest.db / backup-ledger abnormality
-- ScreenTime / ManagedSettings state
-- usageClientId transitions
-- CommCenter / Baseband context
-- evidence-preservation degradation
-- possible account-cloud-calendar-document surfaces
-
-Historical TTP comparison explains possible operational doctrine.
-
-Mobile-native LOTL-like framing explains the mechanism surface.
-
-Therefore:
-
-```text
-Historical TTP comparison:
-useful secondary doctrine comparison
-
-Mobile-native LOTL-like model:
-primary mechanism-level hypothesis
-```
-
----
-
-## White-explanation-first review
-
-This report should be tested by normal explanations first.
-
-Normal explanation candidates include:
-
-- ordinary Apple / iOS behavior
-- iCloud sync behavior
-- user settings
-- Family Sharing
-- ScreenTime defaults
-- Microsoft app residue
-- Outlook calendar residue
-- ICS / meeting invite behavior
-- Intune / MAM policy residue
-- iMazing backup behavior
-- encrypted backup / keybag handling
-- partial or interrupted backup
-- local PC / USB / antivirus / file-lock issues
-- low storage / disk pressure
-- ordinary iOS backup bug
-- ordinary CommCenter / Baseband behavior
-- ordinary Wi-Fi roaming artifacts
-- ordinary app cache / document-provider behavior
-- ordinary device migration / restore behavior
-- ordinary analytics behavior
-
-If normal explanations reproduce the full structure, the hypothesis should be weakened.
-
-If normal explanations only explain isolated pieces but fail to explain the cross-layer pattern, the mobile-native LOTL-like model remains a strong review target.
-
----
-
-## Review questions
-
-Qualified reviewers should ask:
-
-1. Can the observed historical-TTP similarity be explained only as broad operational-doctrine similarity?
-2. Is there any actor-specific evidence, or only seam-level similarity?
-3. Can a PC / enterprise-style LOTL concept have a mobile-native equivalent in this dataset?
-4. Can legitimate mobile apps, accounts, cloud identity, calendar, document, policy, backup, telecom, and evidence-preservation states become the observable control surface?
-5. Can Outlook / Microsoft account-cloud-calendar-document traces be identified in preserved artifacts during key windows?
-6. Can Outlook / Microsoft traces be explained as ordinary residue, old login remnants, calendar artifacts, or normal app behavior?
-7. Can Manifest.db / backup-ledger behavior be reproduced as normal iOS / iMazing backup behavior?
-8. Can encrypted backup / keybag handling fully explain the Manifest.db state?
-9. Can MDMStatus:false normally coexist with repeated management-adjacent daemon activity in the observed pattern?
-10. Can usageClientId / usage-state transitions be explained by normal account/device behavior?
-11. Can ScreenTime / ManagedSettings / restriction-layer behavior be explained by defaults, user settings, Family Sharing, or normal account state?
-12. Can CommCenter / Baseband / SIM / OTP context be explained as independent normal events?
-13. Can BSSID / RSSI proximity anchors be explained as ordinary Wi-Fi roaming artifacts?
-14. Can evidence-preservation failures be explained by storage, local PC issues, app behavior, or backup-tool behavior?
-15. Does the cross-device structure remain after normal explanations are applied?
-16. If normal explanations fail, is mobile-native LOTL-like Apple platform-state anomaly a cleaner mechanism-level framing than actor-centered comparison?
-
----
-
-## What would support historical TTP comparison
-
-Historical TTP comparison would remain useful if reviewers find:
-
-- staged refinement
-- operational seam failure
-- trace suppression
-- long-term low-noise behavior
-- legitimate-service use
-- residual old-doctrine leakage
-- cross-layer activity that resembles historical operational adaptation
-
-This would still not prove attribution.
-
-It would only preserve historical public TTP reporting as a comparison reference.
-
----
-
-## What would weaken historical TTP comparison
-
-Historical TTP comparison should be weakened if:
-
-- the observed structure is better explained by mobile-native LOTL-like platform-state behavior
-- no actor-specific infrastructure, code, C2, certificate, or toolmark is found
-- seam failures are better explained by Apple / iOS / iCloud / iMazing behavior
-- the pattern is reproduced on clean controls
-- all observed similarity remains high-level and generic
-
-In that case, historical TTP comparison should remain only as background context.
-
----
-
-## Non-attribution boundary
-
-This document does not assert:
-
-- actor attribution
-- state attribution
-- government attribution
-- Apple attribution
-- iMazing attribution
 - Microsoft attribution
 - Outlook causation
-- telecom-provider attribution
-- commercial spyware-family attribution
-- confirmed malware
-- confirmed payload
-- confirmed C2
-- confirmed exploit chain
-- confirmed MDM enrollment
-- confirmed baseband compromise
-- confirmed SIM compromise
-- confirmed OTP interception
-- attacker identity
+- Microsoft app causation
+- Microsoft service causation
+- Microsoft mobile apps directly modified Manifest.db
+- Microsoft mobile apps directly modified Apple backup state
+- Microsoft mobile apps directly modified iOS backup services
+- Microsoft surfaces caused the reviewed anomaly
 
-Named public threat reports, mercenary spyware models, Microsoft app surfaces, and LOTL references are comparison points or possible review surfaces only.
+The safe interpretation is:
+
+> Microsoft / Outlook surfaces, if later reviewed in preserved artifacts, should be evaluated as possible account-calendar-document-policy surfaces, not assumed causes.
 
 ---
 
-## Final assessment
+## How This Report Should Be Used
 
-Historical operational-seam comparison remains useful.
+This report should be used to ask better review questions.
 
-However, it should not be the main frame.
+It should not be used to make attribution claims.
 
-The strongest current model is:
+Useful question:
 
-```text
-Mobile-native LOTL-like Apple platform-state anomaly
-```
+> Do historical mechanism concepts help explain why a suspicious mobile case may appear in legitimate platform-state seams instead of payloads?
 
-Historical public TTP reporting remains:
+Not useful:
 
-```text
-secondary operational-history comparison
-```
+> Which historical actor does this prove?
 
-Manifest.db remains:
+Useful question:
 
-```text
-byproduct / observable backup-ledger seam
-```
+> Can long-term, low-noise, legitimate-service-oriented comparison help reviewers design normal controls?
 
-Outlook / Microsoft remains:
+Not useful:
 
-```text
-possible account-cloud-calendar-document future review surface
-```
+> Does similarity prove responsibility?
 
-Attribution remains:
+Useful question:
 
-```text
-not asserted
-```
+> Can clean controls reproduce the retained March-April platform-state seams?
+
+Not useful:
+
+> Does public reporting substitute for artifact-level review?
 
 ---
 
-## Practical reviewer takeaway
+## Strengthening Conditions
 
-The reviewer should not ask first:
+The historical comparison branch is strengthened if qualified review shows that:
 
-```text
-Which actor does this resemble?
-```
-
-The reviewer should ask:
-
-```text
-Can normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior explain the long-term, cross-device clustering of trust state, restriction state, account-calendar-document state, backup state, telecom state, proximity context, and evidence-preservation behavior?
-```
-
-If yes, document the normal explanation and weaken the hypothesis.
-
-If no, the case may represent an under-described mobile forensic blind spot:
-
-```text
-Mobile-native LOTL-like Apple platform-state anomaly
-```
-
-where the most visible traces appear not as malware payloads, but as state contradictions across legitimate mobile ecosystem seams.
+- normal explanations do not reproduce the retained March-April core lines
+- clean controls do not reproduce the same cross-layer structure
+- broad keyword hits and weak temporal joins were properly removed
+- non-core devices were properly excluded from final scoring
+- account/cloud trust-state seams align with restriction or backup/evidence seams
+- backup-ledger defects align with independent log-layer seams
+- restriction-state seams align with backup/evidence seams
+- telecom context aligns with backup/evidence or restriction seams
+- FileProvider / account-document-provider seams align with retained windows
+- Microsoft-adjacent surfaces cannot be reduced to ordinary residue
+- the remaining pattern is better described as platform-state seam behavior than isolated app, device, backup-tool, or local-PC behavior
 
 ---
 
-COMMIT MESSAGE:
-Rename operational seam report to secondary historical TTP comparison
+## Weakening or Falsification Conditions
 
-EXTENDED DESCRIPTION:
-Renames and rewrites the former operational-seam comparison report as:
+The historical comparison branch is weakened if qualified review shows that:
 
-reports/09_secondary_historical_ttp_comparison.md
+- documented Apple / iOS behavior reproduces the full structure
+- documented iMazing behavior reproduces the full structure
+- clean control devices reproduce the same cross-layer clustering
+- encrypted backup behavior fully explains backup-ledger observations
+- Manifest.db opens normally after proper handling
+- local PC / USB / storage conditions reproduce the observed pattern
+- ScreenTime / ManagedSettings behavior is fully explained by user settings or Family Sharing
+- MDMStatus:false plus daemon clustering is ordinary and documented
+- telecom context is independent and ordinary
+- FileProvider behavior is ordinary and unrelated
+- Microsoft-adjacent surfaces are ordinary residue
+- cross-layer clustering disappears after normal controls
+- retained windows are explained by collection bias, observer-side changes, or artifact-processing error
+- historical comparison becomes the main support instead of artifact coupling
 
-This revision removes actor-centered wording from the file title and body, and reframes the report as a non-attribution secondary historical TTP comparison.
+If these conditions are met, this comparison branch should be weakened.
 
-The update keeps historical public TTP reporting only as background comparison material while making the current primary mechanism-level hypothesis:
+---
 
-Mobile-native LOTL-like Apple platform-state anomaly.
+## Reviewer Questions
 
-The new version clarifies:
+A qualified reviewer should ask:
 
-- historical TTP comparison is secondary context only
-- no actor, state, government, vendor, product, service, or spyware-family attribution is asserted
-- Outlook / Microsoft surfaces are possible future review surfaces only
-- Manifest.db remains a byproduct / observable backup-ledger seam
-- mobile-native LOTL-like Apple platform-state anomaly remains the main hypothesis
-- normal explanations must be tested first
+1. Is historical TTP comparison being used only as mechanism context?
+2. Are any actor, state, government, vendor, or spyware-family claims being made?
+3. Is public reporting being used as evidence, or only as review context?
+4. Were ordinary explanations removed before retaining the March-April lines?
+5. Were broad keyword hits and weak temporal joins sufficiently filtered?
+6. Were non-core devices correctly excluded from final retained scoring?
+7. Can ordinary Apple / iOS / iCloud behavior reproduce the retained cross-layer structure?
+8. Can ordinary iMazing / iOS backup behavior reproduce the backup-ledger defects and sidecar mismatch behavior?
+9. Can ordinary encrypted-backup opacity explain the Manifest-related observations without broader coupling?
+10. Can ordinary ScreenTime / Family Sharing / ManagedSettings behavior explain the restriction-state pattern?
+11. Can MDMStatus:false normally coexist with the reviewed management-adjacent daemon clustering?
+12. Can CommCenter / Baseband / SIM / device-trust signals be explained as independent normal events?
+13. Can FileProvider and account/document-provider behavior explain the observed account-cloud-document state?
+14. Can Microsoft-adjacent surfaces be explained as ordinary residue?
+15. Can local PC, USB, storage pressure, or acquisition-tool behavior reproduce the preservation anomalies?
+16. Does cross-layer clustering remain after normal controls?
+17. If normal explanations reproduce the structure, what documented test demonstrates it?
+18. If normal explanations do not reproduce the structure, does the remaining pattern justify deeper mobile forensic review?
 
-This commit does not add raw artifacts, does not change the evidence base, and does not claim malware, C2, exploit chain, confirmed MDM enrollment, Apple attribution, iMazing attribution, Microsoft attribution, Outlook causation, state attribution, spyware-family attribution, telecom compromise, baseband compromise, OTP interception, actor attribution, government attribution, or attacker identity.
+---
+
+## Final Position
+
+This report is secondary.
+
+It does not prove Shadow Cloud.
+
+It does not prove compromise.
+
+It does not prove attribution.
+
+It does not identify an actor.
+
+The final position is:
+
+> Historical TTP comparison is mechanism context only.
+> It may help reviewers understand low-noise, legitimate-service, staged-refinement, and evidence-preservation concepts.
+> It is not evidence of responsibility.
+> It should be weakened if normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior reproduces the full retained structure.
+
+If normal behavior explains the retained structure, the comparison branch should be weakened.
+
+If normal behavior does not explain the retained structure, historical mechanism comparison may remain useful as secondary context for deeper mobile forensic review.
