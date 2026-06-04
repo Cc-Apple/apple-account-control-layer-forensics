@@ -4,661 +4,256 @@
 
 This repository requests technical triage, not attribution.
 
-The dataset summarizes approximately 11 months of forensic observations across 9+ Apple devices, including owner devices and comparison devices.
+The working hypothesis is called **Shadow Cloud**.
 
-The core question is whether the observed artifacts are normal Apple / iOS / iCloud / iMazing behavior, Microsoft app residue, ordinary account-calendar-document behavior, user-side artifacts, local environment issues, isolated device failures, or whether they merit deeper forensic triage as a possible Apple account / cloud / backup / restriction-layer / proximity-communication / evidence-preservation control anomaly.
+The current framing is:
 
-The current strongest mechanism-level hypothesis is:
+**Shadow Cloud is a non-attribution forensic model for mobile-native LOTL-like Apple platform-state anomalies.**
 
-> Shadow Cloud may represent a mobile-native LOTL-like Apple platform-state anomaly.
+This is not a malware report.
+
+This is not a spyware-family claim.
 
 This is not an attribution claim.
 
-This is not a claim that any named actor, government, vendor, product, service, or organization caused the observed behavior.
+This is not a vendor-blame claim.
 
-The model asks whether a PC / enterprise-style Living-off-the-Land concept may have a mobile-native equivalent, where legitimate mobile apps, accounts, cloud identity, calendar, document, policy, backup, telecom, and evidence-preservation states become the observable control surface.
+The central question is whether LOTL-like forensic patterns can be observed in a mobile ecosystem without relying on malware binaries, C2 indicators, hash-based evidence, or actor attribution.
 
-In short:
-
-> Not living off tools.
-> Living off Apple platform state.
-
-For the backup layer:
-
-> Living off Apple backup state.
-
-This means the primary review target is not a named actor.
-
-The primary review target is whether Apple platform state, trust state, restriction state, backup state, telecom state, account-cloud-calendar-document state, and evidence-preservation behavior appear to form a cross-layer anomaly surface.
+The proposed unit of analysis is the **platform-state seam**, not a conventional payload, toolset, or actor label.
 
 ---
 
-## Maximum Working Hypothesis
+## Core Review Question
 
-The current maximum working hypothesis is:
+Can normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior explain a long-term structure in which the following states appear to cluster at the same seams?
 
-```text
-Shadow Cloud
-= non-attribution working hypothesis
+- account/cloud trust state
+- restriction state
+- backup-ledger state
+- evidence-preservation behavior
+- telecom context
+- FileProvider state
+- account/document-provider state
 
-Mobile-native LOTL-like Apple platform-state anomaly
-= maximum current mechanism-level hypothesis
+If yes, the normal explanation should be documented.
 
-Outlook / Microsoft account-cloud-calendar-document surface
-= possible entry / state surface candidate
+If no, the case may represent a forensic blind spot in how mobile platform state, backup-ledger behavior, restriction state, account-cloud-document state, telecom context, and evidence-preservation paths are currently reviewed.
 
-Manifest.db / backup-ledger seam
-= byproduct / observable evidence-preservation seam
+---
 
-Account / cloud / mobile-surveillance comparison
-= public comparison reference
+## Mobile-Native LOTL Framing
 
-Historical TTP comparison
-= secondary operational-history comparison reference
+Traditional Living-off-the-Land is historically centered on desktop or enterprise environments.
 
-Telecom / proximity comparison
-= tertiary condition / context comparison
+It usually means living off legitimate tools, valid accounts, cloud services, document systems, administrative paths, or management surfaces.
 
-Attribution
-= not asserted
-```
+This repository asks whether a mobile equivalent can be modeled as:
 
-Important clarification:
+**living off legitimate platform state.**
 
-* `Manifest.db` is not treated as the root cause.
-* `Manifest.db` / backup-ledger abnormality is treated as a possible byproduct or observable evidence-preservation seam.
-* Outlook / Microsoft mobile surfaces are not treated as proven causes.
-* Outlook / Microsoft surfaces are treated as possible account-cloud-calendar-document entry or state surfaces for future review.
-* iMazing is not treated as the cause.
-* iMazing is treated as an acquisition surface.
-* Apple backup state is treated as the review surface.
+Short formulation:
 
-See also:
+Traditional LOTL:
+Living off tools.
 
-* `docs/mobile_lotl_maximum_hypothesis.md`
+Shadow Cloud:
+Living off Apple platform state.
+
+Backup branch:
+Living off Apple backup state.
+
+This does not mean that PC-style LOTL executed directly on iOS.
+
+It means the review surface may shift from visible tools or payloads to normal-looking mobile platform states.
 
 ---
 
 ## Dataset Scope
 
-* Period: approximately 11 months
-* Devices: 9+ Apple devices
-* Sources:
+The public package summarizes approximately eleven months of multi-device Apple ecosystem observations.
 
-  * iPhone / iPad Analytics logs
-  * iMazing backup structures
-  * Manifest.db / Manifest.plist / Status.plist
-  * RTCR / RTCReporting
-  * Wi-Fi / BSSID / sysdiagnose artifacts
-  * ScreenTime / Game Center / Content & Privacy signals
-  * ManagedSettings / FamilyControls signals
-  * usageClientId transitions
-  * daemon / resource-pressure logs
-  * CommCenter / Baseband / SIM / OTP context
-  * evidence-preservation difficulty observations
+The broader preserved material includes:
 
----
+- six primary Apple devices
+- comparison devices
+- iOS diagnostic logs
+- iMazing / iOS backup generations
+- Manifest-related artifacts
+- RTCR / RTCReporting material
+- ScreenTime / ManagedSettings observations
+- CommCenter / Baseband / SIM-context observations
+- FileProvider / account-document-provider observations
+- preserved backup-state material
+- timeline and artifact summaries
 
-## Core Observations
+Raw logs, private account data, BSSID details, Apple ID material, OTP/financial data, screenshots, sysdiagnose archives, and sensitive backup artifacts are not included in this public repository.
 
-### 1. Manifest.db anomaly
-
-Multiple backup generations showed `Manifest.db` behaving as non-SQLite / opaque / high-entropy structures.
-
-The issue is not merely encrypted backup handling.
-
-The primary concern is repeated abnormal `Manifest.db` behavior at the backup path / backup service / backup-ledger layer.
-
-### Backup-ledger seam interpretation
-
-The `Manifest.db` issue is reviewed as a possible backup-ledger seam within a mobile LOTL-like Apple platform-state anomaly.
-
-This does not mean that iMazing is treated as the cause.
-
-The safer interpretation is that iMazing may be the acquisition surface through which abnormal Apple backup state becomes observable.
-
-The review question is whether repeated `Manifest.db` / backup-ledger abnormality can be reproduced as normal Apple / iOS / iMazing backup behavior, or whether it remains aligned with broader trust-state, restriction-state, daemon-layer, telecom, and evidence-preservation anomalies.
-
-In short:
-
-> Not living off tools.
-> Living off Apple backup state.
-
-See also:
-
-* `docs/backup_ledger_seam_mobile_lotl.md`
+They are preserved separately and may be provided only through a qualified secure review process.
 
 ---
 
-### 2. usageClientId transitions
+## Normal-Hypothesis Reduction
 
-Repeated usageClientId switching and discontinuity were observed across logs and devices.
+To avoid overclaiming, ordinary explanations were treated first.
 
-This appears closer to account / usage-state transition than a single app infection.
+The following were treated as noise or normal-hypothesis candidates unless stronger cross-layer coupling remained:
 
-This is not treated as proof of compromise.
+- ordinary encrypted-backup opacity
+- high-entropy artifacts alone
+- broad keyword hits
+- weak temporal joins
+- non-core devices
+- pre-March observations
+- candidates without Manifest defects or backup/evidence overlap
+- isolated device failures
+- local PC / USB / storage explanations
+- Microsoft app residue without cross-layer coupling
+- ordinary account-calendar-document behavior
 
-It is treated as a recurring structural signal requiring comparison against normal baselines.
+The goal is not to prove a malicious explanation.
 
----
-
-### 3. Restriction-layer signals without visible MDM
-
-ScreenTime / Game Center / Content & Privacy / ManagedSettings / FamilyControls signals were observed while visible MDM / supervised / userIsManaged indicators were not present.
-
-The issue is the apparent mismatch:
-
-* restriction-layer behavior appears
-* management-adjacent traces appear
-* ordinary visible device-management indicators are absent or false
-
-The review question is whether visible management absence can normally coexist with the observed management-adjacent and restriction-adjacent artifact pattern.
+The goal is to test whether normal explanations can reproduce the full structure.
 
 ---
 
-### 4. March 2026 beta-phase candidate
+## Final Retained Core Lines
 
-Normalized analysis showed a density increase in restriction-layer, ID / cloud, resource-pressure, operational-trace, telecom, and proximity-related categories during March 2026.
+After final filtering limited to two primary devices, two March-April 2026 core review lines remained.
 
-This period is treated as a possible phase shift or beta-phase candidate.
+These are review targets, not conclusions.
 
-This is a review question, not a conclusion.
+1. 2026-03-15 to 2026-03-21  
+   Centered on 2026-03-17 to 2026-03-19
 
----
+2. 2026-03-29 to 2026-04-04  
+   Centered on 2026-03-31 to 2026-04-02
 
-### 5. March 12, 2026 mini1 core event
+Both windows retained overlapping forensic artifacts across:
 
-A mini1 Analytics log showed proximity / communication patterns involving SIMTransfer, BluetoothDiscovery, CommCenter, BasebandPowerCycle, PrivacyProxy, RSSI, Nearby, and resource reactions.
+- account/cloud trust state
+- restriction state
+- backup-ledger state
+- evidence-preservation behavior
+- telecom context
+- FileProvider state
+- account/document-provider state
+- auxiliary Microsoft-adjacent surfaces
 
-This event is important because it connects telecom, proximity, privacy, and resource-pressure signals in a tight time window.
+Microsoft-adjacent surfaces are treated as correlative only.
 
-It is not treated as standalone attribution evidence.
-
----
-
-### 6. March 7, 2026 15G Wi-Fi / BSSID anchor
-
-WiFiConnectionQuality / sysdiagnose artifacts showed a physical Wi-Fi anchor with RSSI, channel, and lastJoined timestamps.
-
-This is treated as a location and timeline anchor only.
-
-It is not treated as attribution to a person, actor, device, or organization.
-
----
-
-### 7. Outlook / Microsoft surface as future review anchor
-
-Outlook / Microsoft mobile app surfaces are not treated as public proof in this package.
-
-However, the user repeatedly observed Outlook / meeting / schedule-like traces during suspicious periods despite low or non-use.
-
-This is treated as an internal future review anchor, not a conclusion.
-
-The reason it matters is that Microsoft-related surfaces are closely connected to traditional LOTL patterns through account, cloud, calendar, meeting, document, OAuth, token, and policy state.
-
-Relevant future review surfaces may include:
-
-* Outlook
-* Exchange
-* Microsoft 365
-* Teams
-* OneDrive
-* SharePoint
-* Office / Excel / Word / PowerPoint
-* Microsoft Authenticator
-* Microsoft Edge
-* Company Portal
-* Intune / MAM
-* OAuth / access tokens / refresh tokens
-* Microsoft Graph
-* calendar invites / meeting objects / ICS files
-* attachments
-* document-provider state
-* FileProvider behavior
-* app protection policy
-* selective wipe / managed app state
-
-This repository does not claim Microsoft causation.
-
-This repository does not claim Outlook causation.
+They are not treated as a proven entry point or causal mechanism.
 
 ---
 
-## Updated TTP Framing
+## Manifest.db / Backup-Ledger Boundary
 
-The observed structure was previously compared mainly with public reporting around:
+Manifest.db unreadability or high entropy alone is not treated as evidence of compromise.
 
-* account / cloud / mobile-surveillance operations
-* historical long-term, low-noise, legitimate-service-oriented operations
-* telecom / proximity concepts
-* commercial spyware or mobile-surveillance models
+Ordinary encrypted-backup opacity may explain unreadability or high-entropy appearance.
 
-Those comparisons remain useful.
+The stronger observation is temporal coupling between backup-ledger defects and independent log-layer seams involving:
 
-They should not be read as attribution.
+- backup/evidence behavior
+- restriction state
+- account/cloud trust
+- telecom context
+- FileProvider / account-document-provider state
 
-The updated framing is mechanism-centered:
+This is supporting evidence only.
 
-```text
-Shadow Cloud
-= working hypothesis name
+It is not proof of causation by Apple, iMazing, Microsoft, Outlook, any telecom provider, any backup tool, any mobile app, or any actor.
 
-Mobile-native LOTL-like Apple platform-state anomaly
-= maximum current mechanism-level hypothesis
+The key review question is:
 
-Backup-ledger seam in mobile LOTL-like platform-state anomaly
-= focused backup-layer branch
-
-Account / cloud / mobile-surveillance comparison
-= public comparison reference
-
-Historical TTP comparison
-= secondary operational-history comparison
-
-Telecom / proximity comparison
-= tertiary condition / context comparison
-
-Attribution
-= not asserted
-```
-
-### Why this matters
-
-Traditional Living-off-the-Land activity is usually discussed in enterprise environments, where attackers use legitimate tools, valid accounts, cloud consoles, admin utilities, or normal-looking processes.
-
-The Shadow Cloud hypothesis appears conceptually similar, but the suspected surface is different.
-
-The suspected surface is Apple platform state itself.
-
-Relevant platform-state surfaces include:
-
-* Apple ID trust state
-* iCloud trust state
-* trusted-device graph
-* usageClientId / usage-state transitions
-* ScreenTime / ManagedSettings
-* backup-ledger behavior
-* Manifest.db / Manifest.plist / Status.plist
-* RTCR / RTCReporting
-* CommCenter / Baseband / SIM / OTP context
-* BSSID / RSSI proximity context
-* evidence-preservation behavior
-* account-cloud-calendar-document state
-
-Traditional LOTL can be summarized as:
-
-> Living off existing tools and accounts.
-
-Shadow Cloud can be summarized as:
-
-> Living off Apple platform state.
-
-For the backup layer, the narrower formulation is:
-
-> Living off Apple backup state.
-
-This framing better explains why the strongest traces may appear not in malware payloads, C2 infrastructure, exploit chains, configuration profiles, or visible MDM enrollment, but in Apple ecosystem seams.
-
-See also:
-
-* `docs/mobile_lotl_maximum_hypothesis.md`
-* `docs/ttp_framing_addendum_lotl_platform_state.md`
-* `docs/backup_ledger_seam_mobile_lotl.md`
+Can normal Apple / iOS / iMazing backup behavior reproduce the backup-ledger defects when those defects align with independent platform-state seams?
 
 ---
 
-## Public TTP Mechanism Comparison
+## Non-Attribution Boundary
 
-Public TTP comparison remains useful only as mechanism context.
+This repository does not claim:
 
-The purpose is not to associate this case with any named group.
-
-The purpose is to test whether known public operational concepts help reviewers evaluate the observed structure.
-
-Useful comparison categories include:
-
-* account / cloud / mobile-surveillance comparison
-* historical TTP comparison
-* telecom / proximity comparison
-* commercial spyware model comparison
-* Microsoft app surface comparison
-* LOTL-like platform-state comparison
-
-The primary mechanism-level hypothesis remains:
-
-> Mobile-native LOTL-like Apple platform-state anomaly.
-
-See also:
-
-* `reports/06_public_ttp_mechanism_comparison.md`
-* `reports/09_secondary_historical_ttp_comparison.md`
-
-No attribution is asserted.
+- actor attribution
+- state attribution
+- government attribution
+- vendor attribution
+- Apple attribution
+- iMazing attribution
+- Microsoft attribution
+- Outlook causation
+- telecom-provider attribution
+- confirmed malware
+- confirmed payload
+- confirmed C2
+- confirmed exploit chain
+- confirmed spyware-family deployment
+- confirmed MDM enrollment
+- confirmed baseband compromise
+- confirmed SIM compromise
+- confirmed OTP interception
+- attacker identity
+- that Manifest.db alone proves compromise
+- that subjective observations are standalone proof
 
 ---
 
-## Request
+## Relationship to Supporting Repositories
 
-Please assess whether these artifacts are likely normal Apple / iOS behavior, user-side backup artifacts, local environment issues, iMazing backup artifacts, Microsoft app residue, ordinary account-calendar-document behavior, or whether they merit deeper forensic triage as a possible account / cloud / platform-state / evidence-preservation anomaly.
+This main repository is supported by two focused public anchor repositories.
 
-For the backup layer specifically, please assess whether repeated `Manifest.db` / backup-ledger abnormality can be reproduced as normal Apple / iOS / iMazing behavior, or whether it remains a high-value backup-ledger seam requiring deeper review.
+support-invisible-restriction-anchor-2026-03-03-public:
 
----
+- support-invisible restriction-state review
+- ScreenTime / ManagedSettings
+- Apple ID sign-out restriction context
+- FileProvider / iCloud state
+- visible-management absence
+- 2026-03-03 / 2026-03-04 / 2026-03-05 anchor sequence
 
-## 2026-05-27 Integrated Update
+mdm-false-management-daemon-failure-chain-public:
 
-A structured re-analysis was completed using organized device-specific log folders and a separate 2026-05 focused run.
+- MDMStatus:false
+- management-adjacent daemon clustering
+- managedappdistributiond
+- dmd
+- ScreenTimeAgent
+- ManagedSettings
+- CommCenter / Baseband
+- SFA / CKKS / CloudServices
+- 15G / mini1 cross-device review windows
 
-### Integrated scope
+These supporting repositories are not standalone conclusions.
 
-* Period: 2025-07-01 to 2026-05-26
-* Wide-range result: My_Device + Friend_Device
-* 2026-05 focused result: 12G / 15G / iPhone11Pro
-* Integrated final daily shortlist: 335 days
-
-### Key result
-
-The observed structure remained visible after:
-
-* separating raw Apple logs, RTCReporting, SiriSearchFeedback, and text-derived artifacts
-* excluding derived summaries / OCR / notes from primary scoring
-* reaggregating Friend_Device by person / folder
-* adding the 2026-05 focused three-device result
-
-### Core repeated structure
-
-The following layers repeatedly appeared together:
-
-* MDM_false
-* restriction / management-adjacent artifacts
-* account / cloud artifacts
-* telecom / proximity artifacts
-* usage / RTCReporting artifacts
-* daemon repetition
-* evidence-interference-adjacent artifacts
-* seam-failure artifacts
-* backup-ledger artifacts
-
-### Current assessment
-
-* Mobile-native LOTL-like Apple platform-state anomaly: strongest current mechanism-level hypothesis, estimated 88 / 100
-* Existing seam observations with mobile LOTL-like model: high structural fit, estimated 84-88 / 100
-* LOTL-like Apple platform-state framing: high structural fit, estimated 86 / 100
-* Backup-ledger seam in mobile LOTL-like platform-state anomaly: high structural fit, estimated 82 / 100
-* Outlook / Microsoft entry-surface hypothesis: internal review anchor, estimated 75 / 100
-* Account / cloud / mobile-surveillance comparison: useful public comparison reference, estimated 80-88 / 100
-* Historical TTP comparison: secondary operational-history comparison, estimated 72-78 / 100
-* Telecom / proximity comparison: tertiary condition / context comparison, estimated 70-76 / 100
-* Shadow Cloud phase estimate: late beta / transitional control-layer model, approximately 75-82% maturity in 2026-05
-
-These are structural-fit scores.
-
-They are not attribution scores.
-
-They are not attack-probability scores.
-
-### Important boundary
-
-This is not an attribution claim.
-
-This repository does not establish:
-
-* actor attribution
-* state attribution
-* government attribution
-* Apple attribution
-* iMazing attribution
-* Microsoft attribution
-* Outlook causation
-* confirmed malware
-* confirmed C2
-* confirmed payload
-* confirmed exploit chain
-* confirmed MDM enrollment
-* confirmed spyware-family deployment
-* telecom compromise
-* baseband compromise
-* SIM compromise
-* OTP interception
-
-The purpose is to request qualified technical review of whether the observed cross-artifact structure is meaningful and whether a formal mobile forensic review is justified.
+They provide narrower review anchors for the broader Shadow Cloud model.
 
 ---
 
-## Supporting technical anchors
+## Reviewer Questions
 
-This one-page summary is supported by two focused public anchor repositories:
+A qualified reviewer should ask:
 
-* `support-invisible-restriction-anchor-2026-03-03-public`
-* `mdm-false-management-daemon-failure-chain-public`
-
-The main repository presents the overall Apple account / iCloud / control-layer anomaly model.
-
-The supporting repositories provide narrower technical anchors for:
-
-* a 2026-03-03 support-invisible restriction event
-* a repeated MDMStatus:false management-daemon failure chain across 15G and mini1
-
-Raw logs and sensitive evidence are not included in the public repositories.
-
----
-
-## Working Hypothesis Refinement
-
-The Shadow Cloud model is not an attribution claim.
-
-It is a reviewer-facing working model intended to test whether the observed artifacts are better explained as isolated device failures, normal Apple / iOS / iCloud behavior, user-side backup artifacts, local environment issues, Microsoft app residue, ordinary account-calendar-document behavior, or a cross-layer account / cloud / policy / backup / telecom trust-state anomaly.
-
-The following hypotheses are the highest-priority validation targets.
-
-### 1. Policy-as-Persistence
-
-The observed persistence may not rely on a classic malware implant.
-
-Instead, persistence may be expressed through:
-
-* ScreenTime state
-* ManagedSettings behavior
-* restriction-layer behavior
-* Apple ID sign-out restriction behavior
-* management-adjacent daemon activity
-* visible MDM state versus effective policy behavior mismatch
-
-The key question is:
-
-> Is policy state acting as persistence?
+1. Can ordinary Apple / iOS / iCloud behavior reproduce the observed platform-state seams?
+2. Can ordinary iMazing / iOS backup behavior reproduce the backup-ledger defects and sidecar mismatch behavior?
+3. Can ordinary encrypted-backup opacity explain the Manifest-related observations without broader coupling?
+4. Can ordinary ScreenTime / Family Sharing / ManagedSettings behavior explain the restriction-state pattern?
+5. Can MDMStatus:false normally coexist with the reviewed management-adjacent daemon clustering?
+6. Can CommCenter / Baseband / SIM / device-trust signals be explained as independent normal events?
+7. Can FileProvider and account/document-provider behavior explain the observed account-cloud-document state?
+8. Can Microsoft-adjacent surfaces be explained as ordinary residue?
+9. Can local PC, USB, storage pressure, or acquisition-tool behavior reproduce the preservation anomalies?
+10. Does cross-layer clustering remain after normal controls?
+11. If normal explanations reproduce the structure, what documented test demonstrates it?
+12. If normal explanations do not reproduce the structure, does the remaining pattern justify deeper mobile forensic review?
 
 ---
 
-### 2. Backup-layer Anti-Forensics
+## Practical Takeaway
 
-Backup-layer artifacts may represent an anti-forensic surface affecting evidence preservation and third-party review.
+This repository does not ask reviewers to accept the Shadow Cloud hypothesis.
 
-Relevant areas include:
+It asks reviewers to test whether the observed Apple ecosystem platform-state seams can be reproduced through ordinary behavior.
 
-* Manifest.db
-* Manifest.plist
-* Status.plist
-* Info.plist
-* RTCR
-* backup encryption state
-* iMazing backup generations
-* encrypted versus unencrypted backup differences
+If normal behavior explains the sequence, the hypothesis should be weakened.
 
-The key question is:
-
-> Is the backup layer preserving evidence normally, or becoming part of the anomaly?
-
----
-
-### 3. Backup-ledger Seam in Mobile LOTL-like Platform-State Anomaly
-
-The Manifest.db / backup-ledger issue may represent a narrower backup-layer seam within the broader LOTL-like Apple platform-state anomaly model.
-
-This hypothesis does not treat iMazing as the cause.
-
-It treats iMazing as the acquisition surface through which abnormal Apple backup state may become observable.
-
-Relevant areas include:
-
-* Manifest.db
-* backup ledger state
-* backup encryption state
-* keybag state
-* pairing / trust state
-* iOS backup service behavior
-* iMazing success / backend artifact mismatch
-* RTCR / RTCReporting
-* Status.plist
-* Manifest.plist
-* storage pressure
-* evidence-preservation behavior
-
-The key question is:
-
-> Can repeated Manifest.db / backup-ledger abnormality be reproduced as normal Apple / iOS / iMazing behavior, or does it remain aligned with broader trust-state, restriction-state, daemon-layer, telecom, and evidence-preservation anomalies?
-
----
-
-### 4. Trust-Graph Poisoning
-
-The center of gravity may not be a single compromised device.
-
-The anomaly may involve distortion of a broader trust graph, including:
-
-* Apple ID lineage
-* trusted devices
-* backup lineage
-* usageClientId continuity
-* SIM / CommCenter / OTP state
-* financial device trust
-
-The key question is:
-
-> Is the trusted relationship itself being distorted across devices, accounts, backups, or authentication events?
-
----
-
-### 5. Evidence-Suppression Objective
-
-The objective may include suppression of the user’s ability to preserve, explain, export, or validate evidence.
-
-Relevant signals include:
-
-* screenshot failure
-* screen recording failure
-* storage pressure during critical events
-* backup inconsistency
-* Manifest / RTCR abnormality
-* artifact preservation difficulty
-* log preservation degradation
-
-The key question is:
-
-> Did the system behave normally when the user attempted to preserve evidence?
-
----
-
-### 6. LOTL-like Platform-State Anomaly
-
-The observed structure may not depend on a visible malicious tool.
-
-Instead, the anomaly may appear as normal-looking platform state across account, iCloud, policy, backup, telecom, and evidence-preservation layers.
-
-Relevant areas include:
-
-* Apple ID trust state
-* iCloud state
-* trusted-device graph
-* ScreenTime / ManagedSettings state
-* MDMStatus:false with management-adjacent activity
-* Manifest.db / backup ledger
-* usageClientId / usage-state transitions
-* CommCenter / Baseband / SIM / OTP context
-* BSSID / RSSI proximity anchors
-* storage pressure and backup / log preservation failures
-
-The key question is:
-
-> Is this a case of normal Apple platform state, or a LOTL-like anomaly surface where platform state itself becomes the control surface?
-
----
-
-### 7. Mobile-native LOTL-like Apple Platform-State Anomaly
-
-The current maximum hypothesis is that traditional PC / enterprise LOTL logic may have a mobile-native equivalent.
-
-Instead of relying on visible PC-side tools, the mobile-native version may operate through:
-
-* legitimate mobile apps
-* legitimate account state
-* legitimate cloud state
-* legitimate calendar / meeting state
-* legitimate document-provider state
-* legitimate token / OAuth state
-* legitimate policy / restriction state
-* legitimate backup state
-* legitimate telecom / SIM / OTP state
-* legitimate evidence-preservation behavior
-
-In this model:
-
-* Outlook / Microsoft surfaces are possible entry or state surfaces for future review.
-* Manifest.db is not the root cause.
-* Manifest.db / backup-ledger abnormality is a possible byproduct or observable evidence-preservation seam.
-* iMazing is not treated as the cause.
-* Apple backup state is the review surface.
-
-The key question is:
-
-> Can normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior explain the long-term, cross-device clustering of account state, calendar/document state, restriction state, backup state, telecom state, proximity context, and evidence-preservation behavior?
-
----
-
-## Validation boundary
-
-These hypotheses do not assert:
-
-* malware attribution
-* actor attribution
-* state attribution
-* government attribution
-* Apple-side causation
-* iMazing causation
-* Microsoft causation
-* Outlook causation
-* classic MDM enrollment
-* known spyware family deployment
-* Evil Twin / rogue AP use as a proven fact
-* confirmed C2
-* confirmed payload
-* confirmed exploit chain
-* baseband compromise
-* SIM compromise
-* OTP interception
-
-They are intended only to guide qualified DFIR / CTI / mobile forensic / platform-security review.
-
-The preferred outcome is not confirmation.
-
-The preferred outcome is a reproducible explanation that supports, weakens, or falsifies each hypothesis.
-
----
-
-## Practical reviewer takeaway
-
-The central question is not:
-
-> Which actor did this?
-
-The central question is:
-
-> Can normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior explain a long-term, cross-device structure in which trust state, restriction state, account-calendar-document state, backup state, telecom state, and evidence-preservation behavior appear to cluster at the same seams?
-
-For the backup layer, the narrower question is:
-
-> Can normal Apple / iOS / iMazing backup behavior explain repeated Manifest.db / backup-ledger abnormality across preserved backup generations, especially when aligned with broader trust-state, restriction-state, daemon-layer, telecom, and evidence-preservation anomalies?
-
-If yes, the hypothesis should be weakened.
-
-If no, the case may represent a forensic blind spot in how iOS platform-state, backup-ledger behavior, restriction state, account-cloud-calendar-document state, telecom context, and evidence preservation are currently reviewed.
+If normal behavior does not explain the sequence, the case may represent a forensic blind spot in how iOS platform-state, backup-ledger behavior, restriction state, account-cloud-document state, telecom context, and evidence preservation are currently reviewed.
