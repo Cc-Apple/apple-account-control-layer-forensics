@@ -1,0 +1,390 @@
+package:
+  name: support-invisible-restriction-anchor-2026-03-03-public
+  type: public_technical_review_package
+  timezone: UTC+7
+  raw_artifacts_public: false
+  attribution_claim: false
+  malware_claim: false
+  classic_mdm_claim: false
+  apple_causation_claim: false
+
+updated_shadow_cloud_framing:
+  status: public_non_attribution_framing_update
+  primary_hypothesis: Shadow Cloud
+  recommended_framing: LOTL-like Apple platform-state / trust-state abuse
+  short_formula: "Not living off tools. Living off Apple platform state."
+  trace_location: "not in payloads, but in Apple ecosystem seams"
+  meaning: >
+    This support repository should be read as a focused restriction-layer and
+    support-window anchor within the broader Shadow Cloud working hypothesis.
+    The review target is not a named actor. The review target is whether Apple
+    platform state, restriction state, FileProvider/iCloud state, support-window
+    timing, storage pressure, and evidence-preservation behavior can be explained
+    as normal Apple / iOS behavior.
+  attribution: not_asserted
+  comparison_roles:
+    lotl_like_apple_platform_state_abuse:
+      role: proposed_ttp_mechanism
+      attribution: not_asserted
+    apt42_style_acms:
+      role: account_cloud_mobile_surveillance_comparison_reference
+      attribution: not_asserted
+    apt32_style_historical_transfer:
+      role: secondary_operational_history_comparison_reference
+      attribution: not_asserted
+    evil_twin_or_rogue_ap_models:
+      role: physical_proximity_wifi_comparison_reference
+      attribution: not_asserted
+      proof_claim: false
+
+device:
+  label: 15G
+  label_type: internal_ghost_apple_id_lineage_label
+  observed_model_identifier: iPhone13,1
+  observed_device_class: iPhone 12 mini class
+  observed_os_generation: iPhone OS 18.5 / 22F76
+  clarification: "15G is not the physical hardware model. It is an internal continuity label."
+
+anchors:
+  - date: "2026-03-03"
+    classification: "FileProvider / MCState / ManagedSettings / visible-management-absent artifact anchor"
+    apple_support_contact_date: false
+    primary_role:
+      - baseline artifact state
+      - visible management absence
+      - MCState / ManagedSettings presence
+      - FileProvider / iCloud Drive needs-auth context
+      - storage and memory pressure
+      - platform-state seam review anchor
+
+    key_observations:
+      visible_management:
+        mdm_status: false
+        is_supervised: false
+        post_setup_profile_was_installed: false
+        mc_profile_events: empty
+        visible_payload_manifest: empty
+
+      managedsettings:
+        present: true
+        screentime_store_present: true
+        safari_private_browsing_denied: false
+        safari_history_clearing_denied: false
+
+      fileprovider:
+        present: true
+        local_storage_fileprovider: true
+        save_to_files_context: true
+        icloud_drive_brctl_state: "logged out / not configured"
+        icloud_drive_fileprovider_state: "enabled / needs-auth"
+
+      pressure:
+        main_event: "1GB-class fileproviderd disk-write event"
+        memory_pressure_endpoint: "evening 21:34 window"
+
+    referenced_artifacts:
+      local_log_package: Logs.zip
+      sysdiagnose:
+        - sysdiagnose_2026.03.03_11-53-34+0700_iPhone-OS_iPhone_22F76.tar.gz
+        - sysdiagnose_2026.03.03_12-14-27+0700_iPhone-OS_iPhone_22F76.tar.gz
+        - sysdiagnose_2026.03.03_20-09-49+0700_iPhone-OS_iPhone_22F76.tar.gz
+        - sysdiagnose_2026.03.03_20-51-10+0700_iPhone-OS_iPhone_22F76.tar.gz
+        - sysdiagnose_2026.03.03_21-34-04+0700_iPhone-OS_iPhone_22F76.tar.gz
+
+    interpretation:
+      normal:
+        - ordinary low-storage FileProvider behavior
+        - ordinary iCloud Drive not-configured provider metadata
+        - normal MCState / ManagedSettings baseline
+      anomalous:
+        - visible management absent while internal restriction structures exist
+        - FileProvider / iCloud Drive needs-auth state persisted
+        - storage pressure and account/cloud/search/delete/trial process context clustered
+        - possible Apple platform-state seam requiring review
+
+    lotl_like_platform_state_relevance:
+      relevant: true
+      reason: >
+        The anchor combines visible management absence, internal restriction-state
+        structures, FileProvider/iCloud mismatch, and storage pressure. This fits
+        the LOTL-like platform-state review model because the signal appears in
+        legitimate Apple platform states rather than in a visible payload.
+
+    boundary:
+      proves_malware: false
+      proves_actor_attribution: false
+      proves_evil_twin: false
+      proves_malicious_profile: false
+      proves_classic_mdm: false
+      proves_apple_causation: false
+
+  - date: "2026-03-04"
+    classification: "Lost Mode / Find My / Game Center exposure / ANE-VisualIntelligence pressure / Account-Cloud-Trust burst anchor"
+    apple_support_contact_date: false
+    primary_role:
+      - Lost Mode / Apple Pay stopped timestamp context
+      - Find My / Family / AppleAccount context
+      - Game Center UI exposure
+      - Game Center social restriction baseline
+      - ANE / Visual Intelligence / Photos / Spotlight pressure
+      - multiple 1GB-class disk-write events
+      - late-night Account / Cloud / Trust burst context
+      - platform-state transition context
+
+    key_windows:
+      - time: "04:20 UTC+7"
+        event: "Apple Pay stopped notification reportedly captured"
+        evidence_type: private_screenshot
+      - time: "04:21 UTC+7"
+        event: "Lost Mode enabled notification reportedly captured"
+        evidence_type: private_screenshot
+      - time: "04:20-04:50 UTC+7"
+        event: "main observation / screenshot / video window"
+        evidence_type: private_media_window
+      - time: "04:43 UTC+7"
+        event: "Game Center UI screenshot reportedly captured"
+        evidence_type: private_screenshot
+      - time: "05:13 UTC+7"
+        event: "MCState / ManagedSettings / Game Center restriction baseline"
+        evidence_type: sysdiagnose
+      - time: "23:13 UTC+7"
+        event: "physical-sensation report screenshot and Account / Cloud / Trust burst context"
+        evidence_type: private_screenshot_and_artifacts
+
+    key_observations:
+      visible_management:
+        mdm_status: false
+        is_supervised: false
+        post_setup_profile_was_installed: false
+        mc_profile_events: empty
+        visible_payload_manifest: empty
+
+      lost_mode_findmy:
+        apple_pay_stopped_notification: private_preserved
+        lost_mode_enabled_notification: private_preserved
+        findmy_family_appleaccount_context: true
+
+      gamecenter:
+        ui_exposure_reported: true
+        social_restriction_baseline_present: true
+        later_recompute_on_2026_03_05: true
+
+      pressure:
+        diskwrite_events:
+          - process: ANECompilerService
+            scale: 1GB-class
+          - process: WeChat
+            scale: 1GB-class
+          - process: fileproviderd
+            scale: 1GB-class
+          - process: sysdiagnosed
+            scale: 1GB-class
+
+      account_cloud_trust:
+        late_night_sfa_burst: true
+        categories:
+          - CloudServices
+          - CKKS
+          - PCS
+          - SOS
+          - local keychain
+          - networking
+
+    referenced_artifacts:
+      local_log_package: 15G-2026-03-04.zip
+      sysdiagnose:
+        - sysdiagnose_2026.03.04_05-13-59+0700_iPhone-OS_iPhone_22F76.tar.gz
+      private_evidence:
+        - "2026-03-04 04:20 UTC+7 - Apple Pay stopped notification"
+        - "2026-03-04 04:21 UTC+7 - Lost Mode enabled notification"
+        - "2026-03-04 04:43 UTC+7 - Game Center UI screenshot"
+        - "2026-03-04 23:13 UTC+7 - ChatGPT physical-sensation report screenshot"
+
+    interpretation:
+      normal:
+        - ordinary Lost Mode / Find My / Apple Pay state behavior
+        - ordinary Photos / Visual Intelligence / Spotlight indexing
+        - ordinary low-storage disk-write pressure
+        - ordinary Apple account health reporting
+      anomalous:
+        - Lost Mode / Game Center / pressure events cluster in a narrow window
+        - Game Center social baseline precedes 2026-03-05 recomputation
+        - multiple 1GB-class writes appear on the same date
+        - Account / Cloud / Trust burst aligns with user-side timestamp context
+        - platform-state surfaces cluster across account, restriction, pressure, and evidence-preservation context
+
+    lotl_like_platform_state_relevance:
+      relevant: true
+      reason: >
+        Lost Mode / Find My / Game Center / account-cloud-trust / storage pressure
+        are legitimate Apple ecosystem states. The review question is whether their
+        clustering is normal or whether the same legitimate state surfaces become
+        the anomaly surface.
+
+    boundary:
+      proves_malware: false
+      proves_actor_attribution: false
+      proves_external_physical_source: false
+      proves_evil_twin: false
+      proves_malicious_profile: false
+      proves_classic_mdm: false
+      proves_apple_causation: false
+
+  - date: "2026-03-05"
+    classification: "Apple Support interaction / ManagedSettings-DMD-Game Center recomputation / later Screen Time UI evidence anchor"
+    apple_support_contact_date: true
+    primary_role:
+      - Apple Support interaction window
+      - ManagedSettings / Safari restriction change
+      - DMD / Digital Health recomputation
+      - Game Center social restriction recomputation
+      - later Screen Time / Apple ID sign-out restriction UI evidence
+      - WeChat storage-pressure context
+      - support-window restriction-state seam anchor
+
+    key_windows:
+      - time: "03:00-06:00 UTC+7"
+        event: "morning precondition / background processing / route change window"
+        evidence_type: artifacts
+      - time: "05:11 UTC+7"
+        event: "Family Sharing screenshot reportedly captured"
+        evidence_type: private_screenshot
+      - time: "11:08 UTC+7"
+        event: "Find My screenshot reportedly captured"
+        evidence_type: private_screenshot
+      - time: "11:10-11:31 UTC+7"
+        event: "Apple Support interaction window"
+        evidence_type: private_support_records
+      - time: "11:11:38 UTC+7"
+        event: "ManagedSettings / Safari restriction change"
+        evidence_type: artifact
+      - time: "11:14 UTC+7"
+        event: "DMD / Digital Health / Game Center recomputation"
+        evidence_type: artifact
+      - time: "18:11 UTC+7"
+        event: "Screen Time restriction-related screenshot"
+        evidence_type: private_screenshot
+      - time: "18:12 UTC+7"
+        event: "Screen Time settings / Apple ID sign-out restriction video"
+        evidence_type: private_video
+
+    key_observations:
+      visible_management:
+        mdm_status: false
+        is_supervised: false
+        post_setup_profile_was_installed: false
+        mc_profile_events: empty
+        visible_payload_manifest: empty
+
+      support_window:
+        start: "11:10 UTC+7"
+        end: "11:31 UTC+7"
+        support_side_visibility_context: private_preserved
+
+      managedsettings:
+        safari_private_browsing_restriction_change: true
+        safari_history_clearing_restriction_change: true
+        approximate_time: "11:11:38 UTC+7"
+
+      dmd_digital_health:
+        recomputation_present: true
+        approximate_time: "11:14 UTC+7"
+        gamecenter_restrictions_involved: true
+
+      gamecenter:
+        social_restriction_recompute: true
+        relevant_to_2026_03_04_baseline: true
+
+      ui_evidence:
+        screentime_restriction_screenshot: private_preserved
+        signout_restriction_video: private_preserved
+
+      pressure:
+        main_event: "1GB-class WeChat disk-write event"
+
+    referenced_artifacts:
+      local_log_package: 15G-2026-03-05.zip
+      sysdiagnose:
+        - sysdiagnose_2026.03.05_04-02-35+0700_iPhone-OS_iPhone_22F76.tar.gz
+        - sysdiagnose_2026.03.05_04-14-45+0700_iPhone-OS_iPhone_22F76.tar.gz
+        - sysdiagnose_2026.03.05_05-13-59+0700_iPhone-OS_iPhone_22F76.tar.gz
+        - sysdiagnose_2026.03.05_08-20-59+0700_iPhone-OS_iPhone_22F76.tar.gz
+        - sysdiagnose_2026.03.05_18-11-13+0700_iPhone-OS_iPhone_22F76.tar.gz
+        - sysdiagnose_2026.03.05_21-22-25+0700_iPhone-OS_iPhone_22F76.tar.gz
+      private_evidence:
+        - "2026-03-05 05:11 UTC+7 - Family Sharing screenshot"
+        - "2026-03-05 11:08 UTC+7 - Find My screenshot"
+        - "2026-03-05 11:10-11:31 UTC+7 - Apple Support records"
+        - "2026-03-05 18:11 UTC+7 - Screen Time restriction screenshot"
+        - "2026-03-05 18:12 UTC+7 - Screen Time / Apple ID sign-out restriction video"
+
+    interpretation:
+      normal:
+        - ordinary Apple Support interaction with unrelated system changes
+        - ordinary ManagedSettings / DMD maintenance
+        - ordinary Game Center restriction-template recomputation
+        - ordinary Screen Time / Family Sharing behavior
+        - ordinary WeChat low-storage pressure
+      anomalous:
+        - Apple Support timing aligns with ManagedSettings / DMD recomputation
+        - Game Center recomputation connects to prior-day Game Center UI/baseline
+        - later Screen Time / sign-out UI evidence follows internal recomputation window
+        - visible management indicators were absent in reviewed artifacts
+        - support-window timing intersects with restriction-state and evidence-preservation surfaces
+
+    lotl_like_platform_state_relevance:
+      relevant: true
+      reason: >
+        The anchor is a direct platform-state review question: visible management
+        indicators remain absent while internal restriction-state recomputation and
+        later visible restriction UI evidence appear near a support/account workflow window.
+
+    boundary:
+      proves_malware: false
+      proves_actor_attribution: false
+      proves_evil_twin: false
+      proves_malicious_profile: false
+      proves_classic_mdm: false
+      proves_apple_causation: false
+
+cross_day:
+  core_question: >
+    Can later Screen Time / Apple ID sign-out restriction behavior be explained by
+    ordinary visible Screen Time / Family Sharing / MDM / supervision state, given
+    visible-management absence and internal restriction-layer recomputation?
+
+  updated_platform_state_question: >
+    Can normal Apple / iOS behavior explain a three-day sequence where visible
+    management indicators remain absent while FileProvider/iCloud state, Game Center
+    restriction baseline, ManagedSettings/DMD recomputation, storage pressure, support
+    workflow timing, and later restriction UI evidence appear in related windows?
+
+  repeated_patterns:
+    visible_management_absent: true
+    internal_restriction_layer_present: true
+    gamecenter_as_possible_seam: true
+    fileprovider_icloud_drive_needs_auth_context: true
+    storage_pressure_repeated: true
+    account_cloud_trust_bursts: true
+    support_window_restriction_recompute_alignment: true
+    evidence_preservation_context: true
+
+ttp_comparison:
+  attribution_claim: false
+  comparison_models:
+    - LOTL-like Apple platform-state / trust-state abuse
+    - Evil Twin / Rogue AP style physical-proximity Wi-Fi TTP
+    - APT42-style account / cloud / mobile-surveillance comparison
+    - APT32-style historical TTP transfer comparison
+    - user-interaction-gated account/control workflow
+    - support/account workflow manipulation
+  preferred_mechanism_framing: LOTL-like Apple platform-state / trust-state abuse
+  conclusion: "comparison only; no actor attribution"
+
+boundary:
+  no_attribution: true
+  no_malware_conclusion: true
+  no_evil_twin_proof: true
+  no_malicious_profile_proof: true
+  no_classic_mdm_proof: true
+  no_apple_causation_claim: true
