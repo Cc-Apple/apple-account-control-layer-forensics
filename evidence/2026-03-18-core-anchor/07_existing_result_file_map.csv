@@ -1,0 +1,19 @@
+﻿file,found,size_bytes,path_redacted
+99_core_evidence_extract_summary.json,True,10035,[RESULT_2026_06_05]\2. seam7_deep\Core_Evidence_Extract\99_core_evidence_extract_summary.json
+04_core_evidence_summary.md,True,6661,[RESULT_2026_06_05]\2. seam7_deep\Core_Evidence_Extract\04_core_evidence_summary.md
+05_core_machine_summary.yaml,True,2693,[RESULT_2026_06_05]\2. seam7_deep\Core_Evidence_Extract\05_core_machine_summary.yaml
+00_core_daily_A_only.csv,True,2875,[RESULT_2026_06_05]\2. seam7_deep\Core_Evidence_Extract\00_core_daily_A_only.csv
+01_core_windows_A_only.csv,True,1715,[RESULT_2026_06_05]\2. seam7_deep\Core_Evidence_Extract\01_core_windows_A_only.csv
+99_trigger_core_final_summary.json,True,7661,[RESULT_2026_06_05]\3. seam8_deep\8_Strict\8_Final\99_trigger_core_final_summary.json
+02_trigger_core_summary.md,True,8399,[RESULT_2026_06_05]\3. seam8_deep\8_Strict\8_Final\02_trigger_core_summary.md
+00_trigger_core_daily_compact.csv,True,861,[RESULT_2026_06_05]\3. seam8_deep\8_Strict\8_Final\00_trigger_core_daily_compact.csv
+01_trigger_core_windows_compact.csv,True,2711,[RESULT_2026_06_05]\3. seam8_deep\8_Strict\8_Final\01_trigger_core_windows_compact.csv
+99_refined_summary.json,True,2375,[RESULT_2026_06_05]\4. Core_Provenance_Audit\Core_Provenance_Audit_Refined\99_refined_summary.json
+github_artifact_index_refined.md,True,44359,[RESULT_2026_06_05]\4. Core_Provenance_Audit\Core_Provenance_Audit_Refined\github_artifact_index_refined.md
+github_reproducibility_note_refined.md,True,1367,[RESULT_2026_06_05]\4. Core_Provenance_Audit\Core_Provenance_Audit_Refined\github_reproducibility_note_refined.md
+03_log_only_core_artifacts.csv,True,162560,[RESULT_2026_06_05]\4. Core_Provenance_Audit\Core_Provenance_Audit_Refined\03_log_only_core_artifacts.csv
+05_duplicate_hash_classified.csv,True,152510,[RESULT_2026_06_05]\4. Core_Provenance_Audit\Core_Provenance_Audit_Refined\05_duplicate_hash_classified.csv
+06_issue_summary.csv,True,303,[RESULT_2026_06_05]\4. Core_Provenance_Audit\Core_Provenance_Audit_Refined\06_issue_summary.csv
+02_artifact_index_public_compact_github.csv,True,4774227,[RESULT_2026_06_05]\4. Core_Provenance_Audit\Core_Provenance_Audit_Refined\02_artifact_index_public_compact_github.csv
+99_workspace_summary.json,True,4000,[RESULT_2026_06_05]\5. scan_0318_workspace\99_workspace_summary.json
+workspace_audit_summary.md,True,1596,[RESULT_2026_06_05]\5. scan_0318_workspace\workspace_audit_summary.md

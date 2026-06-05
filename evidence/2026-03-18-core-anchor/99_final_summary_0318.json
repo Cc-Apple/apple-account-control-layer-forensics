@@ -1,0 +1,78 @@
+{
+  "script": "build_0318_final_from_real_paths.py",
+  "generated_at": "2026-06-05T22:14:41",
+  "input_policy": "read_only_no_delete_no_move_no_modify_no_add_no_rename",
+  "output_dir": "C:\\Users\\Administrator\\Desktop\\Result",
+  "core_date": "2026-03-18",
+  "device_label": "15G",
+  "udid_redacted": "[15G_UDID]",
+  "source_paths": {
+    "log_0318": "D:\\Device-Logs_整理済み\\My_Device\\15G\\2026\\03\\18",
+    "manifest_0318_error": "D:\\Manifest\\My_Device\\15G\\00008101-000524EC3A30001E\\2026-03-18\\2026-03-18-093500  Error",
+    "manifest_0318_snapshot": "D:\\Manifest\\My_Device\\15G\\00008101-000524EC3A30001E\\2026-03-18\\2026-03-18-155727  (Snashpt肥大化世代)",
+    "result_root": "D:\\Result\\2026-06-05"
+  },
+  "source_exists": {
+    "log_0318": true,
+    "manifest_0318_error": true,
+    "manifest_0318_snapshot": true,
+    "result_root": true
+  },
+  "total_indexed_files": 21948,
+  "by_source_group": {
+    "log_0318": 133,
+    "manifest_0318_error": 107,
+    "manifest_0318_snapshot": 21708
+  },
+  "category_counts": {
+    "other": 2218,
+    "analytics": 2,
+    "dmd_digitalhealth": 1,
+    "duet_coreduet": 1,
+    "force_reset": 1,
+    "jetsam": 3,
+    "managedappdistributiond": 5,
+    "trial": 2,
+    "icloud_cloud": 14,
+    "stacks": 22,
+    "info_plist_tmp": 2,
+    "setupapi": 7,
+    "status_plist": 1,
+    "status_plist_backup": 1,
+    "snapshot_file": 19628,
+    "sqlite_shm": 18,
+    "sqlite_wal": 18,
+    "photos_sqlite": 3,
+    "generated_or_result": 1
+  },
+  "magic_counts": {
+    "json_like": 270,
+    "text_like": 21,
+    "binary_or_unknown": 20741,
+    "binary_plist": 599,
+    "empty": 30,
+    "sqlite": 20,
+    "xml_plist_or_xml": 267
+  },
+  "snapshot_file_count": 19625,
+  "snapshot_size_bytes": 56713615632,
+  "snapshot_size_gib": 52.8187,
+  "snapshot_hex_bucket_count": 256,
+  "zero_byte_files": 30,
+  "small_1kb_or_less": 8284,
+  "large_1mb_or_more": 977,
+  "large_100mb_or_more": 177,
+  "plist_rows": 4,
+  "duplicate_hash_groups": 28,
+  "existing_result_files_found": 18,
+  "existing_result_files_missing": 0,
+  "errors": 0,
+  "started": "2026-06-05T21:50:45",
+  "finished": "2026-06-05T22:14:41",
+  "existing_json_summaries_loaded": [
+    "99_core_evidence_extract_summary.json",
+    "99_trigger_core_final_summary.json",
+    "99_refined_summary.json",
+    "99_workspace_summary.json"
+  ]
+}
