@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-06-06T01:24:25",
+  "input_policy": "read_only",
+  "raw_artifacts_included": false,
+  "private_full_paths_in_public_index": false,
+  "device_identifier_included": false,
+  "device_name_included": false,
+  "input_dir": "[INPUT_RESULT_ROOT]",
+  "output_dir": "[OUTPUT_DIR]",
+  "zip": "[ZIP_OUTPUT]",
+  "core_date": "2026-04-01",
+  "device": "15G",
+  "summary_file": "99_final_summary_0401.json",
+  "markdown_summary": "SC_0401_final_summary.md",
+  "public_files": [
+    "01_public_generation_summary_0401.csv",
+    "02_public_plist_status_info_0401.csv",
+    "03_public_snapshot_bucket_summary_0401.csv",
+    "04_cross_generation_summary_0401.csv",
+    "05_public_top_level_inventory_0401.csv",
+    "06_0318_0401_bridge_summary.csv",
+    "0401_machine_summary.json",
+    "99_final_summary_0401.json",
+    "SC_0401_final_summary.md"
+  ],
+  "excluded_from_public_package": [
+    "04_cross_generation_compare_0401.csv",
+    "raw file inventory",
+    "raw logs",
+    "raw Manifest artifacts",
+    "raw Snapshot folder",
+    "private full paths",
+    "device identifiers",
+    "device names",
+    "Result_* generated folders"
+  ]
+}

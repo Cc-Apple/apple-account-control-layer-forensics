@@ -1,0 +1,223 @@
+{
+  "script": "build_0401_public_package_v2.py",
+  "generated_at": "2026-06-06T01:24:25",
+  "started": "2026-06-06T01:24:25",
+  "finished": "2026-06-06T01:24:25",
+  "input_policy": "read_only_no_delete_no_move_no_modify_no_add_no_rename",
+  "raw_artifacts_public": false,
+  "private_full_paths_public": false,
+  "device_identifier_public": false,
+  "device_name_public": false,
+  "input_dir_public": "[INPUT_RESULT_ROOT]",
+  "output_dir_public": "[OUTPUT_DIR]",
+  "zip_public": "[ZIP_OUTPUT]",
+  "device_label": "15G",
+  "core_date": "2026-04-01",
+  "generation_count": 2,
+  "generation_summary": [
+    {
+      "anchor_id": "2026-04-01_15G_0401_020720",
+      "device_label": "15G",
+      "core_date": "2026-04-01",
+      "gen_id": "0401_020720",
+      "label": "2026-04-01-020720",
+      "root_public": "[0401_020720_ROOT]",
+      "root_exists": "True",
+      "total_files": "9085",
+      "total_size_bytes": "32472149798",
+      "total_size_gib": "30.242",
+      "snapshot_files": "6998",
+      "snapshot_size_bytes": "13883784176",
+      "snapshot_size_gib": "12.9303",
+      "snapshot_hex_bucket_count": "256",
+      "zero_byte_files": "5",
+      "small_1kb_or_less": "2904",
+      "large_1mb_or_more": "1382",
+      "large_100mb_or_more": "40",
+      "plist_rows": "3",
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "IsFullBackup": "True",
+      "Status_Date": "2026-04-01 02:07:20.059414",
+      "Info_plist_tmp": "yes",
+      "Product_Version": "18.5",
+      "Build_Version": "22F76",
+      "Product_Type": "iPhone13,1",
+      "Installed_Applications": "36",
+      "errors": "0"
+    },
+    {
+      "anchor_id": "2026-04-01_15G_0401_053959",
+      "device_label": "15G",
+      "core_date": "2026-04-01",
+      "gen_id": "0401_053959",
+      "label": "2026-04-01-053959",
+      "root_public": "[0401_053959_ROOT]",
+      "root_exists": "True",
+      "total_files": "52825",
+      "total_size_bytes": "91488051065",
+      "total_size_gib": "85.2049",
+      "snapshot_files": "50994",
+      "snapshot_size_bytes": "83894052576",
+      "snapshot_size_gib": "78.1324",
+      "snapshot_hex_bucket_count": "256",
+      "zero_byte_files": "0",
+      "small_1kb_or_less": "14559",
+      "large_1mb_or_more": "2891",
+      "large_100mb_or_more": "241",
+      "plist_rows": "3",
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "IsFullBackup": "True",
+      "Status_Date": "2026-04-01 05:39:59.884789",
+      "Info_plist_tmp": "yes",
+      "Product_Version": "18.5",
+      "Build_Version": "22F76",
+      "Product_Type": "iPhone13,1",
+      "Installed_Applications": "36",
+      "errors": "0"
+    }
+  ],
+  "bridge_to_0318": [
+    {
+      "anchor_id": "2026-03-18_15G",
+      "date": "2026-03-18",
+      "generation": "single_core_anchor",
+      "snapshot_files": 19625,
+      "snapshot_size_bytes": 56713615632,
+      "snapshot_size_gib": 52.8187,
+      "snapshot_hex_bucket_count": 256,
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "IsFullBackup": "True",
+      "Info_plist_tmp": "present",
+      "interpretation": "published_0318_backup_ledger_snapshot_anchor"
+    },
+    {
+      "anchor_id": "2026-04-01_15G_0401_020720",
+      "date": "2026-04-01",
+      "generation": "0401_020720",
+      "snapshot_files": "6998",
+      "snapshot_size_bytes": "13883784176",
+      "snapshot_size_gib": "12.9303",
+      "snapshot_hex_bucket_count": "256",
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "IsFullBackup": "True",
+      "Info_plist_tmp": "yes",
+      "interpretation": "0401_repeated_backup_ledger_snapshot_anchor"
+    },
+    {
+      "anchor_id": "2026-04-01_15G_0401_053959",
+      "date": "2026-04-01",
+      "generation": "0401_053959",
+      "snapshot_files": "50994",
+      "snapshot_size_bytes": "83894052576",
+      "snapshot_size_gib": "78.1324",
+      "snapshot_hex_bucket_count": "256",
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "IsFullBackup": "True",
+      "Info_plist_tmp": "yes",
+      "interpretation": "0401_repeated_backup_ledger_snapshot_anchor"
+    }
+  ],
+  "cross_generation_summary": [
+    {
+      "metric": "relative_paths_total",
+      "value": 54912
+    },
+    {
+      "metric": "both_generations",
+      "value": 6998
+    },
+    {
+      "metric": "0401_020720_only",
+      "value": 2087
+    },
+    {
+      "metric": "0401_053959_only",
+      "value": 45827
+    },
+    {
+      "metric": "same_size",
+      "value": 6990
+    },
+    {
+      "metric": "changed_size",
+      "value": 8
+    },
+    {
+      "metric": "same_sample_hash",
+      "value": 0
+    },
+    {
+      "metric": "different_sample_hash_or_blank",
+      "value": 6998
+    }
+  ],
+  "csv_manifest": [
+    {
+      "src": "03_plist_status_info_0401.csv",
+      "dst": "02_public_plist_status_info_0401.csv",
+      "rows": 6,
+      "fields": [
+        "gen_id",
+        "relative_path",
+        "filename",
+        "category",
+        "size_bytes",
+        "mtime",
+        "magic",
+        "parse_error",
+        "BackupState",
+        "SnapshotState",
+        "IsFullBackup",
+        "Date",
+        "Last Backup Date",
+        "Product Version",
+        "Build Version",
+        "Product Type",
+        "Target Identifier",
+        "Device Name",
+        "Display Name",
+        "Installed Applications",
+        "iTunes Version"
+      ]
+    },
+    {
+      "src": "02_snapshot_bucket_summary_0401.csv",
+      "dst": "03_public_snapshot_bucket_summary_0401.csv",
+      "rows": 512,
+      "fields": [
+        "gen_id",
+        "bucket",
+        "is_hex_bucket",
+        "file_count",
+        "total_size_bytes",
+        "total_size_gib",
+        "zero_byte_files",
+        "small_1kb_or_less",
+        "large_1mb_or_more",
+        "large_100mb_or_more",
+        "category_counts",
+        "magic_counts"
+      ]
+    },
+    {
+      "src": "00_top_level_inventory_0401.csv",
+      "dst": "05_public_top_level_inventory_0401.csv",
+      "rows": 524,
+      "fields": [
+        "gen_id",
+        "name",
+        "type",
+        "file_count",
+        "dir_count",
+        "total_size_bytes",
+        "total_size_gib",
+        "zero_byte_files"
+      ]
+    }
+  ]
+}

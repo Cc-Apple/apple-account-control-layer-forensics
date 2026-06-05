@@ -1,0 +1,4 @@
+﻿anchor_id,date,generation,snapshot_files,snapshot_size_bytes,snapshot_size_gib,snapshot_hex_bucket_count,BackupState,SnapshotState,IsFullBackup,Info_plist_tmp,interpretation
+2026-03-18_15G,2026-03-18,single_core_anchor,19625,56713615632,52.8187,256,empty,uploading,True,present,published_0318_backup_ledger_snapshot_anchor
+2026-04-01_15G_0401_020720,2026-04-01,0401_020720,6998,13883784176,12.9303,256,empty,uploading,True,yes,0401_repeated_backup_ledger_snapshot_anchor
+2026-04-01_15G_0401_053959,2026-04-01,0401_053959,50994,83894052576,78.1324,256,empty,uploading,True,yes,0401_repeated_backup_ledger_snapshot_anchor

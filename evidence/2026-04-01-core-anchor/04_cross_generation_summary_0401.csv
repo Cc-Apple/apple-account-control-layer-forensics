@@ -1,0 +1,9 @@
+﻿metric,value
+relative_paths_total,54912
+both_generations,6998
+0401_020720_only,2087
+0401_053959_only,45827
+same_size,6990
+changed_size,8
+same_sample_hash,0
+different_sample_hash_or_blank,6998
