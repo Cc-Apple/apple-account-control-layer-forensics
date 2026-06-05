@@ -14,9 +14,11 @@ It does **not** claim confirmed malware, payload, C2, exploit chain, spyware-fam
 
 The central question is narrower:
 
-> Can LOTL-like forensic patterns be observed in a mobile ecosystem without relying on malware binaries, C2 indicators, hash-based evidence, or actor attribution?
+> Can LOTL-like forensic patterns be observed in a mobile ecosystem without relying on malware binaries, C2 indicators, IOC-based hashes, or actor attribution?
 
 The proposed unit of analysis is the **platform-state seam**, not a conventional payload, toolset, or actor label.
+
+Public SHA256 values in this repository are used for artifact integrity and reproducibility, not as malware-family indicators.
 
 ---
 
@@ -607,6 +609,7 @@ Key files:
 
 * README.md
 * SUMMARY_ONE_PAGE.md
+* machine/machine_summary.yaml
 * machine/integrated_machine_summary_2026-05-27.yml
 * machine/2026-03-18_15G_core_anchor_machine_summary.yaml
 
