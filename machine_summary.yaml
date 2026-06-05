@@ -1,317 +1,325 @@
 shadow_cloud_machine_summary:
-  title: "Shadow Cloud"
-  current_framing: "Non-attribution forensic model for mobile-native LOTL-like Apple platform-state anomalies"
-  status: "public technical review package"
-  version_context: "DFRWS US 2026 Submission 96 synchronized update"
-  attribution: "not asserted"
+title: "Shadow Cloud"
+current_framing: "Non-attribution forensic model for mobile-native LOTL-like Apple platform-state anomalies"
+status: "public technical review package"
+version_context: "DFRWS US 2026 Submission 96 synchronized update"
+attribution: "not asserted"
 
-  submission_context:
-    conference: "DFRWS US 2026"
-    track: "Posters"
-    submission_number: 96
-    poster_status: "updated blinded poster PDF synchronized with revised abstract"
-    public_claim_level: "review model, not conclusion"
+submission_context:
+conference: "DFRWS US 2026"
+track: "Posters"
+submission_number: 96
+poster_status: "updated blinded poster PDF synchronized with revised abstract"
+public_claim_level: "review model, not conclusion"
 
-  core_review_question: >
-    Can LOTL-like forensic patterns be observed in a mobile ecosystem without
-    relying on malware binaries, C2 indicators, hash-based evidence, or actor
-    attribution?
+core_review_question: >
+Can LOTL-like forensic patterns be observed in a mobile ecosystem without
+relying on malware binaries, C2 indicators, hash-based evidence, or actor
+attribution?
 
-  unit_of_analysis: "platform-state seam"
+unit_of_analysis: "platform-state seam"
 
-  short_formulas:
-    traditional_lotl: "Living off tools"
-    shadow_cloud: "Living off Apple platform state"
-    backup_branch: "Living off Apple backup state"
+short_formulas:
+traditional_lotl: "Living off tools"
+shadow_cloud: "Living off Apple platform state"
+backup_branch: "Living off Apple backup state"
 
-  model_boundary:
-    does_not_claim:
-      - "actor attribution"
-      - "state attribution"
-      - "government attribution"
-      - "vendor attribution"
-      - "Apple attribution"
-      - "iMazing attribution"
-      - "Microsoft attribution"
-      - "Outlook causation"
-      - "telecom-provider attribution"
-      - "confirmed malware"
-      - "confirmed payload"
-      - "confirmed C2"
-      - "confirmed exploit chain"
-      - "confirmed spyware-family deployment"
-      - "confirmed MDM enrollment"
-      - "confirmed baseband compromise"
-      - "confirmed SIM compromise"
-      - "confirmed OTP interception"
-      - "attacker identity"
-      - "that Manifest.db alone proves compromise"
-      - "that subjective observations are standalone proof"
-      - "that traditional PC-style LOTL techniques executed directly on iOS"
+model_boundary:
+does_not_claim:
+- "actor attribution"
+- "state attribution"
+- "government attribution"
+- "vendor attribution"
+- "Apple attribution"
+- "iMazing attribution"
+- "Microsoft attribution"
+- "Outlook causation"
+- "telecom-provider attribution"
+- "confirmed malware"
+- "confirmed payload"
+- "confirmed C2"
+- "confirmed exploit chain"
+- "confirmed spyware-family deployment"
+- "confirmed MDM enrollment"
+- "confirmed baseband compromise"
+- "confirmed SIM compromise"
+- "confirmed OTP interception"
+- "attacker identity"
+- "that Manifest.db alone proves compromise"
+- "that subjective observations are standalone proof"
+- "that traditional PC-style LOTL techniques executed directly on iOS"
 
-  dataset_scope:
-    period: "approximately eleven months"
-    primary_devices: 6
-    comparison_devices: "included"
-    public_package_contains:
-      - "written technical summaries"
-      - "artifact names"
-      - "timeline summaries"
-      - "machine-readable summaries"
-      - "reviewer questions"
-      - "analysis framing"
-    preserved_separately:
-      - "raw iOS logs"
-      - "raw sysdiagnose archives"
-      - "screenshots"
-      - "videos"
-      - "private account data"
-      - "BSSID details"
-      - "Apple ID material"
-      - "OTP / financial data"
-      - "sensitive backup artifacts"
+dataset_scope:
+period: "approximately eleven months"
+primary_devices: 6
+comparison_devices: "included"
+public_package_contains:
+- "written technical summaries"
+- "artifact names"
+- "timeline summaries"
+- "machine-readable summaries"
+- "reviewer questions"
+- "analysis framing"
+preserved_separately:
+- "raw iOS logs"
+- "raw sysdiagnose archives"
+- "screenshots"
+- "videos"
+- "private account data"
+- "BSSID details"
+- "Apple ID material"
+- "OTP / financial data"
+- "sensitive backup artifacts"
 
-  normal_hypothesis_reduction:
-    purpose: "avoid overclaiming by removing ordinary explanations first"
-    removed_or_deprioritized_first:
-      - "ordinary encrypted-backup opacity"
-      - "high-entropy artifacts alone"
-      - "broad keyword hits"
-      - "weak temporal joins"
-      - "non-core devices"
-      - "pre-March observations"
-      - "candidates without Manifest defects or backup/evidence overlap"
-      - "isolated device failures"
-      - "local PC / USB / storage explanations"
-      - "Microsoft app residue without cross-layer coupling"
-      - "ordinary account-calendar-document behavior"
-    interpretation: >
-      Candidates survive only when stronger cross-layer coupling remains after
-      normal explanations are considered.
+normal_hypothesis_reduction:
+purpose: "avoid overclaiming by removing ordinary explanations first"
+removed_or_deprioritized_first:
+- "ordinary encrypted-backup opacity"
+- "high-entropy artifacts alone"
+- "broad keyword hits"
+- "weak temporal joins"
+- "non-core devices"
+- "pre-March observations"
+- "candidates without Manifest defects or backup/evidence overlap"
+- "isolated device failures"
+- "local PC / USB / storage explanations"
+- "Microsoft app residue without cross-layer coupling"
+- "ordinary account-calendar-document behavior"
+interpretation: >
+Candidates survive only when stronger cross-layer coupling remains after
+normal explanations are considered.
 
-  retained_core_lines:
-    note: "review targets, not conclusions"
-    final_filter_scope: "limited to two primary devices"
-    lines:
-      - id: "core_line_1"
-        range: "2026-03-15 to 2026-03-21"
-        center: "2026-03-17 to 2026-03-19"
-        status: "retained March-April 2026 core review line"
-      - id: "core_line_2"
-        range: "2026-03-29 to 2026-04-04"
-        center: "2026-03-31 to 2026-04-02"
-        status: "retained March-April 2026 core review line"
+retained_core_lines:
+note: "review targets, not conclusions"
+final_filter_scope: "limited to two primary devices"
+lines:
+- id: "core_line_1"
+range: "2026-03-15 to 2026-03-21"
+center: "2026-03-17 to 2026-03-19"
+status: "retained March-April 2026 core review line"
+- id: "core_line_2"
+range: "2026-03-29 to 2026-04-04"
+center: "2026-03-31 to 2026-04-02"
+status: "retained March-April 2026 core review line"
 
-  retained_overlapping_seams:
-    - name: "account_cloud_trust_state"
-      examples:
-        - "Apple ID trust state"
-        - "iCloud trust state"
-        - "trusted-device behavior"
-        - "account/cloud bursts"
-        - "usage-state transitions"
+retained_overlapping_seams:
+- name: "account_cloud_trust_state"
+examples:
+- "Apple ID trust state"
+- "iCloud trust state"
+- "trusted-device behavior"
+- "account/cloud bursts"
+- "usage-state transitions"
 
-    - name: "restriction_state"
-      examples:
-        - "ScreenTime"
-        - "ManagedSettings"
-        - "FamilyControls"
-        - "DMD / Digital Health"
-        - "MDMStatus:false context"
-        - "visible-management absence versus restriction-like behavior"
+```
+- name: "restriction_state"
+  examples:
+    - "ScreenTime"
+    - "ManagedSettings"
+    - "FamilyControls"
+    - "DMD / Digital Health"
+    - "MDMStatus:false context"
+    - "visible-management absence versus restriction-like behavior"
 
-    - name: "backup_ledger_state"
-      examples:
-        - "Manifest.db"
-        - "Manifest.plist"
-        - "Status.plist"
-        - "RTCR / RTCReporting"
-        - "sidecar mismatch"
-        - "encrypted versus unencrypted backup behavior"
-        - "iMazing / iOS backup generation state"
+- name: "backup_ledger_state"
+  examples:
+    - "Manifest.db"
+    - "Manifest.plist"
+    - "Status.plist"
+    - "RTCR / RTCReporting"
+    - "sidecar mismatch"
+    - "encrypted versus unencrypted backup behavior"
+    - "iMazing / iOS backup generation state"
 
-    - name: "evidence_preservation_behavior"
-      examples:
-        - "storage pressure"
-        - "backup failure paths"
-        - "screenshot / recording difficulty reports"
-        - "log-preservation difficulty"
-        - "backup-generation inconsistency"
-        - "acquisition-surface mismatch"
+- name: "evidence_preservation_behavior"
+  examples:
+    - "storage pressure"
+    - "backup failure paths"
+    - "screenshot / recording difficulty reports"
+    - "log-preservation difficulty"
+    - "backup-generation inconsistency"
+    - "acquisition-surface mismatch"
 
-    - name: "telecom_context"
-      examples:
-        - "CommCenter"
-        - "Baseband"
-        - "SIM context"
-        - "device-trust signals"
-        - "financial re-authentication context"
-        - "telecom-adjacent logs"
+- name: "telecom_context"
+  examples:
+    - "CommCenter"
+    - "Baseband"
+    - "SIM context"
+    - "device-trust signals"
+    - "financial re-authentication context"
+    - "telecom-adjacent logs"
 
-    - name: "fileprovider_and_account_document_provider_state"
-      examples:
-        - "FileProvider"
-        - "iCloud Drive provider state"
-        - "account-document-provider behavior"
-        - "document/cloud state"
-        - "SaveToFiles / fileproviderd activity"
+- name: "fileprovider_and_account_document_provider_state"
+  examples:
+    - "FileProvider"
+    - "iCloud Drive provider state"
+    - "account-document-provider behavior"
+    - "document/cloud state"
+    - "SaveToFiles / fileproviderd activity"
 
-    - name: "auxiliary_microsoft_adjacent_surfaces"
-      status: "correlative only"
-      examples:
-        - "Outlook / Microsoft app residue"
-        - "account-calendar-document state"
-        - "Microsoft 365 / Exchange / OAuth / document-provider surfaces"
-        - "FileProvider-adjacent document state"
-      boundary:
-        - "not treated as proven entry point"
-        - "not treated as causal mechanism"
-        - "not treated as Microsoft attribution"
-        - "not treated as Outlook causation"
+- name: "auxiliary_microsoft_adjacent_surfaces"
+  status: "correlative only"
+  examples:
+    - "Outlook / Microsoft app residue"
+    - "account-calendar-document state"
+    - "Microsoft 365 / Exchange / OAuth / document-provider surfaces"
+    - "FileProvider-adjacent document state"
+  boundary:
+    - "not treated as proven entry point"
+    - "not treated as causal mechanism"
+    - "not treated as Microsoft attribution"
+    - "not treated as Outlook causation"
+```
 
-  manifest_db_backup_ledger_boundary:
-    weak_alone:
-      - "Manifest.db unreadability"
-      - "high entropy"
-      - "ordinary encrypted-backup opacity"
-      - "SQLite unreadability without broader coupling"
-    stronger_when_coupled_with:
-      - "backup-ledger defects"
-      - "sidecar mismatch"
-      - "RTCR / Manifest.plist / Status.plist relationship"
-      - "independent log-layer seams"
-      - "backup/evidence behavior"
-      - "restriction state"
-      - "account/cloud trust"
-      - "telecom context"
-      - "FileProvider / account-document-provider state"
-    public_statement: >
-      Manifest.db unreadability or high entropy alone is not treated as evidence
-      of compromise because encrypted backups may explain ordinary opacity.
-      The stronger observation is temporal coupling between backup-ledger
-      defects and independent platform-state seams.
-    evidence_role: "supporting evidence only"
-    does_not_prove:
-      - "causation by Apple"
-      - "causation by iMazing"
-      - "causation by Microsoft"
-      - "causation by Outlook"
-      - "causation by telecom provider"
-      - "causation by backup tool"
-      - "causation by mobile application"
-      - "actor identity"
+manifest_db_backup_ledger_boundary:
+weak_alone:
+- "Manifest.db unreadability"
+- "high entropy"
+- "ordinary encrypted-backup opacity"
+- "SQLite unreadability without broader coupling"
+stronger_when_coupled_with:
+- "backup-ledger defects"
+- "sidecar mismatch"
+- "RTCR / Manifest.plist / Status.plist relationship"
+- "independent log-layer seams"
+- "backup/evidence behavior"
+- "restriction state"
+- "account/cloud trust"
+- "telecom context"
+- "FileProvider / account-document-provider state"
+public_statement: >
+Manifest.db unreadability or high entropy alone is not treated as evidence
+of compromise because encrypted backups may explain ordinary opacity.
+The stronger observation is temporal coupling between backup-ledger
+defects and independent platform-state seams.
+evidence_role: "supporting evidence only"
+does_not_prove:
+- "causation by Apple"
+- "causation by iMazing"
+- "causation by Microsoft"
+- "causation by Outlook"
+- "causation by telecom provider"
+- "causation by backup tool"
+- "causation by mobile application"
+- "actor identity"
 
-  relationships:
-    apple:
-      role: "review surface"
-      not_asserted:
-        - "Apple attribution"
-        - "Apple malicious behavior"
-        - "Apple intentional failure"
-        - "Apple vendor fault"
+relationships:
+apple:
+role: "review surface"
+not_asserted:
+- "Apple attribution"
+- "Apple malicious behavior"
+- "Apple intentional failure"
+- "Apple vendor fault"
 
-    imazing:
-      role: "acquisition surface"
-      not_asserted:
-        - "iMazing attribution"
-        - "iMazing causation"
-        - "iMazing malicious behavior"
-        - "iMazing intentional failure"
+```
+imazing:
+  role: "acquisition surface"
+  not_asserted:
+    - "iMazing attribution"
+    - "iMazing causation"
+    - "iMazing malicious behavior"
+    - "iMazing intentional failure"
 
-    microsoft_outlook:
-      role: "possible future review surface / auxiliary correlative surface"
-      not_asserted:
-        - "Microsoft attribution"
-        - "Outlook causation"
-        - "Microsoft app causation"
-        - "Microsoft service causation"
-        - "direct modification of Manifest.db"
-        - "direct modification of Apple backup state"
-        - "direct modification of iOS backup services"
+microsoft_outlook:
+  role: "possible future review surface / auxiliary correlative surface"
+  not_asserted:
+    - "Microsoft attribution"
+    - "Outlook causation"
+    - "Microsoft app causation"
+    - "Microsoft service causation"
+    - "direct modification of Manifest.db"
+    - "direct modification of Apple backup state"
+    - "direct modification of iOS backup services"
+```
 
-  supporting_repositories:
-    - name: "support-invisible-restriction-anchor-2026-03-03-public"
-      role: "focused restriction-state anchor"
-      focus:
-        - "support-invisible restriction-state review"
-        - "ScreenTime / ManagedSettings"
-        - "Apple ID sign-out restriction context"
-        - "FileProvider / iCloud state"
-        - "visible-management absence"
-        - "2026-03-03 / 2026-03-04 / 2026-03-05 anchor sequence"
-      status: "supporting material, not standalone conclusion"
+supporting_repositories:
+- name: "support-invisible-restriction-anchor-2026-03-03-public"
+role: "focused restriction-state anchor"
+focus:
+- "support-invisible restriction-state review"
+- "ScreenTime / ManagedSettings"
+- "Apple ID sign-out restriction context"
+- "FileProvider / iCloud state"
+- "visible-management absence"
+- "2026-03-03 / 2026-03-04 / 2026-03-05 anchor sequence"
+status: "supporting material, not standalone conclusion"
 
-    - name: "mdm-false-management-daemon-failure-chain-public"
-      role: "focused management-adjacent daemon-layer anchor"
-      focus:
-        - "MDMStatus:false"
-        - "management-adjacent daemon clustering"
-        - "managedappdistributiond"
-        - "dmd"
-        - "ScreenTimeAgent"
-        - "ManagedSettings"
-        - "CommCenter / Baseband"
-        - "SFA / CKKS / CloudServices"
-        - "15G / mini1 cross-device review windows"
-      status: "supporting material, not standalone conclusion"
+```
+- name: "mdm-false-management-daemon-failure-chain-public"
+  role: "focused management-adjacent daemon-layer anchor"
+  focus:
+    - "MDMStatus:false"
+    - "management-adjacent daemon clustering"
+    - "managedappdistributiond"
+    - "dmd"
+    - "ScreenTimeAgent"
+    - "ManagedSettings"
+    - "CommCenter / Baseband"
+    - "SFA / CKKS / CloudServices"
+    - "15G / mini1 cross-device review windows"
+  status: "supporting material, not standalone conclusion"
+```
 
-  falsifiable_evidence_model:
-    normal_explanation_tests:
-      - "ordinary Apple / iOS / iCloud behavior"
-      - "ordinary iMazing backup behavior"
-      - "encrypted-backup opacity"
-      - "Microsoft app residue"
-      - "user-side artifacts"
-      - "local PC factors"
-      - "USB / storage / file-lock conditions"
-      - "storage pressure"
-      - "isolated device failure"
-      - "ordinary ScreenTime / Family Sharing / local restriction settings"
-      - "ordinary telecom/baseband events"
-      - "ordinary FileProvider behavior"
+falsifiable_evidence_model:
+normal_explanation_tests:
+- "ordinary Apple / iOS / iCloud behavior"
+- "ordinary iMazing backup behavior"
+- "encrypted-backup opacity"
+- "Microsoft app residue"
+- "user-side artifacts"
+- "local PC factors"
+- "USB / storage / file-lock conditions"
+- "storage pressure"
+- "isolated device failure"
+- "ordinary ScreenTime / Family Sharing / local restriction settings"
+- "ordinary telecom/baseband events"
+- "ordinary FileProvider behavior"
 
-    support_conditions:
-      - "cross-layer clustering remains after normal controls"
-      - "account/cloud trust state aligns with restriction state"
-      - "backup-ledger state aligns with evidence-preservation behavior"
-      - "telecom context aligns with account/restriction/backup seams"
-      - "FileProvider or account-document-provider state aligns with other seams"
-      - "clean controls do not reproduce the full structure"
+```
+support_conditions:
+  - "cross-layer clustering remains after normal controls"
+  - "account/cloud trust state aligns with restriction state"
+  - "backup-ledger state aligns with evidence-preservation behavior"
+  - "telecom context aligns with account/restriction/backup seams"
+  - "FileProvider or account-document-provider state aligns with other seams"
+  - "clean controls do not reproduce the full structure"
 
-    weakening_or_falsification_conditions:
-      - "documented vendor/tool behavior reproduces the full structure"
-      - "clean controls reproduce the full structure"
-      - "encrypted backup behavior fully explains backup-ledger observations"
-      - "Manifest.db opens normally after proper handling"
-      - "local PC / USB / storage conditions reproduce the observed pattern"
-      - "ScreenTime / ManagedSettings behavior is fully explained by user settings or Family Sharing"
-      - "telecom context is independent and ordinary"
-      - "FileProvider behavior is ordinary and unrelated"
-      - "Microsoft-adjacent surfaces are ordinary residue"
-      - "cross-layer clustering disappears after normal controls"
+weakening_or_falsification_conditions:
+  - "documented vendor/tool behavior reproduces the full structure"
+  - "clean controls reproduce the full structure"
+  - "encrypted backup behavior fully explains backup-ledger observations"
+  - "Manifest.db opens normally after proper handling"
+  - "local PC / USB / storage conditions reproduce the observed pattern"
+  - "ScreenTime / ManagedSettings behavior is fully explained by user settings or Family Sharing"
+  - "telecom context is independent and ordinary"
+  - "FileProvider behavior is ordinary and unrelated"
+  - "Microsoft-adjacent surfaces are ordinary residue"
+  - "cross-layer clustering disappears after normal controls"
+```
 
-  reviewer_questions:
-    - "Can ordinary Apple / iOS / iCloud behavior reproduce the observed platform-state seams?"
-    - "Can ordinary iMazing / iOS backup behavior reproduce the backup-ledger defects and sidecar mismatch behavior?"
-    - "Can ordinary encrypted-backup opacity explain the Manifest-related observations without broader coupling?"
-    - "Can ordinary ScreenTime / Family Sharing / ManagedSettings behavior explain the restriction-state pattern?"
-    - "Can MDMStatus:false normally coexist with the reviewed management-adjacent daemon clustering?"
-    - "Can CommCenter / Baseband / SIM / device-trust signals be explained as independent normal events?"
-    - "Can FileProvider and account/document-provider behavior explain the observed account-cloud-document state?"
-    - "Can Microsoft-adjacent surfaces be explained as ordinary residue?"
-    - "Can local PC, USB, storage pressure, or acquisition-tool behavior reproduce the preservation anomalies?"
-    - "Does cross-layer clustering remain after normal controls?"
-    - "If normal explanations reproduce the structure, what documented test demonstrates it?"
-    - "If normal explanations do not reproduce the structure, does the remaining pattern justify deeper mobile forensic review?"
+reviewer_questions:
+- "Can ordinary Apple / iOS / iCloud behavior reproduce the observed platform-state seams?"
+- "Can ordinary iMazing / iOS backup behavior reproduce the backup-ledger defects and sidecar mismatch behavior?"
+- "Can ordinary encrypted-backup opacity explain the Manifest-related observations without broader coupling?"
+- "Can ordinary ScreenTime / Family Sharing / ManagedSettings behavior explain the restriction-state pattern?"
+- "Can MDMStatus:false normally coexist with the reviewed management-adjacent daemon clustering?"
+- "Can CommCenter / Baseband / SIM / device-trust signals be explained as independent normal events?"
+- "Can FileProvider and account/document-provider behavior explain the observed account-cloud-document state?"
+- "Can Microsoft-adjacent surfaces be explained as ordinary residue?"
+- "Can local PC, USB, storage pressure, or acquisition-tool behavior reproduce the preservation anomalies?"
+- "Does cross-layer clustering remain after normal controls?"
+- "If normal explanations reproduce the structure, what documented test demonstrates it?"
+- "If normal explanations do not reproduce the structure, does the remaining pattern justify deeper mobile forensic review?"
 
-  practical_takeaway: >
-    This package does not ask reviewers to accept the Shadow Cloud hypothesis.
-    It asks reviewers to test whether the observed Apple ecosystem
-    platform-state seams can be reproduced through ordinary behavior. If normal
-    behavior explains the sequence, the hypothesis should be weakened. If normal
-    behavior does not explain the sequence, the case may represent a forensic
-    blind spot in how iOS platform-state, backup-ledger behavior, restriction
-    state, account-cloud-document state, telecom context, and evidence
-    preservation are currently reviewed.
+practical_takeaway: >
+This package does not ask reviewers to accept the Shadow Cloud hypothesis.
+It asks reviewers to test whether the observed Apple ecosystem
+platform-state seams can be reproduced through ordinary behavior. If normal
+behavior explains the sequence, the hypothesis should be weakened. If normal
+behavior does not explain the sequence, the case may represent a forensic
+blind spot in how iOS platform-state, backup-ledger behavior, restriction
+state, account-cloud-document state, telecom context, and evidence
+preservation are currently reviewed.
 
-  public_review_position: "normal-first, non-attribution, falsifiable"
+public_review_position: "normal-first, non-attribution, falsifiable"
