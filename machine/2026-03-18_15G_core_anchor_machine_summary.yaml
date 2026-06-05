@@ -1,0 +1,138 @@
+title: "2026-03-18 15G Core Anchor Machine Summary"
+
+status:
+  type: "public_machine_summary"
+  raw_artifacts_public: false
+  preserved_private: true
+  attribution_claim: false
+  compromise_claim: false
+  vendor_causation_claim: false
+
+scope:
+  device_label: "15G"
+  core_date: "2026-03-18"
+  public_anchor_path: "evidence/2026-03-18-core-anchor/"
+  report_path: "reports/2026-03-18_15G_backup_ledger_snapshot_anchor.md"
+
+source_groups:
+  log_0318:
+    path_type: "log"
+    indexed_files: 133
+
+  manifest_0318_error:
+    path_type: "manifest_backup_generation"
+    indexed_files: 107
+
+  manifest_0318_snapshot:
+    path_type: "manifest_snapshot_generation"
+    indexed_files: 21708
+
+total_indexed_files: 21948
+errors: 0
+
+core_observation:
+  summary: >
+    The 2026-03-18 15G workspace reached a large Snapshot-generation state
+    while the backup-ledger state remained non-finalized.
+
+  snapshot:
+    file_count: 19625
+    size_bytes: 56713615632
+    size_gib: 52.8187
+    hex_bucket_count: 256
+
+  status_plist:
+    present: true
+    BackupState: "empty"
+    SnapshotState: "uploading"
+    IsFullBackup: true
+    Date: "2026-03-18 15:57:27"
+
+  status_plist_backup:
+    present: true
+    BackupState: "empty"
+    SnapshotState: "uploading"
+    IsFullBackup: true
+    Date: "2026-03-18 15:57:27"
+
+  info_plist_tmp:
+    present: true
+    product_version: "18.5"
+    build_version: "22F76"
+    product_type: "iPhone13,1"
+    installed_applications: 39
+    device_context: "15G backup context"
+
+interpretation:
+  safe_statement: >
+    The observation supports a backup-ledger / evidence-preservation seam.
+    It does not show a simple no-device or no-start backup failure.
+
+  not_claiming:
+    - "confirmed compromise"
+    - "actor attribution"
+    - "Apple causation"
+    - "iMazing causation"
+    - "Windows causation"
+    - "hidden MDM confirmation"
+    - "baseband compromise"
+    - "SIM compromise"
+    - "OTP interception"
+
+seven_layer_context:
+  retained_prior_core: true
+  layers:
+    - "account_state"
+    - "icloud_state"
+    - "restriction_state"
+    - "backup_ledger"
+    - "fileprovider"
+    - "telecom_context"
+    - "evidence_preservation"
+
+eighth_layer_context:
+  retained_prior_core: true
+  layer_name: "orchestration_trigger_state"
+  trigger_groups:
+    - "background_tasks"
+    - "calendar"
+    - "duet_coreduet"
+    - "home_homekit"
+    - "location_network_time_trigger"
+    - "push_notifications"
+    - "reminders"
+    - "shortcuts_automation"
+    - "trial_experiment"
+  support_group:
+    - "launchd_xpc"
+
+normal_hypothesis_candidates:
+  - "ordinary iMazing backup failure"
+  - "USB instability"
+  - "external storage behavior"
+  - "Windows file-system behavior"
+  - "local PC I/O failure"
+  - "ordinary iOS backup pipeline failure"
+  - "incomplete Snapshot upload/finalization state"
+
+public_reproducibility_files:
+  - "evidence/2026-03-18-core-anchor/00_PACKAGE_MANIFEST.json"
+  - "evidence/2026-03-18-core-anchor/01_public_artifact_index_0318.csv"
+  - "evidence/2026-03-18-core-anchor/03_plist_status_info_0318.csv"
+  - "evidence/2026-03-18-core-anchor/04_top_level_summary_0318.csv"
+  - "evidence/2026-03-18-core-anchor/05_snapshot_bucket_summary_0318.csv"
+  - "evidence/2026-03-18-core-anchor/06_duplicate_hash_summary_0318.csv"
+  - "evidence/2026-03-18-core-anchor/07_existing_result_file_map.csv"
+  - "evidence/2026-03-18-core-anchor/99_final_summary_0318.json"
+  - "evidence/2026-03-18-core-anchor/SC_0318_final_summary.md"
+
+private_exclusions:
+  - "raw logs"
+  - "raw Manifest artifacts"
+  - "raw Snapshot folder"
+  - "private full paths"
+  - "02_private_artifact_index_0318_local_only.csv"
+
+future_addition:
+  date: "2026-04-01"
+  status: "observed as similar core pattern; public Snapshot/Workspace hash-index package pending"
