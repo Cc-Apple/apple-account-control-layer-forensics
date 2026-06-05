@@ -24,7 +24,7 @@ Public SHA256 values in this repository are used for artifact integrity and repr
 
 ## Core review question
 
-Can normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior explain a long-term structure in which trust state, restriction state, backup-ledger state, evidence-preservation behavior, telecom context, FileProvider state, account/document-provider state, and orchestration-trigger state appear to cluster at the same seams?
+Can normal Apple / iOS / iCloud / iMazing / Microsoft-app behavior explain a long-term structure in which account state, iCloud state, restriction state, backup-ledger state, FileProvider state, telecom context, evidence-preservation behavior, and orchestration-trigger state appear to cluster at the same seams?
 
 If yes, the normal explanation should be documented.
 
@@ -58,7 +58,7 @@ Under the Shadow Cloud framing, the suspected review surface is not a convention
 
 The suspected review surface is Apple ecosystem state:
 
-* Apple ID trust state
+* Apple ID / account state
 * iCloud trust state
 * trusted-device behavior
 * restriction policy state
@@ -89,6 +89,33 @@ Backup branch:
 Trigger branch:
 
 > Living off Apple orchestration / automation / trigger state.
+
+---
+
+## Eight conceptual platform-state layers
+
+The March-April 2026 review is organized around eight conceptual platform-state layers:
+
+1. account state
+2. iCloud state
+3. restriction / management state
+4. backup-ledger / Snapshot state
+5. FileProvider state
+6. telecom context
+7. evidence-preservation / backup-storage state
+8. orchestration / trigger / automation state
+
+Some scan outputs group related concepts for implementation reasons.
+
+For example, account state and iCloud state may appear as one grouped scan category such as `account_cloud`.
+
+Similarly, backup-ledger state and evidence-preservation / backup-storage state may be represented across Manifest / Snapshot summaries and log-layer categories rather than as a single CSV column.
+
+The conceptual model remains eight layers.
+
+The grouped scan output is an implementation artifact, not a reduction of the model to seven layers.
+
+`usage_state` is treated as an auxiliary observable category that can support the interpretation of account, restriction, orchestration, and evidence-preservation seams.
 
 ---
 
@@ -204,16 +231,20 @@ These are review targets, not conclusions.
 2. 2026-03-29 to 2026-04-04
    Centered on 2026-03-31 to 2026-04-02
 
-Both windows retained overlapping forensic artifacts across:
+Both windows retained overlapping forensic artifacts across the eight conceptual platform-state layers:
 
-* account/cloud trust state
-* restriction state
-* backup-ledger state
-* evidence-preservation behavior
-* telecom context
+* account state
+* iCloud state
+* restriction / management state
+* backup-ledger / Snapshot state
 * FileProvider state
-* account/document-provider state
-* orchestration-trigger state
+* telecom context
+* evidence-preservation / backup-storage state
+* orchestration / trigger / automation state
+
+Additional auxiliary observations include:
+
+* usage state
 * auxiliary Microsoft-adjacent surfaces
 
 The Microsoft-adjacent surfaces are treated as correlative only.
@@ -354,15 +385,30 @@ Core observation:
   * `Info.plist.tmp` present
   * Snapshot hex bucket count `256`
 
-Same-day layer overlap:
+Same-day conceptual eight-layer overlap:
 
-* account/cloud
-* evidence backup/storage
-* FileProvider
-* orchestration/trigger
-* restriction/management
-* telecom
-* usage state
+* account state
+* iCloud state
+* restriction / management state
+* backup-ledger / Snapshot state
+* FileProvider state
+* telecom context
+* evidence-preservation / backup-storage state
+* orchestration / trigger / automation state
+
+Grouped scan-output categories:
+
+* `account_cloud`
+* `restriction_management`
+* `evidence_backup_storage`
+* `fileprovider`
+* `orchestration_trigger`
+* `telecom`
+* `usage_state`
+
+The grouped scan-output categories should not be read as reducing the conceptual model to seven layers.
+
+They are grouped implementation categories used for keyword and artifact matching.
 
 Review relevance:
 
@@ -384,7 +430,7 @@ The 2026-03-18 / 2026-04-01 cross package connects those dates and tests same-da
 
 The strongest structure-level statement supported by the public packages is:
 
-> 2026-03-18 and 2026-04-01 show repeated non-finalized backup-ledger / Snapshot-generation states with same-day seven-layer platform-state overlap.
+> 2026-03-18 and 2026-04-01 show repeated non-finalized backup-ledger / Snapshot-generation states with same-day eight conceptual platform-state layer overlap.
 
 This is a review statement, not an attribution statement.
 
@@ -458,7 +504,7 @@ The intended review method is normal-first:
 2. Try to reproduce the same pattern through ordinary iMazing behavior.
 3. Try to reproduce it through Windows / USB / storage conditions.
 4. Test whether incomplete Snapshot upload/finalization state explains the repeated structure.
-5. Test whether the same-day seven-layer overlap can be reproduced through ordinary background activity.
+5. Test whether the same-day eight conceptual platform-state layer overlap can be reproduced through ordinary background activity.
 6. If normal explanations reproduce the structure, the hypothesis should be weakened.
 7. If normal explanations do not reproduce the structure, the case may represent a mobile forensic review blind spot.
 
