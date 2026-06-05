@@ -1,0 +1,6 @@
+﻿type,id,date,path_public,exists
+log,log_0318,2026-03-18,[LOG_0318_ROOT],True
+log,log_0401,2026-04-01,[LOG_0401_ROOT],True
+manifest,0318_155727,2026-03-18,[0318_155727_ROOT],True
+manifest,0401_020720,2026-04-01,[0401_020720_ROOT],True
+manifest,0401_053959,2026-04-01,[0401_053959_ROOT],True

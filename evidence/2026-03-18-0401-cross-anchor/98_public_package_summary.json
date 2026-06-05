@@ -1,0 +1,150 @@
+{
+  "script": "build_cross_0318_0401_public_package.py",
+  "generated_at": "2026-06-06T01:44:21",
+  "started": "2026-06-06T01:44:21",
+  "finished": "2026-06-06T01:44:21",
+  "input_policy": "read_only_no_delete_no_move_no_modify_no_add_no_rename",
+  "raw_artifacts_public": false,
+  "private_full_paths_public": false,
+  "device_identifier_public": false,
+  "device_name_public": false,
+  "input_dir_public": "[INPUT_RESULT_ROOT]",
+  "output_dir_public": "[OUTPUT_DIR]",
+  "zip_public": "[ZIP_OUTPUT]",
+  "device_label": "15G",
+  "dates": [
+    "2026-03-18",
+    "2026-04-01"
+  ],
+  "csv_manifest": [
+    {
+      "src": "00_source_existence.csv",
+      "dst": "00_source_existence_public.csv",
+      "rows": 5,
+      "fields": [
+        "type",
+        "id",
+        "date",
+        "path_public",
+        "exists"
+      ]
+    },
+    {
+      "src": "04_manifest_core_states.csv",
+      "dst": "01_manifest_core_states_public.csv",
+      "rows": 3,
+      "fields": [
+        "gen_id",
+        "date",
+        "label",
+        "snapshot_files",
+        "snapshot_size_bytes",
+        "snapshot_size_gib",
+        "snapshot_hex_bucket_count",
+        "total_files",
+        "total_size_gib",
+        "BackupState",
+        "SnapshotState",
+        "IsFullBackup",
+        "Status_Date",
+        "Status_Date_iso",
+        "Info_plist_tmp",
+        "Product_Version",
+        "Build_Version",
+        "Product_Type",
+        "Installed_Applications",
+        "errors"
+      ]
+    },
+    {
+      "src": "08_layer_overlap_matrix.csv",
+      "dst": "02_layer_overlap_matrix_public.csv",
+      "rows": 7,
+      "fields": [
+        "layer",
+        "0318_present",
+        "0401_present",
+        "both_present"
+      ]
+    },
+    {
+      "src": "09_alignment_score.csv",
+      "dst": "03_alignment_score_public.csv",
+      "rows": 3,
+      "fields": [
+        "gen_id",
+        "date",
+        "ledger_score_0_6",
+        "day_layer_count",
+        "window_hit_groups_capped",
+        "rough_alignment_score",
+        "BackupState",
+        "SnapshotState",
+        "snapshot_size_gib",
+        "snapshot_hex_bucket_count",
+        "layers_present",
+        "interpretation"
+      ]
+    },
+    {
+      "src": "05_log_layer_counts_by_day.csv",
+      "dst": "04_log_layer_counts_by_day_public.csv",
+      "rows": 14,
+      "fields": [
+        "day_id",
+        "layer",
+        "files_hit",
+        "keyword_hits"
+      ]
+    },
+    {
+      "src": "06_common_log_titles_0318_0401.csv",
+      "dst": "05_common_log_titles_public.csv",
+      "rows": 22,
+      "fields": [
+        "normalized_title",
+        "days",
+        "example_titles"
+      ]
+    },
+    {
+      "src": "07_manifest_log_window_hits.csv",
+      "dst": "06_manifest_log_window_hits_compact_public.csv",
+      "rows": 296,
+      "fields": [
+        "gen_id",
+        "manifest_date",
+        "BackupState",
+        "SnapshotState",
+        "log_day_id",
+        "log_title",
+        "log_datetime",
+        "delta_minutes_log_minus_manifest",
+        "abs_delta_minutes",
+        "within_60m",
+        "within_180m",
+        "within_360m",
+        "matched_layer_count",
+        "matched_layers",
+        "process_tokens"
+      ]
+    },
+    {
+      "src": "10_manifest_top_level_summary.csv",
+      "dst": "07_manifest_top_level_summary_public.csv",
+      "rows": 793,
+      "fields": [
+        "gen_id",
+        "name",
+        "type",
+        "file_count",
+        "dir_count",
+        "total_size_bytes",
+        "total_size_gib",
+        "zero_byte_files"
+      ]
+    }
+  ],
+  "machine_summary_file": "99_cross_machine_summary.json",
+  "markdown_summary_file": "SC_0318_0401_cross_public_summary.md"
+}

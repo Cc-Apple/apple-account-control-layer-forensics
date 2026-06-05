@@ -1,0 +1,4 @@
+﻿gen_id,date,label,snapshot_files,snapshot_size_bytes,snapshot_size_gib,snapshot_hex_bucket_count,total_files,total_size_gib,BackupState,SnapshotState,IsFullBackup,Status_Date,Status_Date_iso,Info_plist_tmp,Product_Version,Build_Version,Product_Type,Installed_Applications,errors
+0318_155727,2026-03-18,2026-03-18-155727_snapshot_bloated,19625,56713615632,52.8187,256,19628,52.8195,empty,uploading,True,2026-03-18 15:57:27.007015,2026-03-18 15:57:27.007015,yes,18.5,22F76,"iPhone13,1",39,0
+0401_020720,2026-04-01,2026-04-01-020720,6998,13883784176,12.9303,256,9085,30.242,empty,uploading,True,2026-04-01 02:07:20.059414,2026-04-01 02:07:20.059414,yes,18.5,22F76,"iPhone13,1",36,0
+0401_053959,2026-04-01,2026-04-01-053959,50994,83894052576,78.1324,256,52825,85.2049,empty,uploading,True,2026-04-01 05:39:59.884789,2026-04-01 05:39:59.884789,yes,18.5,22F76,"iPhone13,1",36,0

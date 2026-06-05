@@ -1,0 +1,151 @@
+{
+  "title": "2026-03-18 / 2026-04-01 15G Log-Manifest Cross Public Summary",
+  "status": {
+    "type": "public_machine_summary",
+    "raw_artifacts_public": false,
+    "private_full_paths_public": false,
+    "device_identifier_public": false,
+    "device_name_public": false,
+    "attribution_claim": false,
+    "compromise_claim": false,
+    "vendor_causation_claim": false
+  },
+  "scope": {
+    "device_label": "15G",
+    "dates": [
+      "2026-03-18",
+      "2026-04-01"
+    ],
+    "input_result_root_public": "[INPUT_RESULT_ROOT]",
+    "output_root_public": "[OUTPUT_DIR]"
+  },
+  "manifest_core_repetition": [
+    {
+      "gen_id": "0318_155727",
+      "date": "2026-03-18",
+      "snapshot_files": "19625",
+      "snapshot_size_gib": "52.8187",
+      "snapshot_hex_bucket_count": "256",
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "IsFullBackup": "True",
+      "Info_plist_tmp": "yes",
+      "errors": "0"
+    },
+    {
+      "gen_id": "0401_020720",
+      "date": "2026-04-01",
+      "snapshot_files": "6998",
+      "snapshot_size_gib": "12.9303",
+      "snapshot_hex_bucket_count": "256",
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "IsFullBackup": "True",
+      "Info_plist_tmp": "yes",
+      "errors": "0"
+    },
+    {
+      "gen_id": "0401_053959",
+      "date": "2026-04-01",
+      "snapshot_files": "50994",
+      "snapshot_size_gib": "78.1324",
+      "snapshot_hex_bucket_count": "256",
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "IsFullBackup": "True",
+      "Info_plist_tmp": "yes",
+      "errors": "0"
+    }
+  ],
+  "layer_overlap_both_dates": [
+    "account_cloud",
+    "evidence_backup_storage",
+    "fileprovider",
+    "orchestration_trigger",
+    "restriction_management",
+    "telecom",
+    "usage_state"
+  ],
+  "alignment_scores": [
+    {
+      "gen_id": "0318_155727",
+      "date": "2026-03-18",
+      "ledger_score_0_6": "6",
+      "day_layer_count": "7",
+      "window_hit_groups_capped": "6",
+      "rough_alignment_score": "113",
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "snapshot_size_gib": "52.8187",
+      "snapshot_hex_bucket_count": "256",
+      "layers_present": "account_cloud|evidence_backup_storage|fileprovider|orchestration_trigger|restriction_management|telecom|usage_state",
+      "interpretation": "higher means stronger log-manifest same-day coupling; not proof of compromise"
+    },
+    {
+      "gen_id": "0401_020720",
+      "date": "2026-04-01",
+      "ledger_score_0_6": "6",
+      "day_layer_count": "7",
+      "window_hit_groups_capped": "6",
+      "rough_alignment_score": "113",
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "snapshot_size_gib": "12.9303",
+      "snapshot_hex_bucket_count": "256",
+      "layers_present": "account_cloud|evidence_backup_storage|fileprovider|orchestration_trigger|restriction_management|telecom|usage_state",
+      "interpretation": "higher means stronger log-manifest same-day coupling; not proof of compromise"
+    },
+    {
+      "gen_id": "0401_053959",
+      "date": "2026-04-01",
+      "ledger_score_0_6": "6",
+      "day_layer_count": "7",
+      "window_hit_groups_capped": "6",
+      "rough_alignment_score": "113",
+      "BackupState": "empty",
+      "SnapshotState": "uploading",
+      "snapshot_size_gib": "78.1324",
+      "snapshot_hex_bucket_count": "256",
+      "layers_present": "account_cloud|evidence_backup_storage|fileprovider|orchestration_trigger|restriction_management|telecom|usage_state",
+      "interpretation": "higher means stronger log-manifest same-day coupling; not proof of compromise"
+    }
+  ],
+  "key_observation": {
+    "safe_statement": "The 2026-03-18 and 2026-04-01 15G results show repeated non-finalized backup-ledger / Snapshot-generation states, with same-day platform-state layer overlap across both dates.",
+    "repeated_manifest_pattern": [
+      "BackupState=empty",
+      "SnapshotState=uploading",
+      "IsFullBackup=true",
+      "Info.plist.tmp present",
+      "Snapshot hex bucket count=256"
+    ],
+    "both_dates_layer_overlap": [
+      "account_cloud",
+      "evidence_backup_storage",
+      "fileprovider",
+      "orchestration_trigger",
+      "restriction_management",
+      "telecom",
+      "usage_state"
+    ],
+    "not_claiming": [
+      "confirmed compromise",
+      "actor attribution",
+      "Apple causation",
+      "iMazing causation",
+      "Windows causation",
+      "hidden MDM confirmation",
+      "baseband compromise",
+      "SIM compromise",
+      "OTP interception"
+    ]
+  },
+  "source_counts": {
+    "log_files_indexed": "330",
+    "manifest_generations_indexed": "3",
+    "cross_window_hit_count": "296",
+    "common_log_title_count": "22",
+    "errors": "0"
+  },
+  "generated_at": "2026-06-06T01:44:21"
+}

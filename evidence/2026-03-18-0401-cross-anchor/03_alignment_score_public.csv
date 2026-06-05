@@ -1,0 +1,4 @@
+﻿gen_id,date,ledger_score_0_6,day_layer_count,window_hit_groups_capped,rough_alignment_score,BackupState,SnapshotState,snapshot_size_gib,snapshot_hex_bucket_count,layers_present,interpretation
+0318_155727,2026-03-18,6,7,6,113,empty,uploading,52.8187,256,account_cloud|evidence_backup_storage|fileprovider|orchestration_trigger|restriction_management|telecom|usage_state,higher means stronger log-manifest same-day coupling; not proof of compromise
+0401_020720,2026-04-01,6,7,6,113,empty,uploading,12.9303,256,account_cloud|evidence_backup_storage|fileprovider|orchestration_trigger|restriction_management|telecom|usage_state,higher means stronger log-manifest same-day coupling; not proof of compromise
+0401_053959,2026-04-01,6,7,6,113,empty,uploading,78.1324,256,account_cloud|evidence_backup_storage|fileprovider|orchestration_trigger|restriction_management|telecom|usage_state,higher means stronger log-manifest same-day coupling; not proof of compromise

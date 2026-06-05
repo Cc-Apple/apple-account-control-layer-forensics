@@ -1,0 +1,8 @@
+﻿layer,0318_present,0401_present,both_present
+account_cloud,True,True,True
+evidence_backup_storage,True,True,True
+fileprovider,True,True,True
+orchestration_trigger,True,True,True
+restriction_management,True,True,True
+telecom,True,True,True
+usage_state,True,True,True

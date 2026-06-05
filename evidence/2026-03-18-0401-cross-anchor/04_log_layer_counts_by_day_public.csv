@@ -1,0 +1,15 @@
+﻿day_id,layer,files_hit,keyword_hits
+0318,account_cloud,110,19122
+0318,evidence_backup_storage,110,51357
+0318,fileprovider,67,4543
+0318,orchestration_trigger,137,32135
+0318,restriction_management,74,4184
+0318,telecom,114,28220
+0318,usage_state,63,2403
+0401,account_cloud,115,14117
+0401,evidence_backup_storage,113,27641
+0401,fileprovider,47,1662
+0401,orchestration_trigger,151,18026
+0401,restriction_management,75,2607
+0401,telecom,111,29354
+0401,usage_state,43,1133
