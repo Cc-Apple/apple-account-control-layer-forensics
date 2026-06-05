@@ -550,3 +550,49 @@ It asks reviewers to test whether the observed Apple ecosystem platform-state se
 If normal behavior explains the sequence, the hypothesis should be weakened.
 
 If normal behavior does not explain the sequence, the case may represent a forensic blind spot in how iOS platform-state, backup-ledger behavior, restriction state, account-cloud-document state, telecom context, and evidence preservation are currently reviewed.
+
+## Final retained core lines
+## 2026-03-18 15G core anchor update
+
+A public non-raw evidence index has been added for the `2026-03-18` 15G core anchor.
+
+Anchor path:
+
+* `evidence/2026-03-18-core-anchor/`
+
+Related technical report:
+
+* `reports/2026-03-18_15G_backup_ledger_snapshot_anchor.md`
+
+Machine-readable anchor summary:
+
+* `machine/2026-03-18_15G_core_anchor_machine_summary.yaml`
+
+Reproducibility scripts:
+
+* `scripts/build_0318_final_from_real_paths.py`
+* `scripts/scan_0318_workspace.py`
+
+This update focuses on the 2026-03-18 15G backup-ledger / Snapshot-generation state.
+
+The public index records artifact titles, sizes, SHA256 hashes, file magic, source groups, plist summaries, Snapshot bucket summaries, duplicate-hash summaries, and redacted paths.
+
+Raw logs, raw Manifest artifacts, raw Snapshot contents, and private full paths are not included.
+
+The key observation is not a completed normal backup.
+
+The retained 2026-03-18 15G workspace shows a large Snapshot-generation state:
+
+* Snapshot files: `19,625`
+* Snapshot size: approximately `52.8187 GiB`
+* Snapshot hex bucket count: `256`
+* `Status.plist` state: `BackupState=empty`
+* `Status.plist` state: `SnapshotState=uploading`
+* `Info.plist.tmp`: present
+
+This supports the backup-ledger / evidence-preservation seam within the broader Shadow Cloud model.
+
+It does not prove compromise, attribution, vendor causation, iMazing causation, Apple causation, hidden MDM, baseband compromise, SIM compromise, or OTP interception.
+
+A similar 2026-04-01 core pattern was observed, but the public Snapshot / Workspace hash-index package for 2026-04-01 may be added later after separate indexing.
+
