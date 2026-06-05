@@ -2,15 +2,15 @@
   "script": "build_0318_final_from_real_paths.py",
   "generated_at": "2026-06-05T22:14:41",
   "input_policy": "read_only_no_delete_no_move_no_modify_no_add_no_rename",
-  "output_dir": "C:\\Users\\Administrator\\Desktop\\Result",
+  "output_dir": "[OUTPUT_DIR]",
   "core_date": "2026-03-18",
   "device_label": "15G",
-  "udid_redacted": "[15G_UDID]",
-  "source_paths": {
-    "log_0318": "D:\\Device-Logs_整理済み\\My_Device\\15G\\2026\\03\\18",
-    "manifest_0318_error": "D:\\Manifest\\My_Device\\15G\\00008101-000524EC3A30001E\\2026-03-18\\2026-03-18-093500  Error",
-    "manifest_0318_snapshot": "D:\\Manifest\\My_Device\\15G\\00008101-000524EC3A30001E\\2026-03-18\\2026-03-18-155727  (Snashpt肥大化世代)",
-    "result_root": "D:\\Result\\2026-06-05"
+  "device_identifier_redacted": "[15G_DEVICE_ID]",
+  "source_paths_public": {
+    "log_0318": "[LOG_0318]",
+    "manifest_0318_error": "[MANIFEST_0318_ERROR]",
+    "manifest_0318_snapshot": "[MANIFEST_0318_SNAPSHOT]",
+    "result_root": "[RESULT_ROOT]"
   },
   "source_exists": {
     "log_0318": true,
