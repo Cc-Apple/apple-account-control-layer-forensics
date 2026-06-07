@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-06-08 05:20:19",
+  "purpose": "Bridge pointer from apple-account-control-layer-forensics to the canonical raw artifact hash register in shadow-cloud-state-reconstruction.",
+  "main_repository": "https://github.com/Cc-Apple/apple-account-control-layer-forensics",
+  "canonical_state_reconstruction_repository": "https://github.com/Cc-Apple/shadow-cloud-state-reconstruction",
+  "canonical_files": {
+    "raw_artifact_hash_register": "evidence-index/RAW_ARTIFACT_HASH_REGISTER_PUBLIC.csv",
+    "raw_artifact_hash_summary": "manifests/RAW_ARTIFACT_HASH_REGISTER_SUMMARY.json",
+    "raw_hash_output_manifest": "manifests/RAW_HASH_REGISTER_OUTPUT_SHA256_MANIFEST.csv"
+  },
+  "raw_artifact_hash_register": {
+    "public_rows": 56508,
+    "private_rows_not_published": 56508,
+    "errors": 0,
+    "duplicates": 3650,
+    "hashed_count": 56508,
+    "reused_count": 0,
+    "elapsed_seconds": 1316.886,
+    "publish_mode": "single",
+    "size_bytes": "18219829",
+    "sha256": "8f1fcd108cf7ed39d45034d2ee0d4ff08768ace8fcedf9ed2845bcc11ddad372",
+    "source_script": "37j_raw_hash_only_fixed.py",
+    "generated_at": "2026-06-08 04:55:48"
+  },
+  "boundary": {
+    "raw_artifacts_in_public_repo": false,
+    "full_private_paths_in_public_register": false,
+    "hash_is_integrity_anchor_not_malware_ioc": true,
+    "not_attribution": true,
+    "not_c2_claim": true,
+    "not_hidden_mdm_proof": true,
+    "content_validation_requires_private_artifact_review": true
+  },
+  "root_status_public_from_source_summary": [
+    {
+      "root_label": "H_DeviceLogs_All",
+      "exists": true
+    },
+    {
+      "root_label": "H_mini1G",
+      "exists": true
+    },
+    {
+      "root_label": "H_Room85_All",
+      "exists": true
+    },
+    {
+      "root_label": "H_Final33b",
+      "exists": true
+    },
+    {
+      "root_label": "H_Repo34",
+      "exists": true
+    }
+  ]
+}
